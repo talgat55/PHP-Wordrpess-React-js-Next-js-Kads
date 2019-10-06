@@ -1,0 +1,2036 @@
+@charset "UTF-8";
+.margin-top-40 {
+  margin-top: 40px; }
+
+.margin-bottom-40 {
+  margin-bottom: 40px; }
+
+.col-contact-first-row {
+  width: 45%; }
+
+.col-contact-second-row {
+  width: 55%; }
+
+.margin-top-10 {
+  margin-top: 10px; }
+
+.relative {
+  position: relative; }
+
+.hide-title {
+  margin: 0;
+  height: 0;
+  overflow: hidden; }
+
+.header-bg-two,
+.header-bg-one {
+  height: 100%;
+  background-repeat: no-repeat !important;
+  -webkit-background-size: cover !important;
+          background-size: cover !important;
+  background-position: center center !important;
+  position: absolute;
+  width: 200%;
+  top: 0; }
+
+.header-bg-one {
+  right: 0;
+  background-color: #2d2c2a; }
+
+.header-bg-two {
+  left: 0;
+  background-color: #14130e; }
+
+.background {
+  height: 100%;
+  position: absolute;
+  width: 200%;
+  top: 0;
+  background-color: #557a46;
+  left: 0;
+  -webkit-background-size: cover !important;
+          background-size: cover !important; }
+  .background.lazy.right {
+    right: 0;
+    left: auto; }
+
+.col-sm-3 .background {
+  width: 230%; }
+
+.sub-title {
+  margin-top: 0;
+  font-family: "Museo Sans Cyrl 900";
+  font-size: 30px;
+  color: #fff;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block; }
+  .sub-title.left:after {
+    content: "";
+    display: block;
+    height: 4px;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    right: 0;
+    left: 100%;
+    top: 19px;
+    margin-left: 20px; }
+  .sub-title.right:after {
+    content: "";
+    display: block;
+    height: 4px;
+    width: 50vh;
+    background-color: #fff;
+    position: absolute;
+    right: 100%;
+    top: 19px;
+    margin-right: 20px; }
+
+.main section {
+  overflow: hidden; }
+
+.content.vertical-align {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%); }
+  .content.vertical-align.left {
+    left: 0; }
+
+.flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.content .link-events {
+  display: inline-block;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Museo Sans Cyrl 700";
+  border: 2px solid #fff;
+  padding: 7px 18px;
+  margin-top: 60px; }
+  .content .link-events:hover {
+    border-color: #557a46;
+    color: #fff;
+    background-color: #557a46;
+    text-decoration: none; }
+
+#map {
+  width: 100%;
+  height: 450px; }
+
+.content-area .row.flex .col-sm-8 {
+  padding-left: 0; }
+  .content-area .row.flex .col-sm-8 > .content {
+    padding: 55px 50px 35px; }
+
+div.wpcf7-validation-errors, div.wpcf7-acceptance-missing {
+  color: #fff; }
+
+.page-collection.page-main .sub-title.left {
+  word-break: break-all !important; }
+
+.pagination {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: inline; }
+  .pagination ul {
+    margin: 0;
+    padding: 0;
+    display: table;
+    width: 100%; }
+    .pagination ul li {
+      display: table-cell;
+      background-color: #b98d5e;
+      text-align: center; }
+      .pagination ul li a {
+        color: #fff;
+        padding: 15px;
+        text-decoration: none;
+        display: inline-block;
+        width: 100%;
+        -webkit-transition: all .3s;
+        -o-transition: all .3s;
+        transition: all .3s;
+        font-family: "Museo Sans Cyrl 700";
+        font-size: 13px;
+        text-transform: uppercase; }
+        .pagination ul li a:hover {
+          background-color: #000; }
+        .pagination ul li a i {
+          border: 1.5px solid #fff;
+          -webkit-border-radius: 50%;
+                  border-radius: 50%;
+          padding: 1px 5px;
+          vertical-align: bottom;
+          display: inline-block; }
+      .pagination ul li.active {
+        background-color: #a47c52; }
+    .pagination ul .link-prev {
+      background-color: #383634; }
+      .pagination ul .link-prev i {
+        margin-right: 5px; }
+    .pagination ul .link-next {
+      background-color: #557a46; }
+      .pagination ul .link-next i {
+        margin-left: 5px; }
+
+.error404 .sub-title.left:after {
+  width: 700%; }
+
+.search-form {
+  display: inline-block; }
+  .search-form .wrapper {
+    width: 93px;
+    -webkit-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    overflow: hidden;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: -webkit-box;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: center;
+    -ms-flex-pack: start;
+    -webkit-box-pack: start;
+            justify-content: start;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    -webkit-box-align: center;
+            align-items: center; }
+    .search-form .wrapper:hover {
+      width: 265px; }
+    .search-form .wrapper input {
+      border: none;
+      padding: 6px 17px;
+      font-size: 15px;
+      font-family: "Museo Sans Cyrl 500";
+      color: #557a46; }
+      .search-form .wrapper input::-webkit-input-placeholder {
+        font-size: 15px;
+        font-family: "Museo Sans Cyrl 500";
+        color: #557a46; }
+      .search-form .wrapper input:-moz-placeholder {
+        font-size: 15px;
+        font-family: "Museo Sans Cyrl 500";
+        color: #557a46; }
+      .search-form .wrapper input::-moz-placeholder {
+        font-size: 15px;
+        font-family: "Museo Sans Cyrl 500";
+        color: #557a46; }
+      .search-form .wrapper input:-ms-input-placeholder {
+        font-size: 15px;
+        font-family: "Museo Sans Cyrl 500";
+        color: #557a46; }
+    .search-form .wrapper button {
+      background: #edece6;
+      -webkit-transition: all .3s;
+      -o-transition: all .3s;
+      transition: all .3s;
+      border: none;
+      padding: 4.5px 10px; }
+      .search-form .wrapper button:hover {
+        opacity: .5; }
+
+.list-search-result {
+  margin: 0;
+  padding: 0; }
+  .list-search-result li {
+    list-style: none; }
+    .list-search-result li a {
+      font-family: "Museo Sans Cyrl 300";
+      font-size: 17px;
+      color: #557a46; }
+
+.bvi-body .history-arrow {
+  top: 16px; }
+
+.bvi-body .search-submit,
+.bvi-body #arrow-history-down {
+  background: #000 !important; }
+  .bvi-body .search-submit img,
+  .bvi-body #arrow-history-down img {
+    background: transparent !important; }
+
+.bvi-body .link-to-back i,
+.bvi-body .page-contacts #map,
+.bvi-body .page-collection .bottom-block,
+.bvi-body .page-articles .list-events .item.even .triangle,
+.bvi-body .page-smi .content-block .list-events .item.even .triangle,
+.bvi-body .home .events .list-events .item.even .triangle,
+.bvi-body .scients-life-block .img-block,
+.bvi-body .page-docs .img-block {
+  display: none !important; }
+
+.bvi-body .exposure {
+  display: none; }
+
+.bvi-body .exhibitions .overlay-link,
+.bvi-body .edu-events .overlay-link {
+  opacity: 1 !important; }
+
+.bvi-body input {
+  color: #000 !important; }
+  .bvi-body input::-webkit-input-placeholder {
+    color: #000 !important; }
+  .bvi-body input:-moz-placeholder {
+    color: #000 !important; }
+  .bvi-body input::-moz-placeholder {
+    color: #000 !important; }
+  .bvi-body input:-ms-input-placeholder {
+    color: #000 !important; }
+
+.bvi-body .pagination .link-prev i,
+.bvi-body .pagination .link-next i {
+  display: none !important; }
+
+.list-events .display-on-mobile,
+.mobile-block {
+  display: none; }
+
+div.wpcf7-mail-sent-ok {
+  color: #fff !important; }
+
+.row-arrow-next {
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  right: -22px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  cursor: pointer; }
+  .row-arrow-next a {
+    padding: 30px 10px;
+    background-color: #b98d5e;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s; }
+  .row-arrow-next:hover a {
+    background-color: #333; }
+
+.sub-title.left.events:after {
+  width: 300%; }
+
+.link-zoom-expouse-block {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden; }
+  .link-zoom-expouse-block img {
+    margin: 0 auto; }
+  .link-zoom-expouse-block .link-zoom-expouse {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+        -ms-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+    color: #fff;
+    text-decoration: none;
+    outline: none; }
+    .link-zoom-expouse-block .link-zoom-expouse:hover {
+      text-decoration: none;
+      opacity: .5; }
+
+@media (max-width: 1230px) {
+  .page-articles .list-events li,
+  .page-smi .content-block .list-events li,
+  .home .events .list-events li {
+    margin-left: 0 !important; }
+    .page-articles .list-events li img,
+    .page-smi .content-block .list-events li img,
+    .home .events .list-events li img {
+      width: 100% !important; } }
+
+@media (max-width: 1200px) {
+  .page-administration .row.flex .col-sm-8 > .content {
+    padding: 55px 15px 35px; }
+  .list-administrations li.item .text {
+    padding: 0 15px !important; } }
+
+@media (max-width: 1024px) {
+  .row-arrow-next {
+    right: 0 !important; }
+  .content-block .main-content .soс-links li a {
+    margin-bottom: 10px !important;
+    margin-left: 0 !important;
+    margin-right: 10px !important; }
+  footer .footer-main-container li {
+    padding-left: 0 !important;
+    padding-right: 30px; }
+    footer .footer-main-container li a {
+      line-height: 30px; }
+  .about .content-block .col-sm-4 img {
+    width: 100%; }
+  .exhibitions .mobile-block,
+  .events .mobile-block {
+    display: block;
+    overflow: hidden; }
+    .exhibitions .mobile-block .content.text-right,
+    .events .mobile-block .content.text-right {
+      text-align: center; }
+  .exhibitions .sub-title,
+  .events .sub-title {
+    margin-top: 20px; }
+    .exhibitions .sub-title.right:after,
+    .events .sub-title.right:after {
+      display: none; }
+  .exhibitions .hidden-mobile,
+  .events .hidden-mobile {
+    display: none; }
+  .exhibitions .col-sm-9,
+  .events .col-sm-9 {
+    width: 100%; }
+  .exhibitions .content .link-events,
+  .events .content .link-events {
+    margin-top: 10px;
+    z-index: 5;
+    position: relative;
+    margin-bottom: 30px; }
+  .page-main .row.flex,
+  .edu-events .row.flex,
+  .exhibitions .row.flex,
+  .events .row.flex,
+  .exposure .row.flex {
+    display: block; }
+  .page-main .col-sm-4,
+  .page-main .col-sm-8,
+  .edu-events .col-sm-4,
+  .edu-events .col-sm-8,
+  .exhibitions .col-sm-4,
+  .exhibitions .col-sm-8,
+  .exposure .col-sm-4,
+  .exposure .col-sm-8 {
+    width: 100%; }
+  .page-main .col-sm-4,
+  .edu-events .col-sm-4,
+  .exhibitions .col-sm-4,
+  .exposure .col-sm-4 {
+    overflow: hidden; }
+  .page-main .content.vertical-align,
+  .edu-events .content.vertical-align,
+  .exhibitions .content.vertical-align,
+  .exposure .content.vertical-align {
+    position: relative;
+    -webkit-transform: none !important;
+        -ms-transform: none !important;
+            transform: none !important;
+    top: 0;
+    text-align: center; }
+  .page-main .sub-title,
+  .edu-events .sub-title,
+  .exhibitions .sub-title,
+  .exposure .sub-title {
+    margin: 20px 0; }
+    .page-main .sub-title.left:after,
+    .edu-events .sub-title.left:after,
+    .exhibitions .sub-title.left:after,
+    .exposure .sub-title.left:after {
+      display: none; }
+  .edu-events .sub-title,
+  .exhibitions .sub-title {
+    text-align: center; }
+  .edu-events .content .link-events,
+  .exhibitions .content .link-events {
+    margin: 0px auto 30px auto !important;
+    display: table; }
+  .edu-events .overlay-link,
+  .exhibitions .overlay-link {
+    opacity: 1 !important; }
+  .edu-events .overlay-link {
+    background: rgba(255, 255, 255, 0.5) !important; }
+    .edu-events .overlay-link .link {
+      color: #000 !important;
+      border-color: #000 !important; }
+  .edu-events .sub-title {
+    margin-bottom: 10px !important; }
+  .edu-events .content p {
+    margin-bottom: 20px !important; }
+  .col-sm-8 .item-carousel img {
+    width: auto !important;
+    height: 360px !important;
+    -o-object-fit: cover;
+       object-fit: cover;
+    margin: 0 auto; }
+  .page-history .history-carousel {
+    padding-left: 0 !important; }
+  .page-history .history-arrow {
+    padding-left: 0 !important;
+    width: 100% !important; }
+  .history-carousel .item img {
+    width: 100% !important; }
+  .history-carousel .item .link-full {
+    width: 100% !important; }
+    .history-carousel .item .link-full img {
+      width: auto !important; }
+  .page-administration .list-administrations li.item {
+    display: block !important; }
+  .list-administrations li.item .text {
+    padding: 15px !important; }
+  .page-articles .row.flex,
+  .page-administration .row.flex,
+  .page-smi .row.flex {
+    display: block !important; }
+  .page-articles .sub-title.left:after,
+  .page-administration .sub-title.left:after,
+  .page-smi .sub-title.left:after {
+    display: none !important; }
+  .page-articles .sub-title,
+  .page-administration .sub-title,
+  .page-smi .sub-title {
+    width: 100%;
+    text-align: center; }
+  .page-articles .col-sm-4,
+  .page-articles .col-sm-8,
+  .page-administration .col-sm-4,
+  .page-administration .col-sm-8,
+  .page-smi .col-sm-4,
+  .page-smi .col-sm-8 {
+    width: 100% !important;
+    overflow: hidden !important; }
+  .page-scients-works .scients-life-block {
+    height: auto !important; }
+    .page-scients-works .scients-life-block.flex {
+      display: block !important; }
+    .page-scients-works .scients-life-block .text,
+    .page-scients-works .scients-life-block .title-block {
+      width: 100% !important; }
+  .page-scients-works .row.flex .col-sm-8 {
+    padding-right: 0 !important; }
+  .page-articles .row.flex,
+  .page-smi .row.flex {
+    display: block !important; }
+  .page-articles .col-sm-4,
+  .page-articles .col-sm-8,
+  .page-smi .col-sm-4,
+  .page-smi .col-sm-8 {
+    width: 100% !important;
+    overflow: hidden !important;
+    padding-right: 0 !important; } }
+
+@media (min-width: 769px) {
+  .maps-section #map {
+    position: absolute !important;
+    right: 0; } }
+
+@media (max-width: 768px) {
+  .list-events .display-on-mobile {
+    display: block !important; }
+  .list-events .hide-on-mobile {
+    display: none !important; }
+  #mobile-toggle {
+    display: inline-block !important; }
+  header .content-block #menu-main {
+    display: none !important; }
+  header .content-block .row.flex {
+    display: block; }
+  header .content-block .top-block {
+    margin: 15px 0 15px 0 !important; }
+    header .content-block .top-block li {
+      text-align: center; }
+  header .content-block .top-bar .search-form {
+    display: none; }
+  .contact-section .contact-block .content {
+    text-align: center;
+    padding-left: 0 !important; }
+  .maps-section .content {
+    top: 450px !important; }
+  footer .footer-main-container {
+    width: 90% !important;
+    margin: 0 auto !important; }
+    footer .footer-main-container li {
+      text-align: center;
+      float: left;
+      width: 50%;
+      padding-right: 0 !important; }
+  .single-events .row.flex,
+  .page-template .row.flex,
+  .page-history .row.flex {
+    display: block !important; }
+  .single-events .sub-title.left:after,
+  .page-template .sub-title.left:after,
+  .page-history .sub-title.left:after {
+    display: none !important; }
+  .single-events .sub-title,
+  .page-template .sub-title,
+  .page-history .sub-title {
+    width: 100%;
+    text-align: center; }
+  .single-events .history-carousel,
+  .page-template .history-carousel,
+  .page-history .history-carousel {
+    padding-top: 0 !important; }
+  .single-events .col-sm-8 {
+    padding-right: 0 !important; }
+  .page-collection .col-sm-8 {
+    padding-right: 0 !important; }
+  .page-contacts .soс-links {
+    text-align: center !important; }
+  .page-contacts .soс-links li {
+    display: inline-block !important; }
+  .maps-section #map {
+    position: relative !important;
+    right: auto !important;
+    width: 100% !important; }
+  .maps-section .content {
+    top: auto !important;
+    height: auto !important; } }
+
+@media (max-width: 600px) {
+  .page-collection .bottom-block .slider-collection li .flex {
+    display: block !important; }
+  .maps-section .content .wrapper {
+    display: block !important; }
+  .maps-section .soс-links li {
+    display: inline-block; }
+    .maps-section .soс-links li a {
+      margin-left: 0 !important;
+      margin-right: 10px !important;
+      height: 24px; }
+  .home .about .col-sm-8 .content .images img {
+    width: 100% !important;
+    margin: 0 0 10px 0 !important; }
+  .maps-section .soс-links {
+    text-align: left !important; }
+  .content-area .row.flex .col-sm-8 > .content {
+    padding: 55px 15px 35px; }
+  .edu-events .col-sm-4 {
+    padding: 0 !important; }
+  .edu-events .sub-title {
+    width: 100% !important; }
+  .page-contacts .soс-links li a {
+    height: 23px; } }
+
+.home .about .bg-block .col-sm-4 {
+  background-color: #557a46; }
+
+.home .about .sub-title:after {
+  right: -195px; }
+
+.home .about .col-sm-4 .content {
+  padding: 40px 0 40px 30px;
+  position: relative; }
+  .home .about .col-sm-4 .content .about {
+    color: #fff;
+    width: 80%;
+    margin-top: 50px; }
+  .home .about .col-sm-4 .content .link-about {
+    margin-top: 50px;
+    display: inline-block; }
+
+.home .about .col-sm-8 .content {
+  padding-top: 20px; }
+  .home .about .col-sm-8 .content .images img {
+    -webkit-box-shadow: 5px 8px 13px 0 #e0e0e0;
+            box-shadow: 5px 8px 13px 0 #e0e0e0;
+    margin-left: 3%;
+    float: left;
+    width: 47%;
+    height: 236px;
+    background-color: #eee; }
+  .home .about .col-sm-8 .content .description {
+    margin-top: 20px;
+    margin-left: 3%; }
+
+.home .bg-block.invert .col-sm-8 {
+  left: 0;
+  right: auto; }
+
+.home .bg-block.invert .col-sm-4 {
+  right: 0;
+  left: auto; }
+
+.home .events {
+  background-color: #fefdf8; }
+  .home .events .col-sm-9 {
+    padding: 0; }
+  .home .events .col-sm-3 .content {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%); }
+
+.home .exposure .sub-title.left:after {
+  width: 150%; }
+
+.home .exposure .list-exposures {
+  margin: 0;
+  padding: 0; }
+  .home .exposure .list-exposures .item {
+    list-style: none;
+    display: inline-block;
+    height: 415px;
+    padding: 0;
+    position: relative; }
+    .home .exposure .list-exposures .item .top-block {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 9;
+      background-color: #383634;
+      padding: 17px; }
+      .home .exposure .list-exposures .item .top-block .title,
+      .home .exposure .list-exposures .item .top-block img {
+        display: inline-block; }
+      .home .exposure .list-exposures .item .top-block .title {
+        font-size: 12px;
+        color: #fff;
+        font-family: "Museo Sans Cyrl 700";
+        text-transform: uppercase;
+        margin: 0;
+        padding-left: 9px; }
+    .home .exposure .list-exposures .item .carousel-exposure .item-carousel {
+      height: 415px;
+      -webkit-background-size: cover !important;
+              background-size: cover !important;
+      background-position: center center !important;
+      background-color: #eee;
+      position: relative; }
+      .home .exposure .list-exposures .item .carousel-exposure .item-carousel button {
+        display: none !important; }
+      .home .exposure .list-exposures .item .carousel-exposure .item-carousel:hover .link-zoom-expouse-block {
+        opacity: 1;
+        visibility: visible; }
+    .home .exposure .list-exposures .item:nth-of-type(3n+2) .top-block {
+      background-color: #557a46; }
+
+.home .exposure .sub-title.left:after {
+  right: auto; }
+
+.home .exposure .col-sm-8 {
+  padding: 0; }
+
+.en_US .exposure .list-exposures .item .top-block .title {
+  padding-left: 5px; }
+
+.exhibitions .col-sm-8 {
+  padding: 0; }
+
+.exhibitions .content .link-events {
+  margin: 60px 0 0 auto;
+  display: table; }
+
+.exhibitions .content .list-exposures {
+  padding: 0;
+  z-index: 3;
+  margin-bottom: 0; }
+  .exhibitions .content .list-exposures .item {
+    list-style: none; }
+  .exhibitions .content .list-exposures .col-sm-6 {
+    padding: 0; }
+  .exhibitions .content .list-exposures .item-carousel {
+    height: 320px;
+    background-position: center center !important;
+    -webkit-background-size: cover !important;
+            background-size: cover !important;
+    position: relative; }
+    .exhibitions .content .list-exposures .item-carousel img {
+      -o-object-fit: cover !important;
+         object-fit: cover !important;
+      height: 100%; }
+
+.edu-events .sub-title.left:after {
+  display: none; }
+
+.edu-events .content p {
+  margin-bottom: 0;
+  font-size: 15px;
+  color: #fff;
+  font-family: "Museo Sans Cyrl 500"; }
+
+.edu-events .col-sm-8 {
+  padding: 0; }
+  .edu-events .col-sm-8 .item-carousel img {
+    max-height: 367px;
+    -o-object-fit: cover !important;
+       object-fit: cover !important; }
+  .edu-events .col-sm-8 .list-exposures {
+    margin: 0;
+    padding: 0; }
+    .edu-events .col-sm-8 .list-exposures .item {
+      padding: 0; }
+
+.exposure .custom-pagination,
+.exhibitions .custom-pagination,
+.edu-events .custom-pagination {
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  right: 0;
+  text-align: right;
+  padding: 9px;
+  z-index: 100; }
+  .exposure .custom-pagination > div,
+  .exhibitions .custom-pagination > div,
+  .edu-events .custom-pagination > div {
+    display: inline-block;
+    vertical-align: middle; }
+  .exposure .custom-pagination .arrow,
+  .exhibitions .custom-pagination .arrow,
+  .edu-events .custom-pagination .arrow {
+    height: 27px; }
+    .exposure .custom-pagination .arrow .prev,
+    .exhibitions .custom-pagination .arrow .prev,
+    .edu-events .custom-pagination .arrow .prev {
+      padding-right: 5px; }
+      .exposure .custom-pagination .arrow .prev .icon,
+      .exhibitions .custom-pagination .arrow .prev .icon,
+      .edu-events .custom-pagination .arrow .prev .icon {
+        position: relative;
+        -webkit-transform: rotateZ(180deg);
+            -ms-transform: rotate(180deg);
+                transform: rotateZ(180deg); }
+    .exposure .custom-pagination .arrow .prev,
+    .exposure .custom-pagination .arrow .next,
+    .exhibitions .custom-pagination .arrow .prev,
+    .exhibitions .custom-pagination .arrow .next,
+    .edu-events .custom-pagination .arrow .prev,
+    .edu-events .custom-pagination .arrow .next {
+      height: 27px;
+      vertical-align: middle;
+      -webkit-transition: all .3s;
+      -o-transition: all .3s;
+      transition: all .3s;
+      display: inline-block; }
+      .exposure .custom-pagination .arrow .prev:hover,
+      .exposure .custom-pagination .arrow .next:hover,
+      .exhibitions .custom-pagination .arrow .prev:hover,
+      .exhibitions .custom-pagination .arrow .next:hover,
+      .edu-events .custom-pagination .arrow .prev:hover,
+      .edu-events .custom-pagination .arrow .next:hover {
+        opacity: .5; }
+      .exposure .custom-pagination .arrow .prev.disable,
+      .exposure .custom-pagination .arrow .next.disable,
+      .exhibitions .custom-pagination .arrow .prev.disable,
+      .exhibitions .custom-pagination .arrow .next.disable,
+      .edu-events .custom-pagination .arrow .prev.disable,
+      .edu-events .custom-pagination .arrow .next.disable {
+        opacity: .5; }
+    .exposure .custom-pagination .arrow .next,
+    .exhibitions .custom-pagination .arrow .next,
+    .edu-events .custom-pagination .arrow .next {
+      padding-left: 5px; }
+  .exposure .custom-pagination .paginaiton,
+  .exhibitions .custom-pagination .paginaiton,
+  .edu-events .custom-pagination .paginaiton {
+    font-size: 18px;
+    color: #fff;
+    width: 30px;
+    font-family: "Museo Sans Cyrl 500"; }
+    .exposure .custom-pagination .paginaiton span,
+    .exhibitions .custom-pagination .paginaiton span,
+    .edu-events .custom-pagination .paginaiton span {
+      font-family: "Museo Sans Cyrl 700";
+      font-size: 22px; }
+
+.exhibitions .overlay-link,
+.edu-events .overlay-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(48, 47, 45, 0.7);
+  opacity: 0;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+  z-index: 99; }
+  .exhibitions .overlay-link .link,
+  .edu-events .overlay-link .link {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+        -ms-transform: translateY(-50%) translateX(-50%);
+            transform: translateY(-50%) translateX(-50%);
+    display: inline-block;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: "Museo Sans Cyrl 700";
+    border: 2px solid #fff;
+    padding: 7px 18px; }
+    .exhibitions .overlay-link .link:hover,
+    .edu-events .overlay-link .link:hover {
+      border-color: #557a46;
+      color: #fff;
+      background-color: #557a46;
+      text-decoration: none; }
+
+.exhibitions .item:hover .overlay-link,
+.exhibitions .item-carousel:hover .overlay-link,
+.edu-events .item:hover .overlay-link,
+.edu-events .item-carousel:hover .overlay-link {
+  opacity: 1; }
+
+.contact-section {
+  background: url(../images/bg-contact.jpg);
+  background-repeat: no-repeat !important;
+  -webkit-background-size: cover !important;
+          background-size: cover !important; }
+  .contact-section .contact-block {
+    padding: 70px; }
+    .contact-section .contact-block .content {
+      padding: 15px 0 0 70px; }
+      .contact-section .contact-block .content .sub-title {
+        font-family: "Museo Sans Cyrl 900";
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 30px; }
+      .contact-section .contact-block .content p {
+        margin-bottom: 0;
+        font-size: 16px;
+        font-family: "Museo Sans Cyrl 700";
+        color: #fff; }
+  .contact-section .form-contact_us input {
+    background: #1f1e1d;
+    border: none;
+    text-align: center;
+    font-family: "Museo Sans Cyrl 500";
+    font-size: 16px;
+    color: #fff;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 25px; }
+    .contact-section .form-contact_us input::-webkit-input-placeholder {
+      font-family: "Museo Sans Cyrl 500";
+      font-size: 16px;
+      color: #fff;
+      text-align: center; }
+    .contact-section .form-contact_us input:-moz-placeholder {
+      font-family: "Museo Sans Cyrl 500";
+      font-size: 16px;
+      color: #fff;
+      text-align: center; }
+    .contact-section .form-contact_us input::-moz-placeholder {
+      font-family: "Museo Sans Cyrl 500";
+      font-size: 16px;
+      color: #fff;
+      text-align: center; }
+    .contact-section .form-contact_us input:-ms-input-placeholder {
+      font-family: "Museo Sans Cyrl 500";
+      font-size: 16px;
+      color: #fff;
+      text-align: center; }
+  .contact-section .form-contact_us input[type=submit] {
+    width: auto;
+    border: 2px solid #fff;
+    display: block;
+    text-transform: uppercase;
+    background: transparent;
+    margin: 30px auto 0;
+    padding: 12px 45px; }
+    .contact-section .form-contact_us input[type=submit]:hover {
+      background: #557a46;
+      border-color: #557a46; }
+  .contact-section .form-contact_us .policy {
+    color: #fff; }
+    .contact-section .form-contact_us .policy a {
+      text-decoration: underline;
+      color: #557a46;
+      font-size: 15px;
+      font-family: "Museo Sans Cyrl 500";
+      -webkit-transition: all .3s;
+      -o-transition: all .3s;
+      transition: all .3s; }
+      .contact-section .form-contact_us .policy a:hover {
+        color: #fff; }
+
+section.partners {
+  background-color: #edece6; }
+  section.partners .list-partners {
+    margin: 0;
+    padding: 40px 0; }
+    section.partners .list-partners li {
+      list-style: none;
+      float: left; }
+      section.partners .list-partners li img {
+        margin: 0 auto; }
+    section.partners .list-partners .slick-dots {
+      right: 196px;
+      width: auto;
+      bottom: -23px; }
+      section.partners .list-partners .slick-dots li {
+        width: 6px;
+        height: 6px; }
+        section.partners .list-partners .slick-dots li button {
+          border: 1px solid #000;
+          -webkit-border-radius: 50%;
+                  border-radius: 50%;
+          padding: 4px;
+          margin: 0;
+          width: 6px;
+          height: 6px; }
+          section.partners .list-partners .slick-dots li button:before {
+            display: none; }
+        section.partners .list-partners .slick-dots li.slick-active button {
+          background-color: #000; }
+  section.partners .partner-arrow {
+    margin: 0 0 0 auto;
+    padding: 0;
+    display: table;
+    position: relative;
+    z-index: 10; }
+    section.partners .partner-arrow li {
+      display: table-cell; }
+      section.partners .partner-arrow li .prev img {
+        position: relative;
+        -webkit-transform: rotateZ(180deg);
+            -ms-transform: rotate(180deg);
+                transform: rotateZ(180deg); }
+      section.partners .partner-arrow li a {
+        background-color: #3e3c3b;
+        display: inline-block;
+        padding: 10px 35px;
+        -webkit-transition: all .3s;
+        -o-transition: all .3s;
+        transition: all .3s; }
+        section.partners .partner-arrow li a:hover {
+          opacity: .5; }
+
+.maps-section {
+  position: relative; }
+  .maps-section .bg-maps::before {
+    content: "";
+    background: url(../images/bg-map.jpg);
+    background-repeat: no-repeat !important;
+    -webkit-background-size: cover !important;
+            background-size: cover !important;
+    height: 450px;
+    display: block;
+    width: 200%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; }
+  .maps-section .col-sm-6:first-child {
+    padding: 0; }
+  .maps-section .content {
+    height: 450px; }
+    .maps-section .content .wrapper {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex; }
+    .maps-section .content .contact-info-block {
+      height: 450px;
+      vertical-align: middle;
+      display: table-cell;
+      padding-left: 40px; }
+  .maps-section #map {
+    right: 0; }
+
+.page-history .sub-title {
+  margin-top: 30px; }
+
+.page-history .mobile-carousel {
+  display: none; }
+
+.page-history .history-carousel {
+  padding-left: 30px;
+  padding-top: 60px; }
+  .page-history .history-carousel .item {
+    position: relative; }
+    .page-history .history-carousel .item .link-full {
+      cursor: pointer; }
+    .page-history .history-carousel .item a {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      -webkit-transition: all .3s;
+      -o-transition: all .3s;
+      transition: all .3s;
+      width: 266px; }
+      .page-history .history-carousel .item a div {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        text-align: center;
+        -webkit-transform: translateY(-50%) translateX(-50%);
+            -ms-transform: translateY(-50%) translateX(-50%);
+                transform: translateY(-50%) translateX(-50%); }
+        .page-history .history-carousel .item a div img {
+          margin: 0 auto; }
+        .page-history .history-carousel .item a div p {
+          margin-bottom: 0;
+          font-size: 13px;
+          font-family: "Museo Sans Cyrl 700";
+          text-transform: uppercase;
+          color: #fff; }
+    .page-history .history-carousel .item:hover a {
+      opacity: 1; }
+
+.page-history .slick-slide {
+  margin: 15px 0; }
+
+.page-history .slick-list {
+  margin: -15px 0; }
+
+.page-history .history-arrow {
+  position: relative;
+  width: 297px;
+  text-align: center;
+  padding-left: 31px;
+  padding-top: 35px; }
+  .page-history .history-arrow a {
+    padding: 10px 30px;
+    background-color: #b98d5e;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s; }
+    .page-history .history-arrow a img {
+      position: relative;
+      -webkit-transform: rotateZ(90deg);
+          -ms-transform: rotate(90deg);
+              transform: rotateZ(90deg); }
+    .page-history .history-arrow a:hover {
+      background-color: #557a46; }
+
+.page-administration .sub-title {
+  margin-top: 37px; }
+
+.page-administration .list-administrations {
+  margin: 0;
+  padding: 0; }
+  .page-administration .list-administrations li.item {
+    background-color: #edece6;
+    list-style: none;
+    display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    -webkit-align-items: center;
+    -ms-flex-align: start;
+    -webkit-box-align: center;
+            align-items: center;
+    margin-bottom: 35px; }
+    .page-administration .list-administrations li.item .img-block img {
+      width: 330px; }
+    .page-administration .list-administrations li.item .text {
+      padding: 0 30px; }
+      .page-administration .list-administrations li.item .text .name {
+        color: #383634;
+        font-family: "Museo Sans Cyrl 700";
+        text-transform: uppercase;
+        margin-top: 0;
+        font-size: 15px;
+        font-weight: 400; }
+      .page-administration .list-administrations li.item .text .position {
+        font-size: 13px;
+        padding: 11px 0 15px; }
+
+.page-docs .sub-title {
+  margin-top: 37px; }
+
+.page-docs .list-docs {
+  margin: 0;
+  padding: 0; }
+  .page-docs .list-docs li {
+    list-style: none; }
+    .page-docs .list-docs li.item {
+      margin-bottom: 45px; }
+      .page-docs .list-docs li.item .link-item {
+        color: #383634;
+        text-decoration: none;
+        display: flex;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        -webkit-align-items: center;
+        -ms-flex-align: start;
+        -webkit-box-align: center;
+                align-items: center; }
+        .page-docs .list-docs li.item .link-item .img-block .hover {
+          display: none; }
+        .page-docs .list-docs li.item .link-item .text {
+          padding-left: 35px; }
+          .page-docs .list-docs li.item .link-item .text .title {
+            font-family: "Museo Sans Cyrl 500";
+            font-size: 16px;
+            margin-top: 0;
+            margin-bottom: 0; }
+    .page-docs .list-docs li:hover .img-block .hover {
+      display: inline-block !important; }
+    .page-docs .list-docs li:hover .img-block .main {
+      display: none; }
+    .page-docs .list-docs li:hover .text .title {
+      color: #557a46; }
+
+.page-contacts .list-info,
+.maps-section .list-info {
+  margin: 0;
+  padding: 0;
+  display: inline-block; }
+  .page-contacts .list-info li,
+  .maps-section .list-info li {
+    list-style: none;
+    font-family: "Museo Sans Cyrl 500";
+    font-size: 17px;
+    color: #fff;
+    margin-bottom: 25px; }
+    .page-contacts .list-info li span,
+    .maps-section .list-info li span {
+      font-family: "Museo Sans Cyrl 700"; }
+    .page-contacts .list-info li a,
+    .maps-section .list-info li a {
+      color: #fff; }
+    .page-contacts .list-info li p,
+    .maps-section .list-info li p {
+      margin-bottom: 0;
+      display: inline-block;
+      vertical-align: top; }
+
+.page-contacts .soс-links,
+.maps-section .soс-links {
+  padding: 0;
+  margin: 0;
+  text-align: right;
+  display: inline-block; }
+  .page-contacts .soс-links li,
+  .maps-section .soс-links li {
+    list-style: none; }
+    .page-contacts .soс-links li a,
+    .maps-section .soс-links li a {
+      display: inline-block;
+      background-color: #fff;
+      text-decoration: none;
+      text-align: center;
+      margin-left: 12px;
+      -webkit-transition: all .3s;
+      -o-transition: all .3s;
+      transition: all .3s;
+      min-width: 27px;
+      margin-bottom: 13px; }
+      .page-contacts .soс-links li a:hover,
+      .maps-section .soс-links li a:hover {
+        background-color: #557a46; }
+        .page-contacts .soс-links li a:hover i,
+        .maps-section .soс-links li a:hover i {
+          color: #fff !important; }
+      .page-contacts .soс-links li a i,
+      .maps-section .soс-links li a i {
+        color: #557a46;
+        font-size: 18px;
+        padding: 3px;
+        vertical-align: middle; }
+    .page-contacts .soс-links li .gos-catalog-link,
+    .maps-section .soс-links li .gos-catalog-link {
+      text-decoration: none;
+      color: #557a46;
+      text-transform: uppercase;
+      font-family: "Museo Sans Cyrl 700";
+      padding: 0 8px; }
+      .page-contacts .soс-links li .gos-catalog-link:hover,
+      .maps-section .soс-links li .gos-catalog-link:hover {
+        color: #fff; }
+      .page-contacts .soс-links li .gos-catalog-link span,
+      .maps-section .soс-links li .gos-catalog-link span {
+        text-transform: lowercase; }
+  .page-contacts .soс-links li.last-soc-title,
+  .maps-section .soс-links li.last-soc-title {
+    text-transform: uppercase;
+    font-size: 15px;
+    font-family: "Museo Sans Cyrl 500";
+    color: #fff;
+    padding-right: 9px; }
+
+.page-contacts .sub-title {
+  margin-top: 37px; }
+  .page-contacts .sub-title.left:after {
+    left: 195px; }
+
+.page-contacts .content {
+  padding: 44px 120px !important; }
+
+.page-contacts .list-info span,
+.page-contacts .list-info li,
+.page-contacts .list-info p {
+  color: #383634; }
+
+.page-contacts .list-info a {
+  color: #383634 !important; }
+
+.page-contacts .list-info span {
+  text-transform: uppercase; }
+
+.page-contacts .soс-links {
+  position: relative;
+  display: block;
+  padding-right: 5px;
+  padding-bottom: 40px; }
+
+.page-scients-works .sub-title {
+  margin-top: 37px; }
+
+.page-scients-works .content {
+  padding: 0 !important; }
+
+.page-scients-works .scients-life-block {
+  margin-bottom: 60px;
+  height: 320px;
+  -webkit-box-shadow: 2px 7px 7px 0px #eee;
+          box-shadow: 2px 7px 7px 0px #eee; }
+  .page-scients-works .scients-life-block .title-block {
+    width: 34%;
+    background-color: #383634;
+    padding: 40px 20px; }
+    .page-scients-works .scients-life-block .title-block .title {
+      font-family: "Museo Sans Cyrl 700";
+      color: #fff;
+      text-transform: uppercase;
+      margin-top: 0; }
+    .page-scients-works .scients-life-block .title-block .text {
+      color: #fff;
+      font-size: 13px; }
+  .page-scients-works .scients-life-block .text {
+    width: 66%;
+    overflow-y: auto; }
+    .page-scients-works .scients-life-block .text::-webkit-scrollbar {
+      width: 10px; }
+    .page-scients-works .scients-life-block .text::-webkit-scrollbar-track {
+      background: #dfded9; }
+    .page-scients-works .scients-life-block .text::-webkit-scrollbar-thumb {
+      background: #3e3c3b; }
+    .page-scients-works .scients-life-block .text::-webkit-scrollbar-thumb:hover {
+      background: #3e3c3b; }
+    .page-scients-works .scients-life-block .text .list {
+      padding: 13px 41px;
+      margin: 0; }
+      .page-scients-works .scients-life-block .text .list li {
+        list-style: none; }
+        .page-scients-works .scients-life-block .text .list li.item {
+          margin-bottom: 45px; }
+          .page-scients-works .scients-life-block .text .list li.item .link-item {
+            color: #383634;
+            text-decoration: none;
+            display: flex;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            -webkit-align-items: center;
+            -ms-flex-align: start;
+            -webkit-box-align: center;
+                    align-items: center; }
+            .page-scients-works .scients-life-block .text .list li.item .link-item .img-block .hover {
+              display: none; }
+            .page-scients-works .scients-life-block .text .list li.item .link-item .text {
+              padding-left: 35px; }
+              .page-scients-works .scients-life-block .text .list li.item .link-item .text .title {
+                font-family: "Museo Sans Cyrl 500";
+                font-size: 16px;
+                margin-top: 0;
+                margin-bottom: 0; }
+        .page-scients-works .scients-life-block .text .list li:hover .img-block .hover {
+          display: inline-block !important; }
+        .page-scients-works .scients-life-block .text .list li:hover .img-block .main {
+          display: none; }
+        .page-scients-works .scients-life-block .text .list li:hover .text .title {
+          color: #557a46; }
+
+.page-articles .list-events,
+.page-smi .content-block .list-events,
+.home .events .list-events {
+  margin: 0;
+  padding: 0;
+  z-index: 9; }
+  .page-articles .list-events li,
+  .page-smi .content-block .list-events li,
+  .home .events .list-events li {
+    list-style: none;
+    margin-left: 41px; }
+  .page-articles .list-events .item .col-sm-7,
+  .page-articles .list-events .item .col-sm-5,
+  .page-smi .content-block .list-events .item .col-sm-7,
+  .page-smi .content-block .list-events .item .col-sm-5,
+  .home .events .list-events .item .col-sm-7,
+  .home .events .list-events .item .col-sm-5 {
+    padding: 0; }
+  .page-articles .list-events .item .img-block,
+  .page-smi .content-block .list-events .item .img-block,
+  .home .events .list-events .item .img-block {
+    position: relative; }
+    .page-articles .list-events .item .img-block img,
+    .page-smi .content-block .list-events .item .img-block img,
+    .home .events .list-events .item .img-block img {
+      width: 100%;
+      -o-object-fit: cover;
+         object-fit: cover;
+      height: 348px;
+      width: 348.5px; }
+  .page-articles .list-events .item.even,
+  .page-smi .content-block .list-events .item.even,
+  .home .events .list-events .item.even {
+    background: #edece6; }
+    .page-articles .list-events .item.even .triangle,
+    .page-smi .content-block .list-events .item.even .triangle,
+    .home .events .list-events .item.even .triangle {
+      width: 0;
+      height: 0;
+      border-top: 15px solid transparent;
+      border-bottom: 15px solid transparent;
+      border-right: 32px solid #edece6;
+      position: absolute;
+      bottom: 4px;
+      right: -1px; }
+  .page-articles .list-events .item.odd .triangle,
+  .page-smi .content-block .list-events .item.odd .triangle,
+  .home .events .list-events .item.odd .triangle {
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 32px solid #fefdf8;
+    position: absolute;
+    bottom: 4px;
+    left: -1px; }
+
+.page-articles .text-block > div,
+.page-smi .content-block .text-block > div,
+.home .events .text-block > div {
+  padding: 25px 40px; }
+
+.page-articles .text-block .title-event,
+.page-smi .content-block .text-block .title-event,
+.home .events .text-block .title-event {
+  font-size: 16px;
+  font-family: "Museo Sans Cyrl 700";
+  text-transform: uppercase;
+  margin-top: 0; }
+  .page-articles .text-block .title-event a,
+  .page-smi .content-block .text-block .title-event a,
+  .home .events .text-block .title-event a {
+    color: #383634;
+    text-decoration: none;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s; }
+    .page-articles .text-block .title-event a:hover,
+    .page-smi .content-block .text-block .title-event a:hover,
+    .home .events .text-block .title-event a:hover {
+      color: #557a46;
+      text-decoration: none; }
+
+.page-articles .text-block .date,
+.page-smi .content-block .text-block .date,
+.home .events .text-block .date {
+  color: #7f7e7d;
+  font-size: 12.5px;
+  font-family: "Museo Sans Cyrl 100";
+  display: inline-block;
+  margin-bottom: 15px; }
+
+.page-articles .text-block .content,
+.page-smi .content-block .text-block .content,
+.home .events .text-block .content {
+  color: #383634;
+  font-size: 14px; }
+
+.page-articles .text-block .link-more,
+.page-smi .content-block .text-block .link-more,
+.home .events .text-block .link-more {
+  color: #b98d5e;
+  font-size: 14px;
+  font-family: "Museo Sans Cyrl 700";
+  text-transform: uppercase;
+  margin-top: 40px;
+  display: inline-block;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s; }
+  .page-articles .text-block .link-more:hover,
+  .page-smi .content-block .text-block .link-more:hover,
+  .home .events .text-block .link-more:hover {
+    color: #557a46;
+    text-decoration: none; }
+
+.page-articles .sub-title,
+.single-events .sub-title {
+  margin-top: 37px;
+  display: inline-block;
+  padding-right: 10px; }
+  .page-articles .sub-title.left:after,
+  .single-events .sub-title.left:after {
+    left: 100%; }
+
+.page-smi .sub-title {
+  margin-top: 37px; }
+
+.page-smi .content-block .list-events li {
+  margin-left: 0; }
+  .page-smi .content-block .list-events li .img-block {
+    overflow: hidden; }
+    .page-smi .content-block .list-events li .img-block img {
+      width: auto !important;
+      height: auto !important;
+      max-height: 400px;
+      min-width: 100%; }
+
+.page-collection .sub-title {
+  margin-top: 37px; }
+
+.page-collection .bottom-block .slider-wrapper {
+  position: relative; }
+  .page-collection .bottom-block .slider-wrapper .arrow-collection {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2; }
+    .page-collection .bottom-block .slider-wrapper .arrow-collection .next,
+    .page-collection .bottom-block .slider-wrapper .arrow-collection .prev {
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+              transform: translateY(-50%);
+      padding: 27px 12px;
+      background-color: #b98d5e;
+      -webkit-transition: all .3s;
+      -o-transition: all .3s;
+      transition: all .3s;
+      display: inline-block;
+      cursor: pointer; }
+      .page-collection .bottom-block .slider-wrapper .arrow-collection .next:hover,
+      .page-collection .bottom-block .slider-wrapper .arrow-collection .prev:hover {
+        background-color: #557a46; }
+    .page-collection .bottom-block .slider-wrapper .arrow-collection .prev {
+      -webkit-transform: translateY(-50%) rotateZ(180deg);
+          -ms-transform: translateY(-50%) rotate(180deg);
+              transform: translateY(-50%) rotateZ(180deg); }
+    .page-collection .bottom-block .slider-wrapper .arrow-collection .next {
+      right: 0; }
+
+.page-collection .bottom-block .title {
+  margin-top: 0;
+  background-color: #557a46;
+  color: #fff;
+  padding: 14px 20px 14px 55px;
+  margin-bottom: 0;
+  display: inline-block; }
+
+.page-collection .bottom-block .slider-collection {
+  margin: 0;
+  padding: 0; }
+  .page-collection .bottom-block .slider-collection li {
+    display: inline-block;
+    float: left;
+    background-color: #383634; }
+    .page-collection .bottom-block .slider-collection li img {
+      width: 100%;
+      height: 400px;
+      -o-object-fit: cover;
+         object-fit: cover; }
+    .page-collection .bottom-block .slider-collection li .text {
+      font-family: "Museo Sans Cyrl 700";
+      text-transform: uppercase;
+      color: #fff;
+      text-align: center;
+      padding: 10px; }
+    .page-collection .bottom-block .slider-collection li .col-sm-6 {
+      padding: 0; }
+    .page-collection .bottom-block .slider-collection li .flex {
+      -webkit-align-items: center;
+      -ms-flex-align: start;
+      -webkit-box-align: center;
+      align-items: center; }
+
+.page-collection .arrow-collection {
+  margin: 0;
+  padding: 0; }
+  .page-collection .arrow-collection li {
+    list-style: none; }
+    .page-collection .arrow-collection li a {
+      display: inline-block; }
+
+.page-articles .col-sm-8 .content {
+  padding: 0 !important; }
+  .page-articles .col-sm-8 .content .list-events li {
+    margin-left: 0; }
+    .page-articles .col-sm-8 .content .list-events li .img-block {
+      overflow: hidden; }
+      .page-articles .col-sm-8 .content .list-events li .img-block img {
+        height: auto;
+        width: auto;
+        max-height: 400px;
+        min-width: 100%; }
+
+.single-events .content {
+  padding: 0 !important;
+  background-color: #f1f1f1; }
+  .single-events .content .img-block {
+    position: relative; }
+    .single-events .content .img-block .date {
+      color: #fff;
+      position: absolute;
+      font-family: "Museo Sans Cyrl 100";
+      padding: 8px 15px;
+      background-color: #557a46;
+      top: 14px;
+      left: 14px; }
+    .single-events .content .img-block .single-news-image {
+      max-width: 100%; }
+  .single-events .content .link-to-back {
+    display: inline-block;
+    background-color: #383634;
+    padding: 22px;
+    color: #fff;
+    text-decoration: none;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s; }
+    .single-events .content .link-to-back i {
+      color: #fff;
+      border: 1.5px solid #fff;
+      -webkit-border-radius: 50%;
+      border-radius: 50%;
+      padding: 1px 5px;
+      vertical-align: bottom;
+      display: inline-block; }
+    .single-events .content .link-to-back p {
+      margin-bottom: 0;
+      display: inline-block;
+      font-family: "Museo Sans Cyrl 700";
+      text-transform: uppercase;
+      padding-left: 15px; }
+    .single-events .content .link-to-back:hover {
+      background-color: #557a46; }
+  .single-events .content .content-wrapper {
+    padding: 45px; }
+    .single-events .content .content-wrapper .heading-single {
+      color: #383634;
+      font-size: 16px;
+      font-family: "Museo Sans Cyrl 700";
+      text-transform: uppercase;
+      margin-bottom: 40px; }
+
+.single-events .contact-block .content {
+  background: transparent;
+  padding: 15px 0 0 70px !important; }
+
+.single-events .single-events-carousel-wrapper {
+  position: relative; }
+  .single-events .single-events-carousel-wrapper .single-events-carousel .item {
+    position: relative; }
+    .single-events .single-events-carousel-wrapper .single-events-carousel .item img {
+      width: 100%; }
+    .single-events .single-events-carousel-wrapper .single-events-carousel .item .link-full {
+      cursor: pointer; }
+    .single-events .single-events-carousel-wrapper .single-events-carousel .item a {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      -webkit-transition: all .3s;
+      -o-transition: all .3s;
+      transition: all .3s;
+      width: 100%; }
+      .single-events .single-events-carousel-wrapper .single-events-carousel .item a div {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        text-align: center;
+        -webkit-transform: translateY(-50%) translateX(-50%);
+            -ms-transform: translateY(-50%) translateX(-50%);
+                transform: translateY(-50%) translateX(-50%); }
+        .single-events .single-events-carousel-wrapper .single-events-carousel .item a div img {
+          margin: 0 auto;
+          width: auto; }
+        .single-events .single-events-carousel-wrapper .single-events-carousel .item a div p {
+          margin-bottom: 0;
+          font-size: 13px;
+          font-family: "Museo Sans Cyrl 700";
+          text-transform: uppercase;
+          color: #fff; }
+    .single-events .single-events-carousel-wrapper .single-events-carousel .item:hover a {
+      opacity: 1; }
+  .single-events .single-events-carousel-wrapper .single-arrow {
+    position: absolute;
+    top: 50%;
+    right: -15px;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%); }
+    .single-events .single-events-carousel-wrapper .single-arrow a {
+      padding: 30px 10px;
+      background-color: #b98d5e;
+      -webkit-transition: all .3s;
+      -o-transition: all .3s;
+      transition: all .3s; }
+      .single-events .single-events-carousel-wrapper .single-arrow a:hover {
+        background-color: #557a46; }
+
+header .content-block .top-block {
+  margin: 25px 0 0 0;
+  padding: 0;
+  position: relative; }
+  header .content-block .top-block li {
+    list-style: none;
+    line-height: 33px;
+    display: block; }
+    header .content-block .top-block li a {
+      text-decoration: none;
+      font-family: "Museo Sans Cyrl 100";
+      font-size: 13px;
+      color: #fff; }
+      header .content-block .top-block li a:hover {
+        color: #557a46; }
+    header .content-block .top-block li p {
+      display: inline-block;
+      margin-bottom: 0;
+      padding-left: 20px; }
+
+header .content-block .top-bar {
+  position: relative;
+  margin-top: 25px;
+  padding-left: 5px; }
+  header .content-block .top-bar .list-switch-lang {
+    margin: 0;
+    padding: 0;
+    display: inline; }
+    header .content-block .top-bar .list-switch-lang li {
+      display: table-cell; }
+      header .content-block .top-bar .list-switch-lang li a {
+        text-decoration: none;
+        color: #777575;
+        font-size: 13px;
+        font-family: "Museo Sans Cyrl 500";
+        width: 50px;
+        text-align: center;
+        display: inline-block;
+        padding: 5px 12px;
+        background-color: #3e3c3b; }
+        header .content-block .top-bar .list-switch-lang li a:hover, header .content-block .top-bar .list-switch-lang li a.active {
+          color: #fff;
+          background-color: #557a46; }
+  header .content-block .top-bar .bvi-controller {
+    margin: 0;
+    padding: 0 0 0 15px;
+    display: inline;
+    vertical-align: middle; }
+    header .content-block .top-bar .bvi-controller li {
+      display: inline;
+      vertical-align: middle; }
+      header .content-block .top-bar .bvi-controller li i {
+        color: #706e6e;
+        font-size: 20px; }
+        header .content-block .top-bar .bvi-controller li i:hover {
+          color: #557a46; }
+
+header .content-block .main-content {
+  position: relative;
+  margin-top: 150px;
+  padding-left: 5px; }
+  header .content-block .main-content .soс-links {
+    padding: 0;
+    margin: 0; }
+    header .content-block .main-content .soс-links li {
+      display: inline-block; }
+      header .content-block .main-content .soс-links li a {
+        display: inline-block;
+        background-color: #3e3c3b;
+        text-decoration: none;
+        text-align: center;
+        margin-left: 12px;
+        -webkit-transition: all .3s;
+        -o-transition: all .3s;
+        transition: all .3s;
+        height: 22px; }
+        header .content-block .main-content .soс-links li a:hover {
+          background-color: #557a46; }
+        header .content-block .main-content .soс-links li a i {
+          color: #000;
+          font-size: 14px;
+          padding: 3px;
+          vertical-align: middle; }
+        header .content-block .main-content .soс-links li a i.fab.fa-facebook-f {
+          padding: 3px 8px; }
+      header .content-block .main-content .soс-links li .image-ext {
+        padding: 0 6px; }
+      header .content-block .main-content .soс-links li .gos-catalog-link {
+        text-decoration: none;
+        color: #000;
+        text-transform: uppercase;
+        font-family: "Museo Sans Cyrl 700";
+        padding: 0 8px; }
+        header .content-block .main-content .soс-links li .gos-catalog-link span {
+          text-transform: lowercase; }
+    header .content-block .main-content .soс-links li:first-child a {
+      margin-left: 0; }
+  header .content-block .main-content .description {
+    font-family: "Museo Sans Cyrl 100";
+    font-size: 17px;
+    color: #fff;
+    background-color: #2e2c2b;
+    border-left: 6px solid #557a46;
+    display: inline-block;
+    margin-top: 24px;
+    padding: 12px 20px;
+    margin-left: -20px; }
+    header .content-block .main-content .description span {
+      display: block;
+      font-family: "Museo Sans Cyrl 900"; }
+
+header .content-block nav {
+  position: relative; }
+  header .content-block nav ul {
+    margin: 25px 0 25px 0;
+    padding: 0; }
+    header .content-block nav ul li {
+      list-style: none; }
+      header .content-block nav ul li a {
+        font-size: 13px;
+        color: #fff;
+        text-transform: uppercase;
+        margin-bottom: 25px;
+        display: inline-block; }
+      header .content-block nav ul li.current-menu-item {
+        padding-left: 75px;
+        position: relative; }
+        header .content-block nav ul li.current-menu-item:before {
+          content: " ";
+          display: block;
+          height: 1px;
+          width: 60px;
+          background: #fff;
+          position: absolute;
+          top: 13px;
+          left: 0; }
+      header .content-block nav ul li:last-child a {
+        margin-bottom: 0; }
+
+.mobile-bar {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  position: fixed;
+  height: 100%;
+  width: 300px;
+  background: #fff;
+  z-index: 100;
+  padding-top: 90px; }
+  .mobile-bar.is-active {
+    opacity: 1;
+    visibility: visible; }
+  .mobile-bar .mobile-main-container {
+    margin: 0;
+    padding: 0 25px; }
+    .mobile-bar .mobile-main-container li {
+      list-style: none; }
+      .mobile-bar .mobile-main-container li a {
+        color: #000;
+        line-height: 30px; }
+  .mobile-bar .search-form .wrapper {
+    width: 100%;
+    margin-top: 20px;
+    padding: 0 18px; }
+    .mobile-bar .search-form .wrapper input {
+      background-color: #eee; }
+
+#mobile-toggle {
+  position: fixed;
+  top: 20px;
+  display: none;
+  left: 10px;
+  -webkit-transition: all .6s;
+  -o-transition: all .6s;
+  transition: all .6s;
+  z-index: 999; }
+  #mobile-toggle .navigation-top-mobile {
+    padding: 130px 30px 0 30px; }
+    #mobile-toggle .navigation-top-mobile .list-inline > li {
+      display: block; }
+  #mobile-toggle .menu-menu-lk {
+    padding-top: 0 !important;
+    background: transparent !important; }
+    #mobile-toggle .menu-menu-lk li:after {
+      display: none !important; }
+    #mobile-toggle .menu-menu-lk li {
+      display: block; }
+      #mobile-toggle .menu-menu-lk li a {
+        padding: 0 30px;
+        font-size: 18px;
+        font-family: "Museo Sans Cyrl 300"; }
+  #mobile-toggle.is-active {
+    left: 10px !important; }
+
+.hamburger-box {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 24px; }
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px; }
+
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+  width: 40px;
+  height: 4px;
+  background-color: #fff;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+  position: absolute;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  -o-transition-property: transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 0.15s;
+       -o-transition-duration: 0.15s;
+          transition-duration: 0.15s;
+  -webkit-transition-timing-function: ease;
+       -o-transition-timing-function: ease;
+          transition-timing-function: ease; }
+
+.hamburger-inner::before, .hamburger-inner::after {
+  content: "";
+  display: block; }
+
+.hamburger-inner::before {
+  top: -10px; }
+
+.hamburger-inner::after {
+  bottom: -10px; }
+
+.hamburger {
+  padding: 15px 10px;
+  display: none;
+  cursor: pointer;
+  -webkit-transition-property: opacity, -webkit-filter;
+  transition-property: opacity, -webkit-filter;
+  -o-transition-property: opacity, filter;
+  transition-property: opacity, filter;
+  transition-property: opacity, filter, -webkit-filter;
+  -webkit-transition-duration: 0.15s;
+       -o-transition-duration: 0.15s;
+          transition-duration: 0.15s;
+  -webkit-transition-timing-function: linear;
+       -o-transition-timing-function: linear;
+          transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+  position: absolute;
+  top: 47px;
+  left: 25px;
+  cursor: pointer;
+  z-index: 99999; }
+
+.hamburger:hover {
+  opacity: 0.7; }
+
+.hamburger.is-active:hover {
+  opacity: 0.7; }
+
+.hamburger-inner, .hamburger-inner::after,
+.hamburger-inner::before {
+  background-color: #fff; }
+
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+  background-color: #000; }
+
+.hamburger--3dx .hamburger-box {
+  -webkit-perspective: 80px;
+          perspective: 80px; }
+
+.hamburger--3dx .hamburger-inner {
+  -webkit-transition: background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1); }
+
+.hamburger--3dx .hamburger-inner::before,
+.hamburger--3dx .hamburger-inner::after {
+  -webkit-transition: -webkit-transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: -webkit-transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }
+
+.hamburger--3dx.is-active .hamburger-inner {
+  background-color: transparent !important;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg); }
+
+.hamburger--3dx.is-active .hamburger-inner::before {
+  -webkit-transform: translate3d(0, 10px, 0) rotate(45deg);
+          transform: translate3d(0, 10px, 0) rotate(45deg); }
+
+.hamburger--3dx.is-active .hamburger-inner::after {
+  -webkit-transform: translate3d(0, -10px, 0) rotate(-45deg);
+          transform: translate3d(0, -10px, 0) rotate(-45deg); }
+
+footer {
+  background-color: #383634;
+  padding: 30px 0; }
+  footer .footer-main-container {
+    margin: 0;
+    padding: 0; }
+    footer .footer-main-container li {
+      display: inline-block;
+      padding-left: 30px; }
+      footer .footer-main-container li a {
+        font-size: 13px;
+        color: #fff;
+        text-transform: uppercase; }
+    footer .footer-main-container li:first-child {
+      padding-left: 0; }
+  footer .bootom-copyright {
+    margin-top: 15px;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block; }
+    footer .bootom-copyright span {
+      font-family: "Museo Sans Cyrl 900";
+      color: #b98d5e; }
+    footer .bootom-copyright:hover {
+      text-decoration: underline; }
+
+@media (max-width: 600px) {
+  .page-contacts .col-sm-8 {
+    padding-right: 0 !important; }
+  .page-contacts .content {
+    padding: 44px 20px !important; } }
