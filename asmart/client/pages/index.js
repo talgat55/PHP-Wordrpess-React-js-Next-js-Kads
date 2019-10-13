@@ -1,18 +1,16 @@
-import React from 'react'
-import Head from 'next/head'
-import Nav from '../components/nav'
-
+import React from 'react';
+import Header from '../components/layouts/header/header';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import HomeSlider  from '../components/layouts/HomeSlider/HomeSlider';
+import ServiceBlock from  '../components/layouts/ServiceBlock/ServiceBlock';
+import './main.sass';
 const Home = () => (
-  <div>
-    <Head>
-      <title>Home</title>
-      <link rel='icon' href='/images/favicon.ico' />
-    </Head>
-
-    <Nav />
-
-
-  </div>
+  <>
+      <Header/>
+      <HomeSlider/>
+      <ServiceBlock/>
+     home page
+  </>
 );
 
 export default Home

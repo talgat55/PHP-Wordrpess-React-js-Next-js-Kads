@@ -38,33 +38,98 @@ add_image_size( 'administration-img', 330, 310, true);
 
 
 /*
-*  Register Post Type Scientific work
+*  Register Post Type Sliders
 */
 
-add_action('init', 'post_type_smionas');
+add_action('init', 'post_type_sliders');
 
-function post_type_smionas()
+function post_type_sliders()
 {
     $labels = array(
-        'name' => 'СМИ о нас',
-        'singular_name' => 'СМИ о нас',
-        'all_items' => 'СМИ о нас',
-        'menu_name' => 'СМИ о нас' // ссылка в меню в админке
+        'name' => 'Слайдер',
+        'singular_name' => 'Слайдер',
+        'all_items' => 'Слайдер',
+        'menu_name' => 'Слайдер' // ссылка в меню в админке
     );
     $args = array(
         'labels' => $labels,
         'public' => true,
         'menu_position' => 5,
         'has_archive' => true,
-        'query_var' => "smionas",
+        'show_in_rest' => true,
+        'query_var' => "slider",
         'supports' => array(
             'title',
             'editor',
             'thumbnail'
         )
     );
-    register_post_type('smionas', $args);
+    register_post_type('slider', $args);
 }
+
+
+
+/*
+*  Register Post Type Services
+*/
+
+add_action('init', 'post_type_services');
+
+function post_type_services()
+{
+    $labels = array(
+        'name' => 'Услуги',
+        'singular_name' => 'Услуги',
+        'all_items' => 'Услуги',
+        'menu_name' => 'Услуги' // ссылка в меню в админке
+    );
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'menu_position' => 5,
+        'has_archive' => true,
+        'show_in_rest' => true,
+        'query_var' => "services",
+        'supports' => array(
+            'title',
+            'editor',
+            'thumbnail'
+        )
+    );
+    register_post_type('services', $args);
+}
+
+
+/*
+*  Register Post Type Services
+*/
+
+add_action('init', 'post_type_promo');
+
+function post_type_promo()
+{
+    $labels = array(
+        'name' => 'Акции',
+        'singular_name' => 'Акции',
+        'all_items' => 'Акции',
+        'menu_name' => 'Акции' // ссылка в меню в админке
+    );
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'menu_position' => 5,
+        'has_archive' => true,
+        'show_in_rest' => true,
+        'query_var' => "promo",
+        'supports' => array(
+            'title',
+            'editor',
+            'thumbnail'
+        )
+    );
+    register_post_type('promo', $args);
+}
+
 
 /*
 *  Register Post Type Settings
@@ -81,4 +146,3 @@ if (function_exists('acf_add_options_page')) {
 
 
 }
-
