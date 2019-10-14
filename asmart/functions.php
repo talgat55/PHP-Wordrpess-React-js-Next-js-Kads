@@ -132,6 +132,38 @@ function post_type_promo()
 
 
 /*
+*  Register Post Type Certs
+*/
+
+add_action('init', 'post_type_certs');
+
+function post_type_certs()
+{
+    $labels = array(
+        'name' => 'Сертификаты',
+        'singular_name' => 'Сертификаты',
+        'all_items' => 'Сертификаты',
+        'menu_name' => 'Сертификаты' // ссылка в меню в админке
+    );
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'menu_position' => 5,
+        'has_archive' => true,
+        'show_in_rest' => true,
+        'query_var' => "certs",
+        'supports' => array(
+            'title',
+            'editor',
+            'thumbnail'
+        )
+    );
+    register_post_type('certs', $args);
+}
+
+
+
+/*
 *  Register Post Type Settings
 */
 if (function_exists('acf_add_options_page')) {

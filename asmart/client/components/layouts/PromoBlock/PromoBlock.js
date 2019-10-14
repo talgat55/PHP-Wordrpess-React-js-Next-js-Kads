@@ -2,7 +2,6 @@ import React from 'react';
 import axios from "axios";
 import {Col, Container, Row} from 'reactstrap';
 import './style.sass';
-import ServiceItem from "../ServiceBlock/ServiceItem";
 
 // import SliderItem from "./SliderItem";
 
@@ -16,7 +15,7 @@ class PromoBlock extends React.Component {
         //   acf api    http://localhost:6080/wp-json/acf/v3/slider
         axios.get('http://localhost:6080/wp-json/wp/v2/promo')
             .then(function (response) {
-                console.log(response.data);
+                // console.log(response.data);
                 currentComponent.setState({items: response.data})
             })
             .catch(function (error) {
@@ -43,7 +42,7 @@ class PromoBlock extends React.Component {
                         <Col lg="6" md="12">
                             <ul className="promo-list row w-100 ">
                                 {items.map(item => (
-                                    <li key={item.key} className="item">
+                                    <li key={item.id} className="item">
                                         <a href={item.link} className="link">
                                             {item.title.rendered}
                                             <span className="w-100">
