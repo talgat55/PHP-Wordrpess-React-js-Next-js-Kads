@@ -6,6 +6,7 @@ import ServiceBlock from  '../components/layouts/ServiceBlock/ServiceBlock';
 import PromoBlock from  '../components/layouts/PromoBlock/PromoBlock';
 import AdvantagesBlock from  '../components/layouts/AdvantagesBlock/AdvantagesBlock';
 import CertsBlock from  '../components/layouts/CertsBlock/CertsBlock';
+import InfoBlock from  '../components/layouts/InfoBlock/InfoBlock';
 import './main.sass';
 const Home = () => (
   <>
@@ -15,6 +16,7 @@ const Home = () => (
       <PromoBlock/>
       <AdvantagesBlock/>
       <CertsBlock/>
+      <InfoBlock/>
      home page
   </>
 );
