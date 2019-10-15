@@ -161,6 +161,36 @@ function post_type_certs()
     register_post_type('certs', $args);
 }
 
+/*
+*  Register Post Type Reviews
+*/
+
+add_action('init', 'post_type_reviews');
+
+function post_type_reviews()
+{
+    $labels = array(
+        'name' => 'Отзывы',
+        'singular_name' => 'Отзывы',
+        'all_items' => 'Отзывы',
+        'menu_name' => 'Отзывы' // ссылка в меню в админке
+    );
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'menu_position' => 5,
+        'has_archive' => true,
+        'show_in_rest' => true,
+        'query_var' => "reviews",
+        'supports' => array(
+            'title',
+            'editor',
+            'thumbnail'
+        )
+    );
+    register_post_type('reviews', $args);
+}
+
 
 
 /*

@@ -7,6 +7,11 @@ import PromoBlock from  '../components/layouts/PromoBlock/PromoBlock';
 import AdvantagesBlock from  '../components/layouts/AdvantagesBlock/AdvantagesBlock';
 import CertsBlock from  '../components/layouts/CertsBlock/CertsBlock';
 import InfoBlock from  '../components/layouts/InfoBlock/InfoBlock';
+import SchemaBlock from  '../components/layouts/SchemaBlock/SchemaBlock';
+import NewsBlock from  '../components/layouts/NewsBlock/NewsBlock';
+import ReviewsBlock from  '../components/layouts/ReviewsBlock/ReviewsBlock';
+import CollaborationBlock from  '../components/layouts/CollaborationBlock/CollaborationBlock';
+
 import './main.sass';
 const Home = () => (
   <>
@@ -17,7 +22,10 @@ const Home = () => (
       <AdvantagesBlock/>
       <CertsBlock/>
       <InfoBlock/>
-     home page
+      <SchemaBlock/>
+      <NewsBlock/>
+      <ReviewsBlock/>
+      <CollaborationBlock/>
   </>
 );
 

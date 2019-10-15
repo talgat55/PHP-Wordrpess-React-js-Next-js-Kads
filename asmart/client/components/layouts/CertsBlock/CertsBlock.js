@@ -18,7 +18,7 @@ class CertsBlock extends React.Component {
         let currentComponent = this;
         axios.get('http://localhost:6080/wp-json/wp/v2/certs')
             .then(function (response) {
-                console.log(response.data);
+                // console.log(response.data);
                 currentComponent.setState({items: response.data})
             })
             .catch(function (error) {
