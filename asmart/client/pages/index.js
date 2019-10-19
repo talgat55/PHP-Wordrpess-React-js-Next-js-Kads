@@ -11,6 +11,7 @@ import SchemaBlock from  '../components/layouts/SchemaBlock/SchemaBlock';
 import NewsBlock from  '../components/layouts/NewsBlock/NewsBlock';
 import ReviewsBlock from  '../components/layouts/ReviewsBlock/ReviewsBlock';
 import CollaborationBlock from  '../components/layouts/CollaborationBlock/CollaborationBlock';
+import FeedbackBlock from  '../components/layouts/FeedbackBlock/FeedbackBlock';
 
 import './main.sass';
 const Home = () => (
@@ -26,6 +27,7 @@ const Home = () => (
       <NewsBlock/>
       <ReviewsBlock/>
       <CollaborationBlock/>
+      <FeedbackBlock/>
   </>
 );
 
