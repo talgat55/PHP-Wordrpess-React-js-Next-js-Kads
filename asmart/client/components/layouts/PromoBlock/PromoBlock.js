@@ -15,7 +15,7 @@ class PromoBlock extends React.Component {
         //   acf api    http://localhost:6080/wp-json/acf/v3/slider
         axios.get('http://localhost:6080/wp-json/wp/v2/promo')
             .then(function (response) {
-                // console.log(response.data);
+                 console.log(response.data);
                 currentComponent.setState({items: response.data})
             })
             .catch(function (error) {
@@ -54,7 +54,16 @@ class PromoBlock extends React.Component {
                             </ul>
                         </Col>
                         <Col lg="6" md="12">
-
+                            <ul className="promo-list-shapes row w-100 ">
+                                {items.map(item => (
+                                    <li key={item.id} className="item">
+                                        <p>{item.acf.percent_sale} %</p>
+                                    </li>
+                                ))}
+                                <li   className="item last">
+                                        <img src="/static/promo-last.png" alt="Изображение" />
+                                </li>
+                            </ul>
                         </Col>
 
                     </Row>

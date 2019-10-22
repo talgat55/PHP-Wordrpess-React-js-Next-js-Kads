@@ -1,5 +1,6 @@
 .promo-block
   margin-bottom: 65px
+  padding-bottom: 45px
 
   .promo-list
     margin: 0
@@ -23,5 +24,48 @@
           font-size: 1.0667rem
 
 
+  .promo-list-shapes
+    margin: 0
+    padding: 0
 
+    li
+      position: relative
+      list-style: none
+      padding: 50px
+      font-weight: 600
+      font-size: 40px
+      color: #fff
+      &:before
+        content: ""
+        display: block
+        position: absolute
+        top: 15px
+        left: 25px
+        background: #164B84
+        opacity: 0.85
+        transform: rotate(45.13deg)
+        width: 130px
+        height: 130px
+      p
+        margin-bottom: 0
+        position: relative
+
+    li:nth-of-type(4n+1)
+      top: 96px
+      left: 93px
+      &:before
+        opacity: 0.75
+
+    li:nth-of-type(4n+3)
+      left: 189px
+      top: 33px
+      &:before
+        opacity: 1
+
+    .item.last
+      position: absolute
+      left: 249px
+      top: -29px
+      &:before
+        display: none
 
