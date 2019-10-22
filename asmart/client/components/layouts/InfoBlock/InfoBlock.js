@@ -1,5 +1,6 @@
 import React from 'react';
 import {Col, Container, Row} from "reactstrap";
+import Title from '../../elements/Title';
 import './style.sass';
 
 const InfoBlock = () => {
@@ -8,9 +9,7 @@ const InfoBlock = () => {
             <Container>
                 <Row>
                     <Col lg="12">
-                        <h2 className="sub-title">
-                            Для юридических лиц
-                        </h2>
+                        <Title title="Для юридических лиц" />
                     </Col>
                     <Col className="item col-lg-4 col-md-6 col-xs-12">
                         <div className="item-wrap">
