@@ -10,3 +10,82 @@
     &::before
       background-color: #fff
 
+  .schema-list
+    margin: 0
+    height: 375px
+    padding: 45px 0 0 0
+
+    li
+      list-style: none
+      position: relative
+
+      .img-block
+        position: relative
+        &::after
+          content: ""
+          display: block
+          position: absolute
+          top: 50%
+          height: 1px
+          background-color: #fff
+          width: 100px
+
+
+      .title
+        margin-bottom: 0
+        font-weight: 600
+        font-size: 1rem
+        color: #fff
+        margin-top: 14px
+        max-width: 245px
+        text-align: center
+
+    li:nth-of-type(6n+1)
+      .img-block::after
+        width: 99px
+        right: -98px
+
+    li:nth-of-type(6n+2)
+      left: 58px
+      .img-block::after
+        width: 99px
+        right: -93px
+
+    li:nth-of-type(6n+3)
+      left: 92px
+      .img-block::after
+        width: 234px
+        right: -196px
+        top: -13px
+        transform: rotateZ(-28deg)
+      .img-block::before
+        content: ""
+        display: block
+        position: absolute
+        height: 1px
+        background-color: #fff
+        width: 234px
+        right: -196px
+        top: 96px
+        transform: rotateZ(28deg)
+    li:nth-of-type(6n+4)
+      left: 165px
+      top: -125px
+      .img-block::after
+        width: 255px
+        right: -164px
+        top: 109px
+        transform: rotateZ(29deg)
+
+    li:nth-of-type(6n+5)
+      left: -120px
+      top: 125px
+      .img-block::after
+        width: 260px
+        right: -169px
+        top: -16px
+        transform: rotateZ(-29deg)
+
+    li:nth-of-type(6n+6)
+      .img-block::after
+        display: none

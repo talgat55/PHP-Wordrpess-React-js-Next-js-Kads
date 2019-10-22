@@ -1,7 +1,7 @@
 import React from 'react';
 import {Col, Container, Row} from "reactstrap";
 import './style.sass';
-
+import ReactHtmlParser  from 'react-html-parser';
 const SchemaBlock = () => {
     const items = [
         {
@@ -10,12 +10,12 @@ const SchemaBlock = () => {
         },
         {
             id: '2',
-            title: 'Сбор и анализ  документов'
+            title: 'Сбор и анализ<br>  документов'
         }
         ,
         {
             id: '3',
-            title: 'Подготовка пакета документов'
+            title: 'Подготовка пакета<br> документов'
         }
         ,
         {
@@ -47,12 +47,12 @@ const SchemaBlock = () => {
                     <Col md="12">
                         <ul className="schema-list row justify-content-between ">
                             {items.map(item => (
-                                <li key={item.id} className="item text-center col  col-md-6 col-sm-12">
-                                    <div className="img-block">
-                                        <img src={`/static/advantages${item.id}.png`} alt="иконка"/>
+                                <li key={item.id} className="item">
+                                    <div className="img-block text-center">
+                                        <img src={`/static/schema${item.id}.png`} alt="иконка"/>
                                     </div>
                                     <h3 className="title">
-                                        {item.title}
+                                        {ReactHtmlParser(item.title)}
                                     </h3>
                                 </li>
                             ))}
