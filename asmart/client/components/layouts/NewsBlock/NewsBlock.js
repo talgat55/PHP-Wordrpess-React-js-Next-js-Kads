@@ -6,7 +6,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './style.sass';
-
+import packageMain from '../../../package';
 // import SliderItem from "./SliderItem";
 
 class NewsBlock extends React.Component {
@@ -16,7 +16,7 @@ class NewsBlock extends React.Component {
 
     componentDidMount() {
         let currentComponent = this;
-        axios.get('http://localhost:6080/wp-json/wp/v2/posts')
+        axios.get(`${packageMain.proxy}/wp-json/wp/v2/posts`)
             .then(function (response) {
                 // console.log(response.data);
                 currentComponent.setState({items: response.data})

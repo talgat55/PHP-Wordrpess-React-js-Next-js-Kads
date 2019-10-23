@@ -3,7 +3,7 @@ import axios from "axios";
 import {Col, Container, Row} from 'reactstrap';
 import ServiceItem from './ServiceItem';
 import './style.sass';
-
+import packageMain from '../../../package';
 // import SliderItem from "./SliderItem";
 
 class ServiceBlock extends React.Component {
@@ -14,7 +14,7 @@ class ServiceBlock extends React.Component {
     componentDidMount() {
         let currentComponent = this;
         //   acf api    http://localhost:6080/wp-json/acf/v3/slider
-        axios.get('http://localhost:6080/wp-json/wp/v2/services')
+        axios.get(`${packageMain.proxy}/wp-json/wp/v2/services`)
             .then(function (response) {
                 // console.log(response.data);
                 currentComponent.setState({items: response.data})

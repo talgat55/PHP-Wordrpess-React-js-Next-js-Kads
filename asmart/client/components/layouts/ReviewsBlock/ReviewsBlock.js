@@ -6,7 +6,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './style.sass';
-
+import packageMain from '../../../package';
 class ReviewsBlock extends React.Component {
     state = {
         items: []
@@ -15,7 +15,7 @@ class ReviewsBlock extends React.Component {
     componentDidMount() {
         let currentComponent = this;
 
-        axios.get('http://localhost:6080/wp-json/wp/v2/reviews')
+        axios.get(`${packageMain.proxy}/wp-json/wp/v2/reviews`)
             .then(function (response) {
                 // console.log(response.data);
                 currentComponent.setState({items: response.data})

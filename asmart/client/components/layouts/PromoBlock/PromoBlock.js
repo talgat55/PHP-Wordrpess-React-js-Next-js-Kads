@@ -2,7 +2,7 @@ import React from 'react';
 import axios from "axios";
 import {Col, Container, Row} from 'reactstrap';
 import './style.sass';
-
+import packageMain from '../../../package';
 // import SliderItem from "./SliderItem";
 
 class PromoBlock extends React.Component {
@@ -13,7 +13,7 @@ class PromoBlock extends React.Component {
     componentDidMount() {
         let currentComponent = this;
         //   acf api    http://localhost:6080/wp-json/acf/v3/slider
-        axios.get('http://localhost:6080/wp-json/wp/v2/promo')
+        axios.get(`${packageMain.proxy}/wp-json/wp/v2/promo`)
             .then(function (response) {
                  console.log(response.data);
                 currentComponent.setState({items: response.data})

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import packageMain from '../../package';
 import axios from 'axios';
 import ListItem from './Listitem';
 
@@ -10,7 +10,7 @@ class Nav extends React.Component {
 
     componentDidMount() {
         let currentComponent = this;
-        axios.get('http://localhost:6080/wp-json/menus/v1/menus/top_menu')
+        axios.get(`${packageMain.proxy}/wp-json/menus/v1/menus/top_menu`)
             .then(function (response) {
                 // handle success
                 // console.log(response.data.items);

@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
 import "./style.sass";
+import packageMain from '../../../package';
 
 class CertsBlock extends React.Component {
     state = {
@@ -16,7 +17,7 @@ class CertsBlock extends React.Component {
 
     componentDidMount() {
         let currentComponent = this;
-        axios.get('http://localhost:6080/wp-json/wp/v2/certs')
+        axios.get(`${packageMain.proxy}/wp-json/wp/v2/certs`)
             .then(function (response) {
                 // console.log(response.data);
                 currentComponent.setState({items: response.data})

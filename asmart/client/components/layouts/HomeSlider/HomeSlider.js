@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import axios from "axios";
 import './style.sass';
 import SliderItem from "./SliderItem";
+import packageMain from '../../../package';
 
 class HomeSlider extends React.Component {
     state = {
@@ -13,7 +14,7 @@ class HomeSlider extends React.Component {
     componentDidMount() {
         let currentComponent = this;
 
-        axios.get('http://localhost:6080/wp-json/wp/v2/slider')
+        axios.get(`${packageMain.proxy}/wp-json/wp/v2/slider`)
             .then(function (response) {
                 console.log(response.data);
                 currentComponent.setState({items: response.data})
