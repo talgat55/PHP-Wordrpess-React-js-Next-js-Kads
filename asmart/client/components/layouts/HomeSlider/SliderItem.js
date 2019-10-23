@@ -45,7 +45,7 @@ const SliderItem = ({key, title, text, urlVideo, image, items, current}) => {
                         <ul className="items-links">
                             {
                                 items.map( (item , key) =>(
-                                    <li className={ current === key && 'active'  }>
+                                    <li key={key} className={ current === key ? 'active'  : '' }>
                                         <a href="#" className="item-link" data-id={key} >
                                             {item.title.rendered}
                                         </a>

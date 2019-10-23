@@ -8,6 +8,7 @@ const MapBlock = () => {
 
     const contactList = [
         {
+            'id': 1,
             'geo': 'г. Омск, ул. Лермонтова, 171, офис 24, 2-й этаж ',
             'phones': [
                 '+7 (3812) 35-35-75',
@@ -16,6 +17,7 @@ const MapBlock = () => {
             'workTime': 'Пн-чт: с 8:30 до 17:30,  пт: с 8:30 до 16:30 (обед: с 12:00 до 13:00)'
         },
         {
+            'id': 2,
             'geo': 'с. Троицкое, ул. Октябрьская, 1а, офис 11, 1-й этаж ',
             'phones': [
                 '+7 (3812) 35-35-85',
@@ -37,6 +39,7 @@ const MapBlock = () => {
                             {
                                 contactList.map( item =>(
                                     <ContactItem
+                                        key={item.id}
                                         geo={item.geo}
                                         phones={item.phones}
                                         workTime={item.workTime}
