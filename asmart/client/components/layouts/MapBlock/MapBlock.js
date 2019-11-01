@@ -72,7 +72,7 @@ const MapBlock = () => {
                             </Map>
                         </YMaps>
                     </Col>
-                </Row>http://localhost:3000/static/marker.png
+                </Row>
             </Container>
 
         </section>
