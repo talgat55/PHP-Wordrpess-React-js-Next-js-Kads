@@ -53,12 +53,26 @@ const MapBlock = () => {
                         <YMaps>
                             <Map defaultState={{center: [54.924714, 73.321528], zoom: 11}} className="map-full"
                                  width="100%" height="465px">
-                                <Placemark defaultGeometry={[54.984496, 73.426252]}/>
-                                <Placemark defaultGeometry={[54.856377, 73.296104]}/>
+                                <Placemark
+                                    options={{
+                                        iconLayout: 'default#image',
+                                        iconImageSize: [27, 36],
+                                        iconImageOffset: [-13, -36],
+                                        iconImageHref :"http://localhost:3000/static/marker.png"
+                                    }}
+                                     defaultGeometry={[54.984496, 73.426252]}/>
+                                <Placemark
+                                    options={{
+                                        iconLayout: 'default#image',
+                                        iconImageSize: [27, 36],
+                                        iconImageOffset: [-13, -36],
+                                        iconImageHref :"http://localhost:3000/static/marker.png"
+                                    }}
+                                    defaultGeometry={[54.856377, 73.296104]}/>
                             </Map>
                         </YMaps>
                     </Col>
-                </Row>
+                </Row>http://localhost:3000/static/marker.png
             </Container>
 
         </section>
