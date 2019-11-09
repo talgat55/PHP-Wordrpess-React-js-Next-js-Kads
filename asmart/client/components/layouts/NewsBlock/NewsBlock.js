@@ -10,13 +10,17 @@ import packageMain from '../../../package';
 // import SliderItem from "./SliderItem";
 
 class NewsBlock extends React.Component {
+    constructor(props) {
+        super(props);
+
+    }
     state = {
         items: []
     };
 
     componentDidMount() {
         let currentComponent = this;
-        axios.get(`${packageMain.proxy}/wp-json/wp/v2/posts`)
+        axios.get(`${packageMain.proxy}/wp-json/wp/v2/posts?per_page=5`)
             .then(function (response) {
                 // console.log(response.data);
                 currentComponent.setState({items: response.data})
@@ -47,7 +51,7 @@ class NewsBlock extends React.Component {
                     <Row>
                         <Col>
                             <h2 className="sub-title">
-                                Новости
+                                { this.props.title}
                             </h2>
                                 <Slider {...settings}>
                                     {items.map(item => (

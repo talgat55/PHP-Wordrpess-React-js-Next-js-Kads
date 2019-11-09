@@ -7,11 +7,11 @@ import CallBlock from '../../elements/call-block';
 import {Col, Container, Row} from 'reactstrap';
 import "./style.sass";
 
-const Header = () => {
+const Header = ({title}) => {
     return (
         <>
             <Head>
-                <title>Главная</title>
+                <title>{title} </title>
                 <link rel='icon' href='/static/favicon.ico'/>
                 <link
                     href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&display=swap&subset=cyrillic"

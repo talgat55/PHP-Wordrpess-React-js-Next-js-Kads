@@ -23,7 +23,7 @@ const NewsBlock = dynamic(() => import('../components/layouts/NewsBlock/NewsBloc
 
 const Home = () => (
     <>
-        <Header/>
+        <Header title="Главная"/>
         <HomeSlider/>
         <ServiceBlock/>
         <PromoBlock/>
@@ -31,7 +31,7 @@ const Home = () => (
         <CertsBlock/>
         <InfoBlock/>
         <SchemaBlock/>
-        <NewsBlock/>
+        <NewsBlock title="Новости"/>
         <ReviewsBlock/>
         <CollaborationBlock/>
         <FeedbackBlock/>

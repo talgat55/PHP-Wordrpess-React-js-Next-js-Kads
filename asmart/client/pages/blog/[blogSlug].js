@@ -11,7 +11,7 @@ import {Container, Row} from "reactstrap";
 import ReactHtmlParser  from 'react-html-parser';
 import "./blog.sass";
 import FeedbackBlock from "../../components/layouts/FeedbackBlock/FeedbackBlock";
-
+import NewsBlock from "../../components/layouts/NewsBlock/NewsBlock";
 const Post = ({post, lasts}) => {
     // Render post title and content in the page from props
     const  item =  post[0];
@@ -20,7 +20,7 @@ const Post = ({post, lasts}) => {
 
     return (
         <>
-            <Header/>
+            <Header title={item.title.rendered}/>
             <Hero
                 breadscrumb={<Breadcrumb items={listBread}/>}
                 img="/static/hero-news.jpg"
@@ -40,7 +40,7 @@ const Post = ({post, lasts}) => {
                         <div className="last-news-block">
 
                         </div>
-
+                        <NewsBlock title="Последние новости"/>
                     </Row>
                 </Container>
                 <FeedbackBlock/>
