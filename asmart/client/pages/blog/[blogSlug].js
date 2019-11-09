@@ -16,7 +16,7 @@ const Post = ({post, lasts}) => {
     // Render post title and content in the page from props
     const  item =  post[0];
     console.log(post);
-    let listBread = [{'href': 'blog', 'title': 'Новости' } , { 'href' : '','title' : item.title.rendered}];
+    let listBread = [{'href': '/blog', 'title': 'Новости' } , { 'href' : '','title' : item.title.rendered}];
 
     return (
         <>
