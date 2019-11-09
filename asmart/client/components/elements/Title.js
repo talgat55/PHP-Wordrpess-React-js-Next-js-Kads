@@ -1,10 +1,20 @@
 import React from 'react';
+import "./Title.sass";
+const Title = ({title, main, ...props}) => {
 
-const Title = ({title, ...props}) => {
     return (
-        <h2 className="sub-title"  {...props}>
-            {title}
-        </h2>
+        <>
+        {       main
+                    ?
+                (<h1 className="sub-title"  {...props}>
+                {title}
+                </h1>)
+
+                : (<h2 className="sub-title"  {...props}>
+                {title}
+                </h2>)
+        }
+        </>
     );
 };
 
