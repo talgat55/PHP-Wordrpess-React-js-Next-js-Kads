@@ -12,7 +12,7 @@ const Header = ({title}) => {
         <>
             <Head>
                 <title>{title} </title>
-                <link rel='icon' href='/static/favicon.ico'/>
+                <link rel='icon' href='/static/favicon.png'/>
                 <link
                     href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&display=swap&subset=cyrillic"
                     rel="stylesheet"/>

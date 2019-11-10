@@ -1,8 +1,7 @@
 import React from 'react';
-import axios from "axios";
 import {Col, Container, Row} from 'reactstrap';
 import './style.sass';
-import packageMain from '../../../package';
+import {getLastPromo} from '../../api/promo/promo';
 // import SliderItem from "./SliderItem";
 
 class PromoBlock extends React.Component {
@@ -12,26 +11,20 @@ class PromoBlock extends React.Component {
 
     componentDidMount() {
         let currentComponent = this;
-        //   acf api    http://localhost:6080/wp-json/acf/v3/slider
-        axios.get(`${packageMain.proxy}/wp-json/wp/v2/promo`)
-            .then(function (response) {
-                 console.log(response.data);
-                currentComponent.setState({items: response.data})
-            })
-            .catch(function (error) {
-                // handle error
-                console.log(error);
-            })
-            .finally(function () {
-                // always executed
-            });
+        const lasts =   getLastPromo();
+        lasts.then((resolve) =>{
+            currentComponent.setState({items: resolve});
+        });
+         // this.setState({items: getLastPromo()});
 
     }
 
     render() {
         const {items} = this.state;
         return (
+
             <section className="promo-block">
+
                 <Container>
                     <Row>
                         <Col lg="12">
