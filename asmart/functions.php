@@ -99,6 +99,36 @@ function post_type_services()
     register_post_type('services', $args);
 }
 
+/*
+*  Register Post Type Team
+*/
+
+add_action('init', 'post_type_team');
+
+function post_type_team()
+{
+    $labels = array(
+        'name' => 'Наша команда',
+        'singular_name' => 'Наша команда',
+        'all_items' => 'Наша команда',
+        'menu_name' => 'Наша команда' // ссылка в меню в админке
+    );
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'menu_position' => 5,
+        'has_archive' => true,
+        'show_in_rest' => true,
+        'query_var' => "teams",
+        'supports' => array(
+            'title',
+            'editor',
+            'thumbnail'
+        )
+    );
+    register_post_type('teams', $args);
+}
+
 
 /*
 *  Register Post Type Services

@@ -1,0 +1,59 @@
+.page-team
+
+  .hero-section
+    margin-bottom: 90px
+
+  .team-wrap-row
+    margin: 0 -15px
+
+    .item-team
+      margin: 0 8px 70px
+
+      .img-block
+        margin-bottom: 22px
+
+        img
+          max-width: 100%
+
+
+      h3
+        font-weight: 600
+        font-size: 1rem
+        margin: 0 0 5px
+
+      .position
+        img
+          width: 20px
+          height: 20px
+
+        .text
+          font-size: 0.9333rem
+          margin-left: 9px
+
+
+    .slick-arrow
+      transition: all .3s
+      margin-top: -15px
+      z-index: 2
+
+      &:hover
+        opacity: .5 !important
+
+    .slick-next
+      background: url("/static/arrrow.png")
+      width: 11px
+      height: 20px
+      right: 0
+
+      &::before
+        display: none
+
+    .slick-prev
+      background: url("/static/arrrow.png")
+      transform: rotateZ(180deg)
+      width: 11px
+      height: 20px
+      left: 0
+
+      &::before
+        display: none

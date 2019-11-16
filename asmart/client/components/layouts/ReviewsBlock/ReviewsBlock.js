@@ -32,7 +32,7 @@ class ReviewsBlock extends React.Component {
 
     render() {
         const {items} = this.state;
-        var settings = {
+        let settings = {
             dots: false,
             infinite: true,
             speed: 500,
