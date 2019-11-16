@@ -15,7 +15,7 @@ const Promo = ({posts}) => {
 
     return (
         <>
-            { console.log(posts)}
+
             <Header title={title}/>
             <section className="page-promo">
             <Hero
