@@ -1,8 +1,11 @@
 import React from "react";
 
 const PromoItem = ({img, slogan, title, percent_value}) => {
+    let styles = {
+        backgroundImage: `url(${img})`
+    };
     return (
-        <li className="item col-xl-4 col-lg-4 col-md-6 col-sm-12 d-flex align-items-center justify-content-center">
+        <li className="item col-xl-4 col-lg-4 col-md-6 col-sm-12 d-flex align-items-center justify-content-center"  style={styles}>
             <div className="content text-center">
                 <div className="percent">
                     {percent_value}

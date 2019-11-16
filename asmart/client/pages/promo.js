@@ -15,6 +15,7 @@ const Promo = ({posts}) => {
 
     return (
         <>
+            { console.log(posts)}
             <Header title={title}/>
             <section className="page-promo">
             <Hero
@@ -28,7 +29,7 @@ const Promo = ({posts}) => {
                         <ul className="promo-list d-flex align-items-center w-100">
                         {posts.map(item => (
                             <PromoItem
-                                img={item}
+                                img={item.acf.image}
                                 slogan={item.acf.slug}
                                 title={item.title.rendered}
                                 percent_value={item.acf.percent_sale}
