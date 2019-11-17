@@ -1,31 +1,19 @@
 import React from 'react';
-import axios from "axios";
 import {Col, Container, Row} from 'reactstrap';
 import ServiceItem from './ServiceItem';
 import './style.sass';
-import packageMain from '../../../package';
-// import SliderItem from "./SliderItem";
+import {getServices} from "../../api/service/service";
 
 class ServiceBlock extends React.Component {
     state = {
         items: []
     };
-
     componentDidMount() {
         let currentComponent = this;
-        //   acf api    http://localhost:6080/wp-json/acf/v3/slider
-        axios.get(`${packageMain.proxy}/wp-json/wp/v2/services`)
-            .then(function (response) {
-                // console.log(response.data);
-                currentComponent.setState({items: response.data})
-            })
-            .catch(function (error) {
-                // handle error
-                console.log(error);
-            })
-            .finally(function () {
-                // always executed
-            });
+        const lasts =   getServices();
+        lasts.then((resolve) =>{
+            currentComponent.setState({items: resolve});
+        });
 
     }
 

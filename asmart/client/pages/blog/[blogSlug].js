@@ -19,7 +19,7 @@ const Post = ({post, lasts}) => {
     let listBread = [{'href': '/blog', 'title': 'Новости' } , { 'href' : '','title' : item.title.rendered}];
 
     return (
-        <>
+        <div className="post-single-page">
             <Header title={item.title.rendered}/>
             <Hero
                 breadscrumb={<Breadcrumb items={listBread}/>}
@@ -47,7 +47,7 @@ const Post = ({post, lasts}) => {
             </section>
 
             <Footer/>
-        </>
+        </div>
     )
 };
 
