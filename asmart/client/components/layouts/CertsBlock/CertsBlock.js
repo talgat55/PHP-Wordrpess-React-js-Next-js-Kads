@@ -1,5 +1,4 @@
 import React from 'react';
-import axios from "axios";
 import {Col, Container, Row} from "reactstrap";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -7,31 +6,21 @@ import "slick-carousel/slick/slick-theme.css";
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
 import "./style.sass";
-import packageMain from '../../../package';
+import {getCerts} from "../../api/certs/certs";
 
 class CertsBlock extends React.Component {
     state = {
         items: [],
         current: ''
     };
-
     componentDidMount() {
         let currentComponent = this;
-        axios.get(`${packageMain.proxy}/wp-json/wp/v2/certs`)
-            .then(function (response) {
-                // console.log(response.data);
-                currentComponent.setState({items: response.data})
-            })
-            .catch(function (error) {
-                // handle error
-                console.log(error);
-            })
-            .finally(function () {
-                // always executed
-            });
+        const lasts =   getCerts();
+        lasts.then((resolve) =>{
+            currentComponent.setState({items: resolve});
+        });
 
     }
-
     handleClickImage = (e, image) => {
         e && e.preventDefault();
 
@@ -49,7 +38,7 @@ class CertsBlock extends React.Component {
     };
     render() {
         const {items, current} = this.state;
-        var settings = {
+        let settings = {
             dots: false,
             infinite: true,
             speed: 500,
