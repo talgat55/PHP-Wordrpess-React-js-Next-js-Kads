@@ -7,7 +7,6 @@ const SliderItem = ({key, title, text, urlVideo, image, items, current}) => {
         backgroundImage: `url(${image})`
     };
     return (
-
         <div className="item" key={key}  data-id={key} style={styles}>
             <div className="overlay-layer"></div>
             <Container>
@@ -37,8 +36,6 @@ const SliderItem = ({key, title, text, urlVideo, image, items, current}) => {
                                     Просмотр видео
                                 </p>
                             </a>
-
-
                         </div>
                     </div>
                     <div className="links col-lg-5 col-md-12 d-flex align-items-center">
@@ -54,13 +51,10 @@ const SliderItem = ({key, title, text, urlVideo, image, items, current}) => {
                             }
                         </ul>
                     </div>
-
                 </div>
             </Container>
         </div>
-
     );
-
 };
 
 export default SliderItem;

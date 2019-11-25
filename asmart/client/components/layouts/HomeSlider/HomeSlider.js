@@ -1,34 +1,21 @@
 import React from 'react';
 import Slider from "react-slick";
-import axios from "axios";
 import './style.sass';
 import SliderItem from "./SliderItem";
-import packageMain from '../../../package';
+import {getSlides} from "../../api/slider/slider";
 
 class HomeSlider extends React.Component {
     state = {
         items: [],
         activeSlide: 0,
     };
-
     componentDidMount() {
         let currentComponent = this;
-
-        axios.get(`${packageMain.proxy}/wp-json/wp/v2/slider`)
-            .then(function (response) {
-                console.log(response.data);
-                currentComponent.setState({items: response.data})
-            })
-            .catch(function (error) {
-                // handle error
-                console.log(error);
-            })
-            .finally(function () {
-                // always executed
-            });
-
+        const lasts =   getSlides();
+        lasts.then((resolve) =>{
+            currentComponent.setState({items: resolve});
+        });
     }
-
     render() {
         const settings = {
             dots: true,

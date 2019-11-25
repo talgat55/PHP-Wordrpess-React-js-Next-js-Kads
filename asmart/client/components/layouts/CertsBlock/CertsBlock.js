@@ -79,5 +79,4 @@ class CertsBlock extends React.Component {
         )
     }
 }
-
 export default CertsBlock;
