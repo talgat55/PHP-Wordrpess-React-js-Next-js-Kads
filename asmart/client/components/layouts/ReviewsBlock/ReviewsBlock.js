@@ -1,35 +1,23 @@
 import React from 'react';
-import axios from "axios";
 import {Col, Container, Row} from 'reactstrap';
 import ReviewItem from './ReviewItem';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './style.sass';
-import packageMain from '../../../package';
+import {getReviews} from "../../api/reviews/reviews";
+
 class ReviewsBlock extends React.Component {
     state = {
         items: []
     };
-
     componentDidMount() {
         let currentComponent = this;
-
-        axios.get(`${packageMain.proxy}/wp-json/wp/v2/reviews`)
-            .then(function (response) {
-                // console.log(response.data);
-                currentComponent.setState({items: response.data})
-            })
-            .catch(function (error) {
-                // handle error
-                console.log(error);
-            })
-            .finally(function () {
-                // always executed
-            });
-
+        const lasts = getReviews();
+        lasts.then((resolve) => {
+            currentComponent.setState({items: resolve});
+        });
     }
-
     render() {
         const {items} = this.state;
         let settings = {
@@ -54,7 +42,7 @@ class ReviewsBlock extends React.Component {
                                         key={item.id}
                                         title={item.title.rendered}
                                         text={item.content.rendered}
-                                        date={ item.date}
+                                        date={item.date}
                                     />
                                 ))}
                             </Slider>

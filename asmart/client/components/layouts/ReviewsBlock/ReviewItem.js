@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactHtmlParser  from 'react-html-parser';
-
+import dayjs from 'dayjs';
+import 'dayjs/locale/ru';
 const ReviewItem = ({key, title,text,date}) => {
     return (
         <div className="item" key={key}>
@@ -8,7 +9,7 @@ const ReviewItem = ({key, title,text,date}) => {
                 {ReactHtmlParser(title)}
             </h3>
             <div className="date">
-                30 июля 2019
+                { dayjs(date).locale('ru').format('d MMMM YYYY') }
             </div>
             <div className="content">
                 <div>
