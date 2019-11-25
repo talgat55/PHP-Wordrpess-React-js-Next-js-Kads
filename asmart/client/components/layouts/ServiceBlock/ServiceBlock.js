@@ -2,7 +2,7 @@ import React from 'react';
 import {Col, Container, Row} from 'reactstrap';
 import ServiceItem from './ServiceItem';
 import './style.sass';
-import {getServices} from "../../api/service/service";
+import {getServicesForBlock} from "../../api/service/service";
 
 class ServiceBlock extends React.Component {
     state = {
@@ -10,7 +10,7 @@ class ServiceBlock extends React.Component {
     };
     componentDidMount() {
         let currentComponent = this;
-        const lasts =   getServices();
+        const lasts =   getServicesForBlock();
         lasts.then((resolve) =>{
             currentComponent.setState({items: resolve});
         });
@@ -32,13 +32,13 @@ class ServiceBlock extends React.Component {
                                     <ServiceItem
                                         key={item.id}
                                         title={item.title.rendered}
-                                        link={item.link}
+                                        link={item.slug}
                                         image={ item.acf.image}
                                     />
                                 ))}
                             </ul>
                             <div className="w-100">
-                                <a href="#" className="link-to-page">
+                                <a href="/services" className="link-to-page">
                                     Все услуги
                                 </a>
                             </div>

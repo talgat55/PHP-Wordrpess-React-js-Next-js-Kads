@@ -10,3 +10,13 @@ export async function  getServices() {
     return await res.json();
 }
 
+export async function  getServicesForBlock() {
+    const res = await fetch(`${packageMain.proxy}/wp-json/wp/v2/services?per_page=9`);
+    return await res.json();
+}
+
+export async function  getServicesForPage() {
+    const res = await fetch(`${packageMain.proxy}/wp-json/wp/v2/services?per_page=12`);
+    return await res.json();
+}
+
