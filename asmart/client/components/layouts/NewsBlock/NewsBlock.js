@@ -1,40 +1,26 @@
 import React from 'react';
-import axios from "axios";
 import {Col, Container, Row} from 'reactstrap';
 import NewsItem from './NewsItem';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './style.sass';
-import packageMain from '../../../package';
-// import SliderItem from "./SliderItem";
+import {getLastNews } from '../../api/posts/posts';
 
 class NewsBlock extends React.Component {
     constructor(props) {
         super(props);
-
     }
     state = {
         items: []
     };
-
     componentDidMount() {
         let currentComponent = this;
-        axios.get(`${packageMain.proxy}/wp-json/wp/v2/posts?per_page=5`)
-            .then(function (response) {
-                // console.log(response.data);
-                currentComponent.setState({items: response.data})
-            })
-            .catch(function (error) {
-                // handle error
-                console.log(error);
-            })
-            .finally(function () {
-                // always executed
-            });
-
+        const lasts =   getLastNews();
+        lasts.then((resolve) =>{
+            currentComponent.setState({items: resolve});
+        });
     }
-
     render() {
         const {items} = this.state;
         var settings = {
@@ -58,14 +44,13 @@ class NewsBlock extends React.Component {
                                         <NewsItem
                                             key={item.id}
                                             title={item.title.rendered}
-                                            link={item.link}
+                                            link={item.slug}
                                             image={ item.acf.image}
                                             anons={ item.acf.anons}
                                             date={ item.date}
                                         />
                                     ))}
                                 </Slider>
-
                         </Col>
                     </Row>
                 </Container>

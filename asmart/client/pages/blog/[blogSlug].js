@@ -12,7 +12,7 @@ import ReactHtmlParser  from 'react-html-parser';
 import "./blog.sass";
 import FeedbackBlock from "../../components/layouts/FeedbackBlock/FeedbackBlock";
 import NewsBlock from "../../components/layouts/NewsBlock/NewsBlock";
-const Post = ({post, lasts}) => {
+const Post = ({post}) => {
     // Render post title and content in the page from props
     const  item =  post[0];
     console.log(post);
