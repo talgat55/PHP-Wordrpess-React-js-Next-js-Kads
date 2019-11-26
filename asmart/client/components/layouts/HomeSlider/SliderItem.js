@@ -2,12 +2,10 @@ import React from 'react';
 import {Container} from 'reactstrap';
 import ReactHtmlParser  from 'react-html-parser';
 
-const SliderItem = ({key, title, text, urlVideo, image, items, current}) => {
-    let styles = {
-        backgroundImage: `url(${image})`
-    };
+const SliderItem = ({key, title, text, urlVideo, items, current}) => {
+
     return (
-        <div className="item" key={key}  data-id={key} style={styles}>
+        <div className="item" key={key}  data-id={key} >
             <div className="overlay-layer"></div>
             <Container>
                 <div className="row align-items-center w-100 height-block">

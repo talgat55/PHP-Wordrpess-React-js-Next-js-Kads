@@ -29,6 +29,7 @@ class HomeSlider extends React.Component {
         };
 
         const {items, activeSlide} = this.state;
+
         return (
             <section className="home-slider">
                 <Slider {...settings}>
@@ -38,7 +39,6 @@ class HomeSlider extends React.Component {
                             title={item.title.rendered}
                             text={item.content.rendered}
                             urlVideo={item.acf.link_video}
-                            image={item.acf.image}
                             items={items}
                             current={activeSlide}
                         />
