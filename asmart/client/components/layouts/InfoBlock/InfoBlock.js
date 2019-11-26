@@ -11,26 +11,26 @@ const InfoBlock = () => {
                     <Col lg="12">
                         <Title title="Для юридических лиц" />
                     </Col>
-                    <Col className="item col-lg-4 col-md-6 col-xs-12">
+                    <Col sm="6" className="item col-lg-4 col-md-6 col-xs-12">
                         <div className="item-wrap">
                             Помощь в оформлении земельных участков
                             и объектов капитального строительства
                         </div>
                     </Col>
-                    <Col className="item col-lg-4 col-md-6 col-xs-12">
+                    <Col sm="6"  className="item col-lg-4 col-md-6 col-xs-12">
                         <div className="item-wrap">
                             Представление интересов в профильных
                             организациях
                         </div>
                     </Col>
-                    <Col className="item col-lg-4 col-md-6 col-xs-12">
+                    <Col sm="6"  className="item col-lg-4 col-md-6 col-xs-12">
                         <div className="item-wrap">
                             Выезд на объект в удобное для Вас время.
                             Анализ документов. Определение этапов
                             работ, сроков и стоимости
                         </div>
                     </Col>
-                    <Col>
+                    <Col sm="12">
                         <a href="#" className="link-alt">
                             Оформить заявку
                         </a>

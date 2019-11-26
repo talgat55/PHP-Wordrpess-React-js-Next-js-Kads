@@ -1,12 +1,13 @@
 .schema-block
   background: url(/static/schema-bg.jpg)
-  background-repeat: no-repeat!important
-  background-size: cover!important
-  background-position: center center!important
+  background-repeat: no-repeat !important
+  background-size: cover !important
+  background-position: center center !important
   padding-top: 60px
 
   .sub-title
     color: #fff
+
     &::before
       background-color: #fff
 
@@ -21,6 +22,7 @@
 
       .img-block
         position: relative
+
         &::after
           content: ""
           display: block
@@ -47,17 +49,20 @@
 
     li:nth-of-type(6n+2)
       left: 58px
+
       .img-block::after
         width: 99px
         right: -93px
 
     li:nth-of-type(6n+3)
       left: 92px
+
       .img-block::after
         width: 234px
         right: -196px
         top: -13px
         transform: rotateZ(-28deg)
+
       .img-block::before
         content: ""
         display: block
@@ -68,9 +73,11 @@
         right: -196px
         top: 96px
         transform: rotateZ(28deg)
+
     li:nth-of-type(6n+4)
       left: 165px
       top: -125px
+
       .img-block::after
         width: 255px
         right: -164px
@@ -80,6 +87,7 @@
     li:nth-of-type(6n+5)
       left: -120px
       top: 125px
+
       .img-block::after
         width: 260px
         right: -169px
@@ -89,3 +97,43 @@
     li:nth-of-type(6n+6)
       .img-block::after
         display: none
+
+@media (max-width: 1200px)
+  .schema-block
+    .schema-list
+      li:nth-of-type(6n+2)
+        left: 5px
+
+      li:nth-of-type(6n+3)
+        left: -23px
+      li:nth-of-type(6n+4)
+        left: 60px
+      li:nth-of-type(6n+5)
+        left: -211px
+      li:nth-of-type(6n+6)
+        position: absolute
+        right: -23px
+
+@media (max-width: 993px)
+  .schema-block
+    .schema-list
+      height: auto!important
+      padding: 0px 0 35px 0
+      .item
+        width: 33.33%
+        margin-bottom: 30px
+        position: relative!important
+        top: auto!important
+        left: auto!important
+        right: auto!important
+
+        .img-block::before,
+        .img-block::after
+          display: none!important
+
+
+@media (max-width: 600px)
+  .schema-block
+    .schema-list
+      .item
+        width: 50%

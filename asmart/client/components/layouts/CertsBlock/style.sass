@@ -5,17 +5,21 @@
   .item
     .link
       display: block
+
       img
         margin: 0 auto
+
   .slick-arrow
     transition: all .3s
+
     &:hover
-      opacity: .5!important
+      opacity: .5 !important
 
   .slick-next
     background: url("/static/arrrow.png")
     width: 11px
     height: 20px
+
     &::before
       display: none
 
@@ -24,8 +28,19 @@
     transform: rotateZ(180deg)
     width: 11px
     height: 20px
+
     &::before
       display: none
+
+
+@media (max-width: 1200px)
+  .certs-block
+    .item
+      .link
+        margin: 0 20px
+
+        img
+          width: 100%
 
 
 

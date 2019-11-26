@@ -22,10 +22,10 @@ const ContactItem = ({key,geo, phones, workTime}) => {
 
                 <p>
                     {
-                        phones.map(item => {
+                        phones.map((item , index) => {
                             let phone =  `tel: ${item}` ;
                             return (
-                                <a href={phone} className="phone-link">
+                                <a key={index} href={phone} className="phone-link">
                                     {item}
                                 </a>
                             )

@@ -16,7 +16,7 @@ const SliderItem = ({key, title, text, urlVideo, items, current}) => {
                         <div className="text">
                             {ReactHtmlParser(text)}
                         </div>
-                        <div className="bottom d-flex align-items-center">
+                        <div className="bottom d-sm-flex align-items-center">
                             <a href="#" className="link-order-new">
                                 Заказать услугу
                             </a>

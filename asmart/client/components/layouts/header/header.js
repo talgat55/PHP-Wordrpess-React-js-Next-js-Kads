@@ -20,13 +20,19 @@ const Header = ({title}) => {
             <header>
                 <Container>
                     <Row>
-                        <Col>
+                        <Col className="d-lg-flex align-items-lg-center">
                             <Logo/>
                         </Col>
                         <Col>
                             <div className="top d-flex justify-content-end  align-items-center">
                                 <PhoneBlock/>
                                 <CallBlock/>
+                                <a id="mobile-toggle" href="#menu"
+                                   className="mobile-toggle hamburger hamburger--collapse hamburger--3dx  ">
+                                 <span className="hamburger-box">
+                                     <span className="hamburger-inner"></span>
+                                 </span>
+                                </a>
                             </div>
                             <div className="bottom">
                                 <Navigation/>
@@ -35,7 +41,6 @@ const Header = ({title}) => {
                     </Row>
                 </Container>
             </header>
-
         </>
     );
 };

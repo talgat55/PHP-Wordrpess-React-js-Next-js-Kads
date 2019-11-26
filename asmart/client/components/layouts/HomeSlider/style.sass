@@ -4,6 +4,7 @@ $color_white: #fff
   background-repeat: no-repeat
   background-size: cover !important
   background: url(/static/home_bg.jpg)
+
   .item
     height: 580px
 
@@ -81,6 +82,7 @@ $color_white: #fff
             list-style: none
             line-height: 1
             position: relative
+
             &::before
               top: 4px
               content: ""
@@ -91,6 +93,7 @@ $color_white: #fff
               border-bottom: 6px solid transparent
               display: block
               position: absolute
+
             a
               line-height: 1
               text-decoration: none
@@ -111,7 +114,6 @@ $color_white: #fff
               padding-bottom: 0
 
 
-
   .slick-dots
     bottom: 25px
 
@@ -120,6 +122,7 @@ $color_white: #fff
       height: 10px
       margin: 0 9px
       position: relative
+
       &.slick-active
         &::after
           content: ""
@@ -133,7 +136,7 @@ $color_white: #fff
           border-radius: 50%
 
         button
-          background: #fff!important
+          background: #fff !important
 
 
       button
@@ -141,13 +144,35 @@ $color_white: #fff
         width: 10px
         height: 10px
         border-radius: 50%
+
         &:before
           display: none
 
 
+@media (max-width: 993px)
+  .home-slider
+    height: 510px
 
+    .item
+      height: 510px
 
+      .items-links
+        display: none
 
+      .content
+        h2
+          font-size: 2rem !important
 
+        .text
+          font-size: 0.9333rem !important
 
+@media (max-width: 500px)
+  .home-slider
+    min-height: 400px
+    height: auto!important
+    .item
+      min-height: 400px
+      height:  auto!important
 
+      .link-order-new
+        margin-bottom: 20px

@@ -10,10 +10,11 @@
     margin-bottom: 70px
 
     .content
-      padding: 20px
+      padding: 70px 30px
       border-radius: 5px
       overflow: hidden
       position: relative
+      width: 100%
       &:before
         content: ""
         display: block
@@ -24,6 +25,27 @@
         height: 100%
         background: #FFFFFF
         opacity: 0.7
+      .first
+        border-right: 1px solid #565656
+
+        .lists-parts
+          margin: 0
+          padding: 0
+          list-style-image: url(/static/arrow-service.png)
+          .item
+            margin-bottom: 22px
+            font-size: 1rem
+            font-weight: bold
+            cursor: pointer
+            transition: all .3s
+            color: #565656
+            &:hover,
+            &.active
+              color: #009160
+          .item:last-child
+            margin-bottom: 0!important
+
+
 
   .steps-section
     margin-bottom: 80px
@@ -66,6 +88,7 @@
   .last-section
     position: relative
     padding-bottom: 57px
+    background-size: cover!important
 
     &:before
       content: ""
