@@ -1,6 +1,7 @@
 .service-block
   margin-top: 80px
   margin-bottom: 80px
+
   .service-list
     margin: 0
     padding: 0
@@ -9,16 +10,20 @@
       list-style: none
       margin-bottom: 42px
       transition: all .3s
+
       &:hover
         background: #009160
         border-radius: 2px
+
         .img-block
-          background-color: #00BB7C!important
+          background-color: #00BB7C !important
+
         a,
         .title
-          color: #fff!important
+          color: #fff !important
+
         svg path
-          fill: #fff!important
+          fill: #fff !important
 
       .item-wrap
         padding: 16px 0
@@ -45,13 +50,63 @@
           color: #000
           font-size: 0.9333rem
           transition: all .3s
+
           &:hover
             color: #009160
 
 
           svg
             margin-left: 11px
+
             path
               transition: all .3s
 
+.bottom-doc-block
+  width: 100%
 
+  .block-title
+    cursor: pointer
+    background: #009160
+    font-weight: 600
+    font-size: 1.3333rem
+    color: #FFFFFF
+    padding: 19px
+    width: 100%
+
+    span
+      padding-right: 10px
+    .icon
+      transition: all .3s
+      transform: rotateZ(0deg)
+    &.active
+      .icon
+        transform: rotateZ(180deg)
+
+  .content-doc
+    display: none
+    padding: 20px
+    background: #fff
+    ul
+      margin: 0
+      padding: 0
+      li
+        list-style: none
+        margin-bottom: 20px
+        a
+          text-decoration: none
+          font-size: 1rem
+          color: #000
+          transition: all .3s
+          &:hover
+            text-decoration: none
+            color: #009160
+
+        img
+          padding-right: 20px
+          height: 20px
+
+
+
+
+    &.active
+      display: block

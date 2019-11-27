@@ -5,7 +5,6 @@ import Title from "../../components/elements/Title";
 import Footer from "../../components/layouts/footer/footer";
 import ServiceStepItem from "../../components/layouts/ServiceBlock/ServiceStepItem";
 import ServiceLastItem from "../../components/layouts/ServiceBlock/ServiceLastItem";
-import PartListItem from "../../components/layouts/ServiceBlock/Part/PartListItem";
 import React from "react";
 import {getServiceBySlug} from '../../components/api/service/service';
 import {Container, Row} from "reactstrap";
@@ -13,35 +12,45 @@ import ReactHtmlParser from 'react-html-parser';
 import "./service.sass";
 import FeedbackBlock from "../../components/layouts/FeedbackBlock/FeedbackBlock";
 import MapBlock from "../../components/layouts/MapBlock/MapBlock";
+import PartBlock from "../../components/layouts/ServiceBlock/Part/PartBlock";
+import DocBlock from "../../components/layouts/ServiceBlock/Part/DocBlock";
 
 
 class ServicePost extends React.Component {
     constructor(props) {
         super(props);
         const item = this.props.post[0];
-        // console.log(item.acf.parts[0]);
+        console.log(item);
         this.state = {
             item: item,
-            itemContent: item.acf.parts[0]
+            itemContent: item.acf.parts[0],
+            currentIndex: 0,
+            openClass: false,
+            itemDocs:  item.acf.parts[0].docs
         };
+
+        this.HandleClick = this.HandleClick.bind(this);
     }
     //
-    // HandleClick = index => {
+    //  Event click by element in left block
     //
-    //     console.log(index);
-    //     // this.setState({
-    //     //     itemContent: this.state.item.acf.parts[index]
-    //     // });
-    // };
     HandleClick(e) {
-        alert(e.target);
+        this.setState({
+            itemContent: this.state.item.acf.parts[e],
+            currentIndex: e,
+            openClass: false,
+            itemDocs: this.state.item.acf.parts[e].docs
+        });
     }
 
     render() {
 
         const {
             item,
-            itemContent
+            itemContent,
+            currentIndex,
+            itemDocs,
+            openClass
         } = this.state;
 
         let listBread = [{'key': 1, 'href': '/service', 'title': 'Услуги'}, {
@@ -56,7 +65,6 @@ class ServicePost extends React.Component {
         let styleLast = {
             backgroundImage: `url(${item.acf.imageBgLast})`
         };
-
 
         return (
             <div className="service-single-page">
@@ -84,24 +92,23 @@ class ServicePost extends React.Component {
                                     <div className="content" style={stylePart}>
                                         <div className="part-block-wrapper d-flex w-100">
                                             <div className="first col-md-6 col-12">
-                                                <ul className="lists-parts">
-                                                    {
-                                                        item.acf.parts.map((item, index) => (
-                                                            <PartListItem
-                                                                key={index}
-                                                                title={item.title}
-                                                                onClick={this.HandleClick}
-                                                                counter={index}
-                                                            />
-                                                        ))
-                                                    }
-                                                </ul>
+                                                <PartBlock
+                                                    items={item.acf.parts}
+                                                    current={currentIndex}
+                                                    onClick={this.HandleClick}
+                                                />
                                             </div>
                                             <div className="second col-md-6 col-12">
                                                 {ReactHtmlParser(itemContent.text)}
                                             </div>
                                         </div>
                                     </div>
+
+                                   <DocBlock
+                                       openClass={openClass}
+                                       items={itemDocs}
+                                   />
+
                                 </Row>
                             </Container>
                         </section>
