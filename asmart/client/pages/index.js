@@ -22,7 +22,7 @@ const InfoBlock = dynamic(() => import('../components/layouts/InfoBlock/InfoBloc
 const NewsBlock = dynamic(() => import('../components/layouts/NewsBlock/NewsBlock'));
 
 const Home = () => (
-    <div className="main-wrap">
+    <div id="main-wrap" className="main-wrap">
         <Header title="Главная"/>
         <HomeSlider/>
         <ServiceBlock/>

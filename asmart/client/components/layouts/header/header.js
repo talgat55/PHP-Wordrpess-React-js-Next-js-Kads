@@ -4,6 +4,7 @@ import Navigation from '../../navigation/nav';
 import Logo from '../../elements/logo-block';
 import PhoneBlock from '../../elements/phone-block';
 import CallBlock from '../../elements/call-block';
+import MobileMenu from '../../elements/MobileMenu';
 import {Col, Container, Row} from 'reactstrap';
 import "./style.sass";
 
@@ -17,6 +18,7 @@ const Header = ({title}) => {
                     href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&display=swap&subset=cyrillic"
                     rel="stylesheet"/>
             </Head>
+            <MobileMenu/>
             <header>
                 <Container>
                     <Row>
@@ -27,12 +29,7 @@ const Header = ({title}) => {
                             <div className="top d-flex justify-content-end  align-items-center">
                                 <PhoneBlock/>
                                 <CallBlock/>
-                                <a id="mobile-toggle" href="#menu"
-                                   className="mobile-toggle hamburger hamburger--collapse hamburger--3dx  ">
-                                 <span className="hamburger-box">
-                                     <span className="hamburger-inner"></span>
-                                 </span>
-                                </a>
+
                             </div>
                             <div className="bottom">
                                 <Navigation/>

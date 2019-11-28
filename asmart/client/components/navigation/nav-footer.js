@@ -1,28 +1,17 @@
 import React from 'react';
-import axios from 'axios';
 import ListItem from './Listitem';
 import "./nav-footer.sass";
-
+import {getMenu} from "../api/menu/top-menu";
 class Nav extends React.Component {
     state = {
         menu: []
     };
-
     componentDidMount() {
         let currentComponent = this;
-        axios.get('http://localhost:6080/wp-json/menus/v1/menus/top_menu')
-            .then(function (response) {
-                // handle success
-                // console.log(response.data.items);
-                currentComponent.setState({menu: response.data.items})
-            })
-            .catch(function (error) {
-                // handle error
-                console.log(error);
-            })
-            .finally(function () {
-                // always executed
-            });
+        const lasts =   getMenu();
+        lasts.then((resolve) =>{
+            currentComponent.setState({menu: resolve.items});
+        });
 
     }
 

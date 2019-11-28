@@ -18,17 +18,38 @@ footer
     color: #373737
     text-align: right
     margin-top: 25px
+
     span
       color: #9ACA42
+
     &:hover
       color: #009160
 
 
+@media (max-width: 993px)
+  footer
+    .first
+      display: flex
+      margin-bottom: 25px
+      justify-content: space-between
 
+    .footer-navigation
+      text-align: center
+      margin-bottom: 20px
 
+    .bottom-copyright
+      text-align: center
 
+@media (max-width: 600px)
+  footer
+    .footer-navigation
+      column-count: 2
 
+    .third
+      >  div:first-child
+        flex-direction: column
 
-
+      .phone-block
+        margin-bottom: 25px
 
 

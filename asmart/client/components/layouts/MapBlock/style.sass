@@ -1,9 +1,11 @@
 .map-block
   position: relative
   height: 465px
+
   .sub-title
     margin-top: 56px
     margin-bottom: 53px
+
   .col
     position: absolute
     left: 0
@@ -41,6 +43,7 @@
           border: 1px solid #DFE2E2
           border-radius: 5px
           display: inline-block
+          width: 535px
 
           .line
             margin-bottom: 10px
@@ -71,3 +74,36 @@
     left: 0
     width: 100%
     height: 465px
+
+
+@media (max-width: 1200px)
+  .map-block
+    .content
+      .info
+        .list-contacts
+          li
+            width: auto
+
+@media (max-width: 993px)
+  .map-block
+    height: auto
+
+    .content
+      &::before
+        display: none
+
+      .info
+        .list-contacts
+          li
+            min-width: 100%
+
+    .sub-title
+      margin-top: 56px
+      margin-bottom: 53px
+
+    .col
+      position: relative
+      left: 0
+
+    .map-full
+      position: relative

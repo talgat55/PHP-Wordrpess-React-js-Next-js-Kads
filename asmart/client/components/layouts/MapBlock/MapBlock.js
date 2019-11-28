@@ -18,15 +18,14 @@ const MapBlock = () => {
         },
         {
             'id': 2,
-            'geo': 'с. Троицкое, ул. Октябрьская, 1а, офис 11, 1-й этаж ',
+            'geo': '10 лет октября 136',
             'phones': [
-                '+7 (3812) 35-35-85',
-                '+7 (3812) 28-02-31'
+                '666-136',
+                '280-231'
             ],
-            'workTime': 'Пн-чт: с 8:30 до 17:00,  пт: с 8:30 до 16:00 (обед: с 12:30 до 13:30)'
+            'workTime': 'пн-чт 9-18, пт 9-17 без обеда'
         }
     ];
-
 
     return (
         <section className="map-block">
@@ -51,7 +50,7 @@ const MapBlock = () => {
                     </Col>
                     <Col>
                         <YMaps>
-                            <Map defaultState={{center: [54.924714, 73.321528], zoom: 11}} className="map-full"
+                            <Map defaultState={{center: [54.985132, 73.398098], zoom: 13}} className="map-full"
                                  width="100%" height="465px">
                                 <Placemark
                                     options={{
@@ -68,7 +67,7 @@ const MapBlock = () => {
                                         iconImageOffset: [-13, -36],
                                         iconImageHref :"http://localhost:3000/static/marker.png"
                                     }}
-                                    defaultGeometry={[54.856377, 73.296104]}/>
+                                    defaultGeometry={[54.985323, 73.413236]}/>
                             </Map>
                         </YMaps>
                     </Col>

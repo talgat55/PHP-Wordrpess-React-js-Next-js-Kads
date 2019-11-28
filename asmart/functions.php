@@ -238,3 +238,34 @@ if (function_exists('acf_add_options_page')) {
 
 
 }
+
+
+add_filter('rest_endpoints', function ($routes) {
+    foreach (array('teams') as $type) {
+        if (!($route =& $routes['/wp/v2/' . $type])) {
+            continue;
+        }
+
+        // Allow ordering by meta values
+        $route[0]['args']['orderby']['enum'][] = 'custom_sort';
+
+        // Allow only specific meta keys
+        $route[0]['args']['meta_key'] = array(
+            'description'       => 'The meta key to query.',
+            'type'              => 'string',
+            'enum'              => ['custom_sort'],
+            'validate_callback' => 'rest_validate_request_arg',
+        );
+    }
+    return $routes;
+}, 10, 1);
+
+// Manipulate query
+add_filter('rest_teams_query', function ($args, $request) {
+    $order_key = $request->get_param('orderby');
+    if (!empty($order_key) && $order_key === 'custom_sort') {
+        $args['meta_key'] = $order_key;
+    }
+
+    return $args;
+}, 10, 2);

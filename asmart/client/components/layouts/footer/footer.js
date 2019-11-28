@@ -11,17 +11,17 @@ const Footer = () => {
         <footer>
             <Container>
                 <Row className=" w-100 align-items-center">
-                    <div className="col-lg-2  col-md-12 text-center">
+                    <div className="col-lg-2  col-md-12 text-center first">
                         <Logo/>
                         <a href="#" className="link-requisites">
                             Реквизиты компании
                         </a>
                     </div>
-                    <div className="col-lg-5 col-md-12">
+                    <div className="second col-lg-5 col-md-12">
                         <Navigation/>
                     </div>
-                    <div className="col-lg-5 col-md-12">
-                        <div className=" d-flex justify-content-end  align-items-center">
+                    <div className="third col-lg-5 col-md-12">
+                        <div className=" d-flex justify-content-lg-end   justify-content-sm-center  align-items-center">
                             <PhoneBlock/>
                             <CallBlock/>
                         </div>

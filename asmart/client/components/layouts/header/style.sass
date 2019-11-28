@@ -26,6 +26,9 @@ header
           font-size: 1.0667rem
           padding: 0 5px
           transition: all .3s
+          &:focus
+            outline: none
+
           &:hover
             color: #009160
 
@@ -34,97 +37,57 @@ header
         a
           padding-right: 0
 
-#mobile-toggle
+
+.bm-burger-button
   display: none
-  transition: all .6s
-  z-index: 999
-.hamburger-box
-  position: relative
-  display: inline-block
-  width: 40px
+  position: fixed
+  width: 36px
+  height: 30px
+  right: 23px
+  top: 47px
+
+.bm-burger-bars
+  background: #373a47
+
+.bm-burger-bars-hover
+  background: #a90000
+
+.bm-cross-button
   height: 24px
+  width: 24px
+
+.bm-cross
+  background: #bdc3c7
 
 
-.hamburger-inner
-  display: block
-  top: 50%
-  margin-top: -2px
+.bm-menu-wrap
+  position: fixed
+  height: 100%
 
+.bm-menu
+  background: #373a47
+  padding: 2.5em 1.5em 0
+  font-size: 1.15em
 
-.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after
-  width: 40px
-  height: 4px
-  background-color: #333
-  border-radius: 4px
-  position: absolute
-  transition-property: transform
-  transition-duration: 0.15s
-  transition-timing-function: ease
+.bm-morph-shape
+  fill: #373a47
 
+.bm-item-list
+  color: #b8b7ad
+  padding: 0.8em
+.bm-item
+  display: inline-block
+  color: #fff
+  text-decoaration: none
 
-.hamburger-inner::before, .hamburger-inner::after
-  content: ""
-  display: block
+  &:active,
+  &:focus
+    outline: none
+    color:  #fff
+    text-decoration: none
 
-
-.hamburger-inner::before
-  top: -10px
-
-
-.hamburger-inner::after
-  bottom: -10px
-
-
-.hamburger
-  padding: 15px 0px
-  display: none
-  cursor: pointer
-  transition-property: opacity, filter
-  transition-duration: 0.15s
-  transition-timing-function: linear
-  font: inherit
-  color: inherit
-  text-transform: none
-  background-color: transparent
-  border: 0
-  margin: 0
-  overflow: visible
-  position: absolute
-  right: 20px
-  cursor: pointer
-  z-index: 99999
-
-.hamburger:hover
-  opacity: 0.7
-
-.hamburger.is-active:hover
-  opacity: 0.7
-
-.hamburger-inner, .hamburger-inner::after,
-.hamburger-inner::before
-  background-color: #333
-.hamburger.is-active .hamburger-inner,
-.hamburger.is-active .hamburger-inner::before,
-.hamburger.is-active .hamburger-inner::after
-  background-color: #000
-
-.hamburger--3dx .hamburger-box
-  perspective: 80px
-
-.hamburger--3dx .hamburger-inner
-  transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1)
-.hamburger--3dx .hamburger-inner::before,
-.hamburger--3dx .hamburger-inner::after
-  transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1)
-
-.hamburger--3dx.is-active .hamburger-inner
-  background-color: transparent !important
-  transform: rotateY(180deg)
-.hamburger--3dx.is-active .hamburger-inner::before
-  transform: translate3d(0, 10px, 0) rotate(45deg)
-.hamburger--3dx.is-active .hamburger-inner::after
-  transform: translate3d(0, -10px, 0) rotate(-45deg)
-
+.bm-overlay
+  background: rgba(0, 0, 0, 0.3)
 
 @media (max-width: 1200px)
   .logo
@@ -157,7 +120,7 @@ header
         height: auto
     .top
       padding: 0
-
+  .bm-burger-button,
   #mobile-toggle
     display: block!important
 

@@ -1,8 +1,8 @@
 .feedback-block
-  padding: 46px 0  58px
-  background:  url("/static/feedback-bg.jpg")
-  background-repeat: no-repeat!important
-  background-size: cover!important
+  padding: 46px 0 58px
+  background: url("/static/feedback-bg.jpg")
+  background-repeat: no-repeat !important
+  background-size: cover !important
 
   .form-feedback
     width: 715px
@@ -19,6 +19,7 @@
       font-size: 1.0667rem
       color: #fff
       margin-bottom: 41px
+
     .form-group
       svg
         position: absolute
@@ -29,10 +30,11 @@
       input
         color: #656565
         font-size: 0.9333rem
-        padding: 20px 10px  20px 40px
+        padding: 20px 10px 20px 40px
         background: #FFFFFF
         border-radius: 5px
         border: none
+
         &:active,
         &:focus
           outline: none
@@ -51,9 +53,22 @@
         border: none
         width: 180px
         transition: all .3s
+
         &:hover
           background: #313131
 
+
+@media (max-width: 993px)
+  .feedback-block
+    input
+      margin-bottom: 20px
+
+    .form-feedback
+      width: 100%
+
+      .form-group
+        button
+          width: 100%
 
 
 
