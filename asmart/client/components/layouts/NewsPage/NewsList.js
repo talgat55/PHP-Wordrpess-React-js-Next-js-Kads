@@ -16,7 +16,7 @@ const NewsList = ({posts}) => {
                                 image={item.acf.image}
                                 anons={item.acf.anons}
                                 date={item.date}
-                                elementClass="col-lg-6  col-md-6 col-xs-12 col-12"
+                                elementClass="col-xl-6 col-lg-12  col-md-12 col-xs-12 col-12"
                             />
                         ))}
                     </Row>

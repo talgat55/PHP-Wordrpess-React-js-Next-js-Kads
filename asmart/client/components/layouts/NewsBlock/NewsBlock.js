@@ -5,22 +5,25 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './style.sass';
-import {getLastNews } from '../../api/posts/posts';
+import {getLastNews} from '../../api/posts/posts';
 
 class NewsBlock extends React.Component {
     constructor(props) {
         super(props);
     }
+
     state = {
         items: []
     };
+
     componentDidMount() {
         let currentComponent = this;
-        const lasts =   getLastNews();
-        lasts.then((resolve) =>{
+        const lasts = getLastNews();
+        lasts.then((resolve) => {
             currentComponent.setState({items: resolve});
         });
     }
+
     render() {
         const {items} = this.state;
         var settings = {
@@ -64,20 +67,38 @@ class NewsBlock extends React.Component {
                     <Row>
                         <Col>
                             <h2 className="sub-title">
-                                { this.props.title}
+                                {this.props.title}
                             </h2>
-                                <Slider {...settings}>
-                                    {items.map(item => (
-                                        <NewsItem
-                                            key={item.id}
-                                            title={item.title.rendered}
-                                            link={item.slug}
-                                            image={ item.acf.image}
-                                            anons={ item.acf.anons}
-                                            date={ item.date}
-                                        />
-                                    ))}
-                                </Slider>
+                            <Slider {...settings}>
+                                {items.map(item => {
+                                        return this.props.exclude ?
+                                            (this.props.exclude != item.slug ?
+
+                                                    (<NewsItem
+                                                        key={item.id}
+                                                        title={item.title.rendered}
+                                                        link={item.slug}
+                                                        image={item.acf.image}
+                                                        anons={item.acf.anons}
+                                                        date={item.date}
+                                                    />)
+                                                    :
+                                                    ''
+                                            )
+                                            :
+                                            (<NewsItem
+                                                key={item.id}
+                                                title={item.title.rendered}
+                                                link={item.slug}
+                                                image={item.acf.image}
+                                                anons={item.acf.anons}
+                                                date={item.date}
+                                            />)
+                                            ;
+
+                                    }
+                                )}
+                            </Slider>
                         </Col>
                     </Row>
                 </Container>

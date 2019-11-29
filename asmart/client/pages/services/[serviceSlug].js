@@ -20,7 +20,7 @@ class ServicePost extends React.Component {
     constructor(props) {
         super(props);
         const item = this.props.post[0];
-        console.log(item);
+        // console.log(item);
         this.state = {
             item: item,
             itemContent: item.acf.parts[0],
@@ -67,7 +67,7 @@ class ServicePost extends React.Component {
         };
 
         return (
-            <div className="service-single-page">
+            <div  id="main-wrap"   className="main-wrap  service-single-page">
                 <Header title={item.title.rendered}/>
                 <Hero
                     breadscrumb={<Breadcrumb items={listBread}/>}

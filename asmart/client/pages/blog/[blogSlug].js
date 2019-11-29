@@ -15,8 +15,8 @@ import NewsBlock from "../../components/layouts/NewsBlock/NewsBlock";
 const Post = ({post}) => {
     // Render post title and content in the page from props
     const  item =  post[0];
-    console.log(post);
     let listBread = [{'href': '/blog', 'title': 'Новости' } , { 'href' : '','title' : item.title.rendered}];
+
 
     return (
         <div className="post-single-page">
@@ -37,10 +37,8 @@ const Post = ({post}) => {
                         <div className="content">
                             {ReactHtmlParser(item.content.rendered)}
                         </div>
-                        <div className="last-news-block">
 
-                        </div>
-                        <NewsBlock title="Последние новости"/>
+                        <NewsBlock title="Последние новости"  exclude={item.slug}/>
                     </Row>
                 </Container>
                 <FeedbackBlock/>

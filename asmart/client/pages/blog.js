@@ -11,7 +11,7 @@ const Blog = ({posts}) => {
     const titlePage = 'Новости';
     let listBread = [{'href': 'blog', 'title': titlePage}];
     return (
-        <>
+        <div id="main-wrap" className="main-wrap blog-page">
             <Header title={titlePage}/>
             <Hero
                 breadscrumb={<Breadcrumb items={listBread}/>}
@@ -21,7 +21,7 @@ const Blog = ({posts}) => {
             </Hero>
             <NewsList posts={posts}/>
             <Footer/>
-        </>
+        </div>
     )
 };
 

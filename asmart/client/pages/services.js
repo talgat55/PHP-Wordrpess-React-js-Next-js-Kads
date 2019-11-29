@@ -1,7 +1,6 @@
 import React from 'react';
 import Header from "../components/layouts/header/header";
 import Footer from "../components/layouts/footer/footer";
-import NewsList from "../components/layouts/NewsPage/NewsList";
 import {getServicesForPage} from '../components/api/service/service';
 import Hero from "../components/elements/Hero";
 import Title from "../components/elements/Title";
@@ -13,7 +12,7 @@ const Blog = ({posts}) => {
     const titlePage = 'Услуги';
     let listBread = [{'href': 'services', 'title': titlePage}];
     return (
-        <>
+        <div id="main-wrap" className="main-wrap services-page">
             <Header title={titlePage}/>
             <Hero
                 breadscrumb={<Breadcrumb items={listBread}/>}
@@ -31,7 +30,7 @@ const Blog = ({posts}) => {
                                         key={item.id}
                                         title={item.title.rendered}
                                         link={item.slug}
-                                        image={ item.acf.image}
+                                        image={item.acf.image}
                                     />
                                 ))}
                             </ul>
@@ -42,7 +41,7 @@ const Blog = ({posts}) => {
                 </Container>
             </section>
             <Footer/>
-        </>
+        </div>
     )
 };
 

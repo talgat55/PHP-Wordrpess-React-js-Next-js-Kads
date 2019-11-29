@@ -109,6 +109,25 @@
     .item
       margin-bottom: 30px
 
+.post-single-page
+  .single-post
+    .news-block
+      width: 100%
+
+    .date-block
+      img
+        padding-right: 15px
+
+
+@media (max-width: 1200px)
+  .blog-page
+    .news-list
+      > .row
+        flex-direction: column
+        .text
+          width: auto
+          text-align: center
+          margin-top: 20px
 
 @media (max-width: 993px)
   .news-block
@@ -116,8 +135,12 @@
       width: 80%
       margin: 0 auto
 
+      .text
+        margin-top: 10px
 
-
+  .post-single-page
+    .sub-title.single-post
+      font-size: 1.5rem
 
 @media (max-width: 768px)
   .news-block
@@ -127,3 +150,8 @@
       display: flex
       flex-direction: column
       justify-content: center
+
+  .post-single-page
+    .single-post
+      .row
+        margin: 0!important

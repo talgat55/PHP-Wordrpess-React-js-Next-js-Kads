@@ -70,6 +70,8 @@
           .counter
             width: 26px
             height: 26px
+            min-width: 26px
+            min-height: 26px
             margin-right: 26px
             background: #009160
             border-radius: 50%
@@ -125,4 +127,15 @@
           margin-left: 20px
 
 
+@media (max-width: 768px)
+  .service-single-page
+    .steps-section
+      .lists-steps
+        li
+          .item-wrap
+            width: auto!important
 
+    .last-section
+      .lists-steps
+        .item
+          width: 100%!important
