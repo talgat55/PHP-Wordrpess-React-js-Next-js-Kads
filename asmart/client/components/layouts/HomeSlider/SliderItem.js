@@ -20,7 +20,8 @@ const SliderItem = ({key, title, text, urlVideo, items, current}) => {
                             <a href="#" className="link-order-new">
                                 Заказать услугу
                             </a>
-                            <a href="#" className="link-show-video d-flex align-items-center">
+
+                            <a href={urlVideo}  target="_blank" className="link-show-video d-flex align-items-center">
                                 <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path
