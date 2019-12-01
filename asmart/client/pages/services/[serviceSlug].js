@@ -20,17 +20,17 @@ class ServicePost extends React.Component {
     constructor(props) {
         super(props);
         const item = this.props.post[0];
-        // console.log(item);
         this.state = {
             item: item,
-            itemContent: item.acf.parts[0],
+            itemContent: item.acf.parts ? item.acf.parts[0] : '',
             currentIndex: 0,
             openClass: false,
-            itemDocs:  item.acf.parts[0].docs
+            itemDocs: item.acf.parts ? item.acf.parts[0].docs ? item.acf.parts[0].docs : '' : ''
         };
 
         this.HandleClick = this.HandleClick.bind(this);
     }
+
     //
     //  Event click by element in left block
     //
@@ -53,21 +53,21 @@ class ServicePost extends React.Component {
             openClass
         } = this.state;
 
-        let listBread = [{'key': 1, 'href': '/service', 'title': 'Услуги'}, {
+        let listBread = [{'key': 1, 'href': '/services', 'title': 'Услуги'}, {
             'key': 2,
             'href': '',
             'title': item.title.rendered
         }];
 
         let stylePart = {
-            backgroundImage: `url(${item.acf.imageBgPart})`
+            backgroundImage: `url(${item.acf.imageBgPart ? item.acf.imageBgPart : ''})`
         };
         let styleLast = {
-            backgroundImage: `url(${item.acf.imageBgLast})`
+            backgroundImage: `url(${item.acf.imageBgLast ? item.acf.imageBgLast : ''})`
         };
 
         return (
-            <div  id="main-wrap"   className="main-wrap  service-single-page">
+            <div id="main-wrap" className="main-wrap  service-single-page">
                 <Header title={item.title.rendered}/>
                 <Hero
                     breadscrumb={<Breadcrumb items={listBread}/>}
@@ -104,10 +104,10 @@ class ServicePost extends React.Component {
                                         </div>
                                     </div>
 
-                                   <DocBlock
-                                       openClass={openClass}
-                                       items={itemDocs}
-                                   />
+                                    <DocBlock
+                                        openClass={openClass}
+                                        items={itemDocs}
+                                    />
 
                                 </Row>
                             </Container>
@@ -118,22 +118,25 @@ class ServicePost extends React.Component {
                     <Container>
                         <Row>
                             <div className="content w-100">
-                                <h2 className="text-center">
-                                    Этапы работы
-                                </h2>
+
                                 {
                                     item.acf.steps && (
-                                        <ul className="lists-steps d-flex justify-content-center">
-                                            {
-                                                item.acf.steps.map((item, index) => (
-                                                    <ServiceStepItem
-                                                        key={index}
-                                                        counter={index}
-                                                        title={item.title}
-                                                    />
-                                                ))
-                                            }
-                                        </ul>
+                                        <>
+                                            <h2 className="text-center">
+                                                Этапы работы
+                                            </h2>
+                                            <ul className="lists-steps d-flex justify-content-center">
+                                                {
+                                                    item.acf.steps.map((item, index) => (
+                                                        <ServiceStepItem
+                                                            key={index}
+                                                            counter={index}
+                                                            title={item.title}
+                                                        />
+                                                    ))
+                                                }
+                                            </ul>
+                                        </>
                                     )
                                 }
                             </div>

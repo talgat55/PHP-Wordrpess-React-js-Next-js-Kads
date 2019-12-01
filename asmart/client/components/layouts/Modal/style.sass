@@ -1,0 +1,51 @@
+.custom-modal-wrapper
+  position: fixed
+  z-index: 9999
+  align-items: center
+  justify-content: center
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  display: flex
+  transition: all .3s
+  opacity: 0
+  visibility: hidden
+  &.active
+    opacity: 1
+    visibility: visible
+  .custom-modal
+    width: 522px
+    background-color: #fff
+    padding: 60px 70px
+    .close-modal
+      position: absolute
+      right: 10px
+      top: 10px
+      transition: all .3s
+
+      &:hover
+        opacity: .5
+
+    h3
+      margin-top: 0
+      white-space: nowrap
+      font-size: 20px
+      color: #000000
+      margin-bottom: 34px
+
+    input
+      margin-bottom: 20px
+
+    .btn-secondary
+      display: block
+      width: 100%
+      background: #009160
+      border-radius: 2px
+      border: none
+      font-weight: 600
+      font-size: 1.0667rem
+      padding: 10px
+      transition: all .3s
+      &:hover
+        opacity: .5
