@@ -8,6 +8,7 @@ import MobileMenu from '../../elements/MobileMenu';
 import {Col, Container, Row} from 'reactstrap';
 import "./style.sass";
 
+
 const Header = ({title}) => {
     return (
         <>
@@ -42,6 +43,5 @@ const Header = ({title}) => {
     );
 };
 
-export default Header
-
+export default Header;
 

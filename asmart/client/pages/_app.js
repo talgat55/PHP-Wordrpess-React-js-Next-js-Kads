@@ -1,17 +1,12 @@
 import React from "react";
-import {createStore} from "redux";
+import {applyMiddleware, createStore} from "redux";
 import {Provider} from "react-redux";
 import App from "next/app";
 import withRedux from "next-redux-wrapper";
+import thunk from 'redux-thunk';
+import {composeWithDevTools} from 'redux-devtools-extension';
+import rootReducer from '../reducers/rootReducer';
 
-const reducer = (state = {foo: ''}, action) => {
-    switch (action.type) {
-        case 'FOO':
-            return {...state, foo: action.payload};
-        default:
-            return state
-    }
-};
 
 /**
  * @param {object} initialState
@@ -22,7 +17,11 @@ const reducer = (state = {foo: ''}, action) => {
  * @param {string} options.storeKey This key will be used to preserve store in global namespace for safe HMR
  */
 const makeStore = (initialState, options) => {
-    return createStore(reducer, initialState);
+    return createStore(rootReducer,
+        composeWithDevTools(
+            applyMiddleware(thunk)
+        )
+    );
 };
 
 class MyApp extends App {
