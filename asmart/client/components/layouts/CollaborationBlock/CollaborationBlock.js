@@ -33,7 +33,7 @@ const CollaborationBlock = () => {
         }
     ];
     return (
-        <section className="collaboration-block">
+        <section  id="collaboration" className="collaboration-block">
             <Container>
                 <Row>
                     <Col lg="12">

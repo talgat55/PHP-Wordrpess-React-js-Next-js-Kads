@@ -56,7 +56,7 @@ class ReviewsBlock extends React.Component {
             ]
         };
         return (
-            <section className="reviews-block">
+            <section  id="reviews" className="reviews-block">
                 <Container>
                     <Row>
                         <Col>
