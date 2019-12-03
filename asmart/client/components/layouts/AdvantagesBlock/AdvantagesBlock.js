@@ -1,6 +1,7 @@
 import React from 'react';
 import {Col, Container, Row} from "reactstrap";
 import './style.sass';
+import ReactHtmlParser from 'react-html-parser';
 const AdvantagesBlock = () => {
     const items = [
         {
@@ -24,7 +25,7 @@ const AdvantagesBlock = () => {
         ,
         {
             id: '5',
-            title: 'Работа “под ключ” Стоять в очередях и отвечать на непонятные вопросы:  все берем на себя!'
+            title: 'Работа “под ключ” <br/>Стоять в очередях и отвечать на непонятные вопросы:  все берем на себя!'
         }
     ];
 
@@ -45,7 +46,7 @@ const AdvantagesBlock = () => {
                                             <img src={`/static/advantages${item.id}.png`} alt="иконка" />
                                         </div>
                                     <h3 className="title">
-                                        {item.title}
+                                        {ReactHtmlParser(item.title)}
                                     </h3>
                                 </li>
                             ))}
