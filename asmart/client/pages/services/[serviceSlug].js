@@ -20,6 +20,7 @@ class ServicePost extends React.Component {
     constructor(props) {
         super(props);
         const item = this.props.post[0];
+
         this.state = {
             item: item,
             itemContent: item.acf.parts ? item.acf.parts[0] : '',

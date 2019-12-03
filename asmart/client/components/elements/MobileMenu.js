@@ -18,9 +18,10 @@ export default class MobileMenu extends React.Component {
     render () {
 
         return (
-            <Menu> 
-                {this.state.menu.map(item => (
-                        <a id={item.ID} className="menu-item"  href={item.url}>{item.title}</a>
+
+            <Menu>
+                {this.state.menu.map((item, index) => (
+                        <a key={index} id={item.ID} className="menu-item"  href={item.url}>{item.title}</a>
                 ))}
             </Menu>
 

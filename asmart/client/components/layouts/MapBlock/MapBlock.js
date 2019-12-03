@@ -57,7 +57,7 @@ const MapBlock = () => {
                                         iconLayout: 'default#image',
                                         iconImageSize: [27, 36],
                                         iconImageOffset: [-13, -36],
-                                        iconImageHref :"http://localhost:3000/static/marker.png"
+                                        iconImageHref :"http://kadastr.lightxdesign.ru:3000/static/marker.png"
                                     }}
                                      defaultGeometry={[54.984496, 73.426252]}/>
                                 <Placemark
@@ -65,7 +65,7 @@ const MapBlock = () => {
                                         iconLayout: 'default#image',
                                         iconImageSize: [27, 36],
                                         iconImageOffset: [-13, -36],
-                                        iconImageHref :"http://localhost:3000/static/marker.png"
+                                        iconImageHref :"http://kadastr.lightxdesign.ru:3000/static/marker.png"
                                     }}
                                     defaultGeometry={[54.985323, 73.413236]}/>
                             </Map>

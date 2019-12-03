@@ -11,6 +11,7 @@ const DocBlock = ({openClass, items}) => {
 
     return (
         <div className="bottom-doc-block">
+
             <div className={cx('block-title d-flex justify-content-center', {active: toggleClass})}
                  onClick={toggleElement}>
                 <span>Посмотреть необходимые документы</span>
@@ -23,7 +24,7 @@ const DocBlock = ({openClass, items}) => {
             </div>
             <div className={cx('content-doc', {active: toggleClass})}>
                 <ul>
-                    {items.map(item => (
+                    { items && items.map(item => (
                         <li key={item.file.ID}>
                             <a href={item.file.url} className="d-flex w-100 align-items-center">
                                 <img src={item.file.icon} alt="иконка"/>
