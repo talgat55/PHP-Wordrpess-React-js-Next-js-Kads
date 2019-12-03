@@ -11,6 +11,7 @@
   transition: all .3s
   opacity: 0
   visibility: hidden
+
   &.success
     .content
       text-align: center
@@ -53,3 +54,15 @@
       transition: all .3s
       &:hover
         opacity: .5
+
+  .form-feedback
+    &.service-modal
+      > .form-group
+        flex-direction: column
+        .position-relative
+          width: 100%
+
+@media (max-width: 768px)
+  .custom-modal-wrapper
+    .custom-modal
+      width: 100%

@@ -269,3 +269,17 @@ add_filter('rest_teams_query', function ($args, $request) {
 
     return $args;
 }, 10, 2);
+
+
+
+add_action( 'rest_api_init', function () {
+    register_rest_route( 'custom/v1', '/post-count', array(
+        'methods' => 'GET',
+        'callback' => 'countPost',
+    ) );
+} );
+
+
+function countPost() {
+    return wp_count_posts();
+}

@@ -8,6 +8,7 @@ import PhoneBlock from '../../elements/phone-block';
 import Modal from '../Modal/Modal';
 import OverlayLayer from "../../elements/OverlayLayer";
 import ModalSuccess from '../Modal/ModalSuccess';
+import ModalService from '../Modal/ModalService';
 const Footer = () => {
     return (
         <>
@@ -39,6 +40,7 @@ const Footer = () => {
             <Modal/>
             <OverlayLayer/>
             <ModalSuccess/>
+            <ModalService/>
         </>
 
     );
