@@ -7,7 +7,7 @@ import CallBlock from '../../elements/call-block';
 import PhoneBlock from '../../elements/phone-block';
 import Modal from '../Modal/Modal';
 import OverlayLayer from "../../elements/OverlayLayer";
-
+import ModalSuccess from '../Modal/ModalSuccess';
 const Footer = () => {
     return (
         <>
@@ -38,6 +38,7 @@ const Footer = () => {
             </footer>
             <Modal/>
             <OverlayLayer/>
+            <ModalSuccess/>
         </>
 
     );

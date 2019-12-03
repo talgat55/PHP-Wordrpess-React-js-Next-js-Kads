@@ -1,9 +1,12 @@
 import React, {Component} from 'react';
 import {Button, Form, FormGroup, Input} from 'reactstrap';
 import InputMask from 'react-input-mask';
-import {sendFeedbackRequestLinkToUs}  from '../../api/form/form';
+import {sendFeedbackRequestLinkToUs} from '../../api/form/form';
+import {connect} from "react-redux";
+import {ACTIVE_SUCCESS_MODAL_STATE,DEACTIVE_SUCCESS_MODAL_STATE} from '../../../types';
+
 class FormComponent extends Component {
-   state = {
+    state = {
         username: '',
         userphone: '',
         errors: [],
@@ -41,13 +44,13 @@ class FormComponent extends Component {
         if (this.isFormValid()) {
             this.setState({errors: [], loading: true});
 
-            const response =  sendFeedbackRequestLinkToUs('165', {
+            const response = sendFeedbackRequestLinkToUs('165', {
                 username: this.state.username,
                 userphone: this.state.userphone,
             });
-            console.log(response);
-            response.then((resolve) =>{
-                if(resolve.status === "mail_sent"){
+            // console.log(response);
+            response.then((resolve) => {
+                if (resolve.status === "mail_sent") {
                     console.log('true');
                     this.setState({
                         errors: [],
@@ -55,8 +58,13 @@ class FormComponent extends Component {
                         userphone: '',
                         loading: false
                     });
-                }else{
-                    console.log('false');
+                    let $this = this.props;
+                    $this.ChangeStateSuccessModal();
+                    setTimeout(function () {
+                        $this.DisableStateSuccessModal();
+                    }, 2000);
+                } else {
+                    this.setState({errors: [resolve.message], loading: false});
                 }
 
             });
@@ -146,4 +154,25 @@ class FormComponent extends Component {
     }
 }
 
-export default FormComponent;
+const mapStateToProps = state => {
+    return {
+        modal: state.modal
+    };
+};
+const mapDispatchToProps = dispatch => {
+    return {
+        ChangeStateSuccessModal: () => {
+            dispatch({type: ACTIVE_SUCCESS_MODAL_STATE, payload: true})
+        },
+        DisableStateSuccessModal: () => {
+            dispatch({type: DEACTIVE_SUCCESS_MODAL_STATE, payload: false})
+        }
+
+
+    };
+};
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(FormComponent);

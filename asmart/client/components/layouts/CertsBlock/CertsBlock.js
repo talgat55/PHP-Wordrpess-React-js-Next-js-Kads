@@ -75,7 +75,7 @@ class CertsBlock extends React.Component {
             ]
         };
         return (
-            <section className="certs-block">
+            <section id="certs" className="certs-block">
                 <Container>
                     <Row>
                         <Col lg="12">
