@@ -130,6 +130,7 @@ class FormComponent extends Component {
                             mask="+9 (999) 999-99-99"
                             name="userphone"
                             id="phone-input"
+                            className="form-control"
                             placeholder="Ваш телефон"
                             onChange={this.handleChange}
                             value={userphone}
