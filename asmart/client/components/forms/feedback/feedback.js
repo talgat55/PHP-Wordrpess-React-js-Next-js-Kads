@@ -145,8 +145,7 @@ class FormComponent extends Component {
                 <FormGroup>
                     {errors.length > 0 && (
                         < div className="alert alert-primary" role="alert">
-                            <h3>Ошибка</h3>
-                            {this.state.displayErrors(errors)}
+                            {this.displayErrors(errors)}
                         </div>
                     )}
                 </FormGroup>
