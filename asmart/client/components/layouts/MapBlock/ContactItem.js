@@ -1,8 +1,8 @@
 import React from 'react';
-
+import ReactHtmlParser from 'react-html-parser';
 const ContactItem = ({key,geo, phones, workTime}) => {
     return (
-        <li key={key} >
+        <div key={key} className="item-contact" >
             <div  key="1" className="line d-flex  align-items-center">
                 <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -23,11 +23,19 @@ const ContactItem = ({key,geo, phones, workTime}) => {
                 <p>
                     {
                         phones.map((item , index) => {
-                            let phone =  `tel: ${item}` ;
+                            const regex = /(<([^>]+)>)/ig;
+                            const stripPhone = item.replace(regex, '');
+
+                            let phone =  `tel: ${stripPhone}` ;
                             return (
+                                <>
+                                    {
+                                        index === 0 || ', '
+                                    }
                                 <a key={index} href={phone} className="phone-link">
-                                    {item}
+                                    {ReactHtmlParser(item)}
                                 </a>
+                                </>
                             )
                         })
                     }
@@ -42,7 +50,7 @@ const ContactItem = ({key,geo, phones, workTime}) => {
                     {workTime }
                 </p>
             </div>
-        </li>
+        </div>
     );
 };
 export default ContactItem;
