@@ -167,8 +167,9 @@
 
       .info
         .list-contacts
-          li
+          .item-contact
             min-width: 100%
+            width: 100%
 
     .sub-title
       margin-top: 56px
@@ -181,4 +182,15 @@
     .map-full
       position: relative
 
+  .content-map
+    transform: translateX(-50%)
 
+@media (max-width: 600px)
+  .map-block
+    .content-map
+      left: 0
+      transform: none
+      width: 100%
+
+    .map-full
+      padding-top: 40px
