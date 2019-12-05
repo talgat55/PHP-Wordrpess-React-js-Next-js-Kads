@@ -78,6 +78,11 @@ const MapBlock = () => {
     const closeModal = e => {
         e.preventDefault();
         setShowModal('');
+
+        setTimeout(()=>{
+            setPlacemarkImg(' ');
+        },200);
+
     };
     return (
         <section className="map-block">

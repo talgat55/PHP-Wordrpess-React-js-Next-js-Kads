@@ -4,9 +4,14 @@ import {getMenu} from "../api/menu/top-menu";
 
 
 export default class MobileMenu extends React.Component {
-    state = {
-        menu: []
-    };
+    constructor (props) {
+        super(props);
+        this.state = {
+            menu: [],
+            menuOpen: false
+        }
+    }
+
     componentDidMount() {
         let currentComponent = this;
         const lasts =   getMenu();
@@ -15,13 +20,30 @@ export default class MobileMenu extends React.Component {
             // console.log(resolve.items);
         });
     }
+    closeMenu () {
+        this.setState({menuOpen: false})
+    }
+    handleStateChange (state) {
+        this.setState({menuOpen: state.isOpen})
+    }
     render () {
 
         return (
 
-            <Menu>
+            <Menu
+                isOpen={this.state.menuOpen}
+                onStateChange={(state) => this.handleStateChange(state)}
+            >
                 {this.state.menu.map((item, index) => (
-                        <a key={index} id={item.ID} className="menu-item"  href={item.url}>{item.title}</a>
+                        <a
+                            key={index}
+                            id={item.ID}
+                            className="menu-item"
+                            href={item.url}
+                            onClick={() => this.closeMenu()}
+                        >
+                            {item.title}
+                       </a>
                 ))}
             </Menu>
 
