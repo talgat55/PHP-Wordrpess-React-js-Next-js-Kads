@@ -104,11 +104,15 @@ class ServicePost extends React.Component {
                                             </div>
                                         </div>
                                     </div>
+                                    {
+                                        itemDocs && (
+                                            <DocBlock
+                                                openClass={openClass}
+                                                items={itemDocs}
+                                            />
+                                        )
+                                    }
 
-                                    <DocBlock
-                                        openClass={openClass}
-                                        items={itemDocs}
-                                    />
 
                                 </Row>
                             </Container>

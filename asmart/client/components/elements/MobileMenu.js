@@ -34,6 +34,15 @@ export default class MobileMenu extends React.Component {
                 isOpen={this.state.menuOpen}
                 onStateChange={(state) => this.handleStateChange(state)}
             >
+                <a
+                    key="-1"
+                    id="-1"
+                    className="menu-item"
+                    href="/"
+                    onClick={() => this.closeMenu()}
+                >
+                    Главная
+                </a>
                 {this.state.menu.map((item, index) => (
                         <a
                             key={index}

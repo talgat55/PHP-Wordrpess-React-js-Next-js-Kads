@@ -26,7 +26,7 @@ const DocBlock = ({openClass, items}) => {
                 <ul>
                     { items && items.map(item => (
                         <li key={item.file.ID}>
-                            <a href={item.file.url} className="d-flex w-100 align-items-center">
+                            <a  target="_blank" href={item.file.url} className="d-flex w-100 align-items-center">
                                 <img src={item.file.icon} alt="иконка"/>
                                 {item.file.filename}
                             </a>
