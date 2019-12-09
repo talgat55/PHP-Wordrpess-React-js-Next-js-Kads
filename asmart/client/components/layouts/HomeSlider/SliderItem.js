@@ -4,7 +4,7 @@ import ReactHtmlParser from 'react-html-parser';
 import {connect} from "react-redux";
 import {ACTIVE_SERVICE_MODAL_STATE, ACTIVE_OVERLAY_STATE} from "../../../types";
 import VideoPlayer from '../../elements/VideoPlayer';
-const SliderItem = ({key, title, text, urlVideo, items, current, EnableServiceModal}) => {
+const SliderItem = ({key, title, text, urlVideo, items, current, EnableServiceModal,customOnChange}) => {
 
     const ClickEvent = (e) => {
         e.preventDefault();
@@ -15,6 +15,11 @@ const SliderItem = ({key, title, text, urlVideo, items, current, EnableServiceMo
     const onOpenModal = (e) => {
         e.preventDefault();
         setOpen(!open);
+    };
+
+    const clickByNavSlide = e =>{
+        customOnChange(e);
+
     };
     return (
         <div className="item" key={key} data-id={key}>
@@ -57,7 +62,11 @@ const SliderItem = ({key, title, text, urlVideo, items, current, EnableServiceMo
                         <ul className="items-links">
                             {
                                 items.map((item, key) => (
-                                    <li key={key} className={current === key ? 'active' : ''}>
+                                    <li
+                                        key={key}
+                                        className={current === key ? 'active' : ''}
+                                        onClick={ () => clickByNavSlide(key)}
+                                    >
                                         <a href="#" className="item-link" data-id={key}>
                                             {item.title.rendered}
                                         </a>

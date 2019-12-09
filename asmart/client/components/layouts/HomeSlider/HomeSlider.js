@@ -16,9 +16,14 @@ class HomeSlider extends React.Component {
             currentComponent.setState({items: resolve});
         });
     }
+    ChangeSlide = e =>{
+        console.log(e);
+       this.slider.slickGoTo(e);
+    };
     render() {
         const settings = {
             dots: true,
+
             infinite: true,
             arrows: false,
             speed: 500,
@@ -32,7 +37,7 @@ class HomeSlider extends React.Component {
 
         return (
             <section className="home-slider">
-                <Slider {...settings}>
+                <Slider ref={slider => (this.slider = slider)} {...settings}>
                     {items.map(item => (
                         <SliderItem
                             key={item.id}
@@ -41,6 +46,7 @@ class HomeSlider extends React.Component {
                             urlVideo={item.acf.link_video}
                             items={items}
                             current={activeSlide}
+                            customOnChange={this.ChangeSlide}
                         />
                     ))}
                 </Slider>
