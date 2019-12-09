@@ -37,11 +37,7 @@ class ServiceBlock extends React.Component {
                                     />
                                 ))}
                             </ul>
-                            <div className="w-100">
-                                <a href="/services" className="link-to-page">
-                                    Все услуги
-                                </a>
-                            </div>
+
                         </Col>
                     </Row>
                 </Container>

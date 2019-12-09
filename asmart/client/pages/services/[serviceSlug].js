@@ -26,7 +26,10 @@ class ServicePost extends React.Component {
             itemContent: item.acf.parts ? item.acf.parts[0] : '',
             currentIndex: 0,
             openClass: false,
-            itemDocs: item.acf.parts ? item.acf.parts[0].docs ? item.acf.parts[0].docs : '' : ''
+            itemDocs: item.acf.parts ? item.acf.parts[0].docs ? item.acf.parts[0].docs : '' : '',
+            itemSteps: item.acf.parts ? item.acf.parts[0].steps ? item.acf.parts[0].steps : '' : '',
+            itemLastBlock: item.acf.parts ? item.acf.parts[0].steps_last_blocks ? item.acf.parts[0].steps_last_blocks : '' : '',
+
         };
 
         this.HandleClick = this.HandleClick.bind(this);
@@ -40,7 +43,9 @@ class ServicePost extends React.Component {
             itemContent: this.state.item.acf.parts[e],
             currentIndex: e,
             openClass: false,
-            itemDocs: this.state.item.acf.parts[e].docs
+            itemDocs: this.state.item.acf.parts[e].docs,
+            itemSteps: this.state.item.acf.parts[e].steps,
+            itemLastBlock: this.state.item.acf.parts[e].steps_last_blocks,
         });
     }
 
@@ -50,6 +55,8 @@ class ServicePost extends React.Component {
             item,
             itemContent,
             currentIndex,
+            itemSteps,
+            itemLastBlock,
             itemDocs,
             openClass
         } = this.state;
@@ -119,35 +126,35 @@ class ServicePost extends React.Component {
                         </section>
                     )
                 }
-                <section className="steps-section">
-                    <Container>
-                        <Row>
-                            <div className="content w-100">
 
-                                {
-                                    item.acf.steps && (
-                                        <>
-                                            <h2 className="text-center">
-                                                Этапы работы
-                                            </h2>
-                                            <ul className="lists-steps d-flex justify-content-center">
-                                                {
-                                                    item.acf.steps.map((item, index) => (
-                                                        <ServiceStepItem
-                                                            key={index}
-                                                            counter={index}
-                                                            title={item.title}
-                                                        />
-                                                    ))
-                                                }
-                                            </ul>
-                                        </>
-                                    )
-                                }
-                            </div>
-                        </Row>
-                    </Container>
-                </section>
+
+                {
+                    itemSteps && (
+                        <section className="steps-section">
+                            <Container>
+                                <Row>
+                                    <div className="content w-100">
+                                        <h2 className="text-center">
+                                            Этапы работы
+                                        </h2>
+                                        <ul className="lists-steps d-flex justify-content-center">
+                                            {
+                                                itemSteps.map((item, index) => (
+                                                    <ServiceStepItem
+                                                        key={index}
+                                                        counter={index}
+                                                        title={item.title}
+                                                    />
+                                                ))
+                                            }
+                                        </ul>
+                                    </div>
+                                </Row>
+                            </Container>
+                        </section>
+                    )
+                }
+
                 <section className="last-section" style={styleLast}>
                     <Container>
                         <Row>
@@ -156,10 +163,10 @@ class ServicePost extends React.Component {
                                     {item.acf.last_title}
                                 </h3>
                                 {
-                                    item.acf.steps_last_blocks && (
+                                    itemLastBlock && (
                                         <ul className="lists-steps d-flex justify-content-center">
                                             {
-                                                item.acf.steps_last_blocks.map((item, index) => (
+                                                itemLastBlock.map((item, index) => (
                                                     <ServiceLastItem
                                                         key={index}
                                                         counter={index}

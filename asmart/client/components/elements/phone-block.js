@@ -6,8 +6,8 @@ const  PhoneBlock = () =>{
             <div className="img-block">
                 <img src="/static/phone.png" alt="иконка"/>
             </div>
-            <a className="phone-link" href="tel:+7(3812) 35-35-75">
-                (3812) 35-35-75
+            <a className="phone-link" href="tel:+7(3812) 666-136">
+                (3812) 666-136
             </a>
         </div>
     );

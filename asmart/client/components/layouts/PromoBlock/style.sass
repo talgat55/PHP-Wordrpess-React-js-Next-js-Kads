@@ -36,6 +36,7 @@
       font-weight: 600
       font-size: 40px
       color: #fff
+      transition: all .2s ease-in-out
 
       &:before
         content: ""
@@ -74,6 +75,12 @@
 
       &:before
         display: none
+
+  &.active-0  #hover-0,
+  &.active-1  #hover-1,
+  &.active-2  #hover-2
+    transform: scale(1.2)
+    z-index: 99
 
 .page-promo
   .promo-list
