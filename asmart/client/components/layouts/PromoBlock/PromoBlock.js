@@ -70,7 +70,7 @@ class PromoBlock extends React.Component {
                                         onMouseOver={  () => this.ChangeActiveClass(index)}
                                         onMouseOut={this.ClearActiveClass}
                                     >
-                                        <a href={item.link} className="link">
+                                        <a href="#" className="link">
                                             {item.title.rendered}
                                             <span className="w-100">
                                                 {item.acf.slug}
