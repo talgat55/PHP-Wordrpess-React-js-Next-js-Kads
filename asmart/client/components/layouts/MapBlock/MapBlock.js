@@ -93,12 +93,12 @@ const MapBlock = () => {
                             <Title title="Адреса офисов"/>
                             <div className="list-contacts">
                                 <Slider {...settings}>
-                                    {contactList.map(item => (
+                                    {contactList.map((item,index) => (
                                         <div>
                                             {
                                                 item.map(value =>(
                                                     <ContactItem
-                                                        key={value.id}
+                                                        key={value.index}
                                                         geo={value.geo}
                                                         phones={value.phones}
                                                         workTime={value.workTime}

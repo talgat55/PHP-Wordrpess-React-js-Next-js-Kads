@@ -2,7 +2,7 @@ import React from 'react';
 import Header from "../components/layouts/header/header";
 import Footer from "../components/layouts/footer/footer";
 import PromoItem from "../components/layouts/PromoBlock/PromoItem";
-import {getLastPromo} from '../components/api/promo/promo';
+import {getPromo} from '../components/api/promo/promo';
 import Hero from "../components/elements/Hero";
 import Title from "../components/elements/Title";
 import Breadcrumb from "../components/elements/Breadcrumbs";
@@ -11,10 +11,11 @@ import FeedbackBlock from "../components/layouts/FeedbackBlock/FeedbackBlock";
 
 const Promo = ({posts}) => {
     const title = 'Акции';
-    let listBread = [{'href': '', 'title': title}];
+    let listBread = [{key: '2', 'href': '', 'title': title}];
 
     return (
         <>
+
 
             <Header title={title}/>
             <section className="page-promo">
@@ -27,12 +28,14 @@ const Promo = ({posts}) => {
                 <Container>
                     <Row>
                         <ul className="promo-list d-flex align-items-center w-100">
-                        {posts.map(item => (
+                        {posts.map((item,index) => (
                             <PromoItem
+                                key={index}
                                 img={item.acf.image}
                                 slogan={item.acf.slug}
                                 title={item.title.rendered}
                                 percent_value={item.acf.percent_sale}
+                                description={item.content.rendered}
                             />
                         )) }
                         </ul>
@@ -46,7 +49,7 @@ const Promo = ({posts}) => {
 };
 
 Promo.getInitialProps = async () => {
-    const posts = await getLastPromo();
+    const posts = await getPromo();
 
     return {posts: posts};
 };

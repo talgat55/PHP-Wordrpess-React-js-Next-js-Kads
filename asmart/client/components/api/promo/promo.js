@@ -11,3 +11,11 @@ export async function  getLastPromo() {
     return await res.json();
 }
 
+
+export async function  getPromo() {
+    const res = await fetch(`${packageMain.proxy}/wp-json/wp/v2/promo`);
+    return await res.json();
+}
+
+
+

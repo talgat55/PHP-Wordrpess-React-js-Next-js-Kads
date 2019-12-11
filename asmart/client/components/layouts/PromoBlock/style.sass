@@ -54,6 +54,7 @@
       p
         margin-bottom: 0
         position: relative
+        width: 91px
 
     li:nth-of-type(4n+1)
       top: 96px
@@ -95,10 +96,16 @@
 
       &.item
         color: #fff
+        &:hover
+          .description
+            display: block!important
 
         .item-wrap
           position: relative
           min-height: 346px
+          .description
+            padding: 10px 15px 0 15px
+            display: none
 
           &:before
             content: ""
@@ -134,4 +141,5 @@
       display: none
 
 
-
+    .description
+      display: block!important
