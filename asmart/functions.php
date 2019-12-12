@@ -233,7 +233,8 @@ if (function_exists('acf_add_options_page')) {
         'page_title' => 'Настройки Темы',
         'menu_title' => 'Настройки Темы',
         'menu_slug' => 'theme-options',
-        'capability' => 'edit_posts'
+        'capability' => 'edit_posts',
+        'post_id'    => 'theme-options'
     ));
 
 

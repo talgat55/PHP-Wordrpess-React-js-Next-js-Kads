@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect }  from 'react';
 import Navigation from '../../navigation/nav-footer';
 import {Container, Row} from 'reactstrap';
 import "./style.sass";
@@ -9,7 +9,20 @@ import Modal from '../Modal/Modal';
 import OverlayLayer from "../../elements/OverlayLayer";
 import ModalSuccess from '../Modal/ModalSuccess';
 import ModalService from '../Modal/ModalService';
+import {getThemeOptions} from '../../api/settings/settings';
+
 const Footer = () => {
+
+
+    const [requesitUrl, setRequesitUrl] = useState('#');
+
+    useEffect(() => {
+        const themeSettings = getThemeOptions();
+        themeSettings.then((resolve) => {
+            setRequesitUrl(resolve.acf.file_requise);
+        });
+
+    });
     return (
         <>
             <footer>
@@ -17,7 +30,7 @@ const Footer = () => {
                     <Row className=" w-100 align-items-center">
                         <div className="col-lg-2  col-md-12 text-center first">
                             <Logo/>
-                            <a href="#" className="link-requisites">
+                            <a href={requesitUrl}  target="_blank" className="link-requisites">
                                 Реквизиты компании
                             </a>
                         </div>
