@@ -7,11 +7,10 @@ import ctx from 'classnames';
 // import SliderItem from "./SliderItem";
 
 class PromoBlock extends React.Component {
-        state = {
-            items: [],
-            activeElement: ''
-        };
-
+    state = {
+        items: [],
+        activeElement: ''
+    };
 
 
     componentDidMount() {
@@ -23,6 +22,7 @@ class PromoBlock extends React.Component {
         // this.setState({items: getLastPromo()});
 
     }
+
     //
     // Add active class for hover element
     //
@@ -36,10 +36,13 @@ class PromoBlock extends React.Component {
     //  Delete active class
     //
 
-    ClearActiveClass = () =>{
+    ClearActiveClass = () => {
         this.setState({
             activeElement: ''
         })
+    };
+    LinkClick = (e) => {
+        e.preventDefault();
     };
 
     render() {
@@ -51,7 +54,7 @@ class PromoBlock extends React.Component {
 
         return (
 
-            <section className={ctx( 'promo-block' , {[`active-${activeElement}`]: true})}>
+            <section className={ctx('promo-block', {[`active-${activeElement}`]: true})}>
                 <Container>
                     <Row>
                         <Col lg="12">
@@ -63,23 +66,33 @@ class PromoBlock extends React.Component {
                             <ul className="promo-list row w-100">
                                 {
 
-                                    items.map((item , index) => (
-                                    <li
-                                        key={item.id}
-                                        className={`item  item-${index} `}
-                                        onMouseOver={  () => this.ChangeActiveClass(index)}
-                                        onMouseOut={this.ClearActiveClass}
-                                    >
-                                        <a href="#" className="link">
-                                            {item.title.rendered}
-                                            <span className="w-100">
+                                    items.map((item, index) => (
+                                        <li
+                                            key={item.id}
+                                            className={`item  item-${index} `}
+                                            onMouseOver={() => this.ChangeActiveClass(index)}
+                                            onMouseOut={this.ClearActiveClass}
+                                        >
+                                            <a
+                                                href="#"
+                                                className="link"
+                                                onClick={(e) => this.LinkClick(e)}
+                                            >
+                                                {item.title.rendered}
+                                                <span className="w-100">
                                                 {item.acf.slug}
                                             </span>
-                                        </a>
-                                    </li>
-                                ))
+                                            </a>
+                                        </li>
+                                    ))
                                 }
                             </ul>
+                            <div>
+                                <a href="/promo" className="promo-link">
+                                    Все акции
+                                </a>
+                            </div>
+
                         </Col>
                         <Col lg="6" md="12">
                             <ul className="promo-list-shapes row w-100 ">
