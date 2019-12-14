@@ -3,13 +3,14 @@ import {Col, Container, Row} from 'reactstrap';
 import './style.sass';
 import {getLastPromo} from '../../api/promo/promo';
 import ctx from 'classnames';
-
-// import SliderItem from "./SliderItem";
+import PromoLoaderWrap from '../../ContentLoaders/Promo/PromoWrapper';
+import FadeIn from "react-fade-in";
 
 class PromoBlock extends React.Component {
     state = {
         items: [],
-        activeElement: ''
+        activeElement: '',
+        loading: true
     };
 
 
@@ -17,7 +18,10 @@ class PromoBlock extends React.Component {
         let currentComponent = this;
         const lasts = getLastPromo();
         lasts.then((resolve) => {
-            currentComponent.setState({items: resolve});
+            currentComponent.setState({
+                items: resolve,
+                loading: !this.state.loading
+            });
         });
         // this.setState({items: getLastPromo()});
 
@@ -49,7 +53,8 @@ class PromoBlock extends React.Component {
 
         const {
             items,
-            activeElement
+            activeElement,
+            loading
         } = this.state;
 
         return (
@@ -63,30 +68,42 @@ class PromoBlock extends React.Component {
                             </h2>
                         </Col>
                         <Col lg="6" md="12">
-                            <ul className="promo-list row w-100">
-                                {
+                            {
+                                loading ?
+                                    (
+                                        <PromoLoaderWrap/>
+                                    )
+                                    :
+                                    (
+                                        <FadeIn>
+                                            <ul className="promo-list row w-100">
+                                                {
 
-                                    items.map((item, index) => (
-                                        <li
-                                            key={item.id}
-                                            className={`item  item-${index} `}
-                                            onMouseOver={() => this.ChangeActiveClass(index)}
-                                            onMouseOut={this.ClearActiveClass}
-                                        >
-                                            <a
-                                                href="#"
-                                                className="link"
-                                                onClick={(e) => this.LinkClick(e)}
-                                            >
-                                                {item.title.rendered}
-                                                <span className="w-100">
+                                                    items.map((item, index) => (
+                                                        <li
+                                                            key={item.id}
+                                                            className={`item  item-${index} `}
+                                                            onMouseOver={() => this.ChangeActiveClass(index)}
+                                                            onMouseOut={this.ClearActiveClass}
+                                                        >
+                                                            <a
+                                                                href="#"
+                                                                className="link"
+                                                                onClick={(e) => this.LinkClick(e)}
+                                                            >
+                                                                {item.title.rendered}
+                                                                <span className="w-100">
                                                 {item.acf.slug}
                                             </span>
-                                            </a>
-                                        </li>
-                                    ))
-                                }
-                            </ul>
+                                                            </a>
+                                                        </li>
+                                                    ))
+                                                }
+                                            </ul>
+                                        </FadeIn>
+                                    )
+                            }
+
                             <div>
                                 <a href="/promo" className="promo-link">
                                     Все акции
