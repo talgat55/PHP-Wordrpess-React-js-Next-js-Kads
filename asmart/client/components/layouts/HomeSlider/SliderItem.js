@@ -97,6 +97,7 @@ const SliderItem = ({key, title, text, urlVideo, items, current, EnableServiceMo
         </div>
     );
 };
+
 const mapDispatchToProps = dispatch => {
     return {
         EnableServiceModal: () => {

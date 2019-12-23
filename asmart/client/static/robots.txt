@@ -1,0 +1,33 @@
+User-agent: *               # общие правила для роботов, кроме Яндекса и Google,
+                            # т.к. для них правила ниже
+Disallow: /cgi-bin          # папка на хостинге
+Disallow: /?                # все параметры запроса на главной
+Disallow: /wp-              # все файлы WP: /wp-json/, /wp-includes, /wp-content/plugins
+Disallow: /wp/              # если есть подкаталог /wp/, где установлена CMS (если нет,
+                            # правило можно удалить)
+Disallow: *?s=              # поиск
+Disallow: *&s=              # поиск
+Disallow: /search/          # поиск
+Disallow: /author/          # архив автора
+Disallow: /users/           # архив авторов
+Disallow: */trackback       # трекбеки, уведомления в комментариях о появлении открытой
+                            # ссылки на статью
+Disallow: */feed            # все фиды
+Disallow: */rss             # rss фид
+Disallow: */embed           # все встраивания
+Disallow: */wlwmanifest.xml # xml-файл манифеста Windows Live Writer (если не используете,
+                            # правило можно удалить)
+Disallow: /xmlrpc.php       # файл WordPress API
+Disallow: *utm*=             # ссылки с utm-метками
+Disallow: *openstat=        # ссылки с метками openstat
+Allow: */uploads            # открываем папку с файлами uploads
+
+# Укажите один или несколько файлов Sitemap (дублировать для каждого User-agent
+# не нужно). Google XML Sitemap создает 2 карты сайта, как в примере ниже.
+Sitemap: http://site.ru/sitemap.xml
+Sitemap: http://site.ru/sitemap.xml.gz
+
+# Укажите главное зеркало сайта, как в примере ниже (с WWW / без WWW, если HTTPS
+# то пишем протокол, если нужно указать порт, указываем). Команда стала необязательной. Ранее Host понимал
+# Яндекс и Mail.RU. Теперь все основные поисковые системы команду Host не учитывают.
+Host: www.site.ru
