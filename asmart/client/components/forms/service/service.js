@@ -48,6 +48,7 @@ class FormComponent extends Component {
             const response = sendFeedbackRequestLinkToUs('167', {
                 username: this.state.username,
                 userphone: this.state.userphone,
+                serviceName: this.props.activeSlide
             });
             console.log(response);
             response.then((resolve) => {
@@ -132,9 +133,11 @@ class FormComponent extends Component {
 
 const mapStateToProps = state => {
     return {
-        modal: state.modal
+        modal: state.modal,
+        activeSlide: state.activeService,
     };
 };
+
 const mapDispatchToProps = dispatch => {
     return {
         ChangeStateSuccessModal: () => {
@@ -146,8 +149,6 @@ const mapDispatchToProps = dispatch => {
         DisableServiceModal: () => {
             dispatch({type: DEACTIVE_SERVICE_MODAL_STATE, payload: false})
         }
-
-
     };
 };
 export default connect(

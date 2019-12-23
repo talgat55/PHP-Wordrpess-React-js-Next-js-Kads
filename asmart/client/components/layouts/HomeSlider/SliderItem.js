@@ -2,13 +2,17 @@ import React , { useState } from 'react';
 import {Container} from 'reactstrap';
 import ReactHtmlParser from 'react-html-parser';
 import {connect} from "react-redux";
-import {ACTIVE_SERVICE_MODAL_STATE, ACTIVE_OVERLAY_STATE} from "../../../types";
+import {ACTIVE_SERVICE_MODAL_STATE, ACTIVE_OVERLAY_STATE, CHANGE_SERVICE_STATE} from "../../../types";
 import VideoPlayer from '../../elements/VideoPlayer';
-const SliderItem = ({key, title, text, urlVideo, items, current, EnableServiceModal,customOnChange}) => {
+
+const SliderItem = ({key, title, text, urlVideo, items, current, EnableServiceModal,customOnChange , ChangeServiceState}) => {
 
     const ClickEvent = (e) => {
-        e.preventDefault();
         EnableServiceModal();
+        ChangeServiceState(e);
+
+        return false;
+
     };
     const [open, setOpen] = useState(false);
 
@@ -21,6 +25,8 @@ const SliderItem = ({key, title, text, urlVideo, items, current, EnableServiceMo
         customOnChange(e);
 
     };
+
+
     return (
         <div className="item" key={key} data-id={key}>
             <div className="overlay-layer"/>
@@ -35,7 +41,7 @@ const SliderItem = ({key, title, text, urlVideo, items, current, EnableServiceMo
                         </div>
                         <div className="bottom d-sm-flex align-items-center">
 
-                            <a href="#" className="link-order-new" onClick={ClickEvent}>
+                            <a href="#" className="link-order-new" onClick={ () => ClickEvent(title)}>
                                 Заказать услугу
                             </a>
                             {
@@ -67,7 +73,12 @@ const SliderItem = ({key, title, text, urlVideo, items, current, EnableServiceMo
                                         className={current === key ? 'active' : ''}
                                         onClick={ () => clickByNavSlide(key)}
                                     >
-                                        <a href="#" className="item-link" data-id={key}>
+                                        <a
+                                            href="#"
+                                            className="item-link"
+                                            data-id={key}
+
+                                        >
                                             {item.title.rendered}
                                         </a>
                                     </li>
@@ -86,13 +97,14 @@ const SliderItem = ({key, title, text, urlVideo, items, current, EnableServiceMo
         </div>
     );
 };
-
-
 const mapDispatchToProps = dispatch => {
     return {
         EnableServiceModal: () => {
             dispatch({type: ACTIVE_SERVICE_MODAL_STATE, payload: true});
             dispatch({type: ACTIVE_OVERLAY_STATE, payload: true})
+        },
+        ChangeServiceState: (e) => {
+          dispatch({type: CHANGE_SERVICE_STATE, payload: e})
         }
     };
 };

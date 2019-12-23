@@ -25,5 +25,15 @@ export const ACTIVE_SERVICE_MODAL_STATE = 'ACTIVE_SERVICE_MODAL_STATE';
 
 
 
+/*
+* Service state
+*/
+export const CHANGE_SERVICE_STATE = 'CHANGE_SERVICE_STATE';
+
+
+
+
+
+
 
 

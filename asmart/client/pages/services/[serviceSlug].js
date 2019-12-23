@@ -14,7 +14,12 @@ import FeedbackBlock from "../../components/layouts/FeedbackBlock/FeedbackBlock"
 import MapBlock from "../../components/layouts/MapBlock/MapBlock";
 import PartBlock from "../../components/layouts/ServiceBlock/Part/PartBlock";
 import DocBlock from "../../components/layouts/ServiceBlock/Part/DocBlock";
-
+import {connect} from "react-redux";
+import {
+    ACTIVE_OVERLAY_STATE,
+    ACTIVE_SERVICE_MODAL_STATE,
+    CHANGE_SERVICE_STATE,
+} from "../../types";
 
 class ServicePost extends React.Component {
     constructor(props) {
@@ -34,7 +39,10 @@ class ServicePost extends React.Component {
 
         this.HandleClick = this.HandleClick.bind(this);
     }
-
+    ClickEvent = (e) => {
+        e.preventDefault();
+        this.props.EnableServiceModal();
+    };
     //
     //  Event click by element in left block
     //
@@ -47,6 +55,10 @@ class ServicePost extends React.Component {
             itemSteps: this.state.item.acf.parts[e].steps,
             itemLastBlock: this.state.item.acf.parts[e].steps_last_blocks,
         });
+    }
+
+    componentDidMount () {
+        this.props.ChangeServiceState(this.state.item.title.rendered);
     }
 
     render() {
@@ -126,8 +138,6 @@ class ServicePost extends React.Component {
                         </section>
                     )
                 }
-
-
                 {
                     itemSteps && (
                         <section className="steps-section">
@@ -179,6 +189,11 @@ class ServicePost extends React.Component {
                                 }
                             </div>
                         </Row>
+                        <Row className="position-relative d-flex w-100 justify-content-center">
+                            <a href="#" className="link-order-new" onClick={ (e) => this.ClickEvent(e)}>
+                                Заказать услугу
+                            </a>
+                        </Row>
                     </Container>
                 </section>
                 <FeedbackBlock/>
@@ -193,4 +208,19 @@ ServicePost.getInitialProps = async (params) => {
     const post = await getServiceBySlug(params.query.serviceSlug);
     return {post: post};
 };
-export default ServicePost
+const mapDispatchToProps = dispatch => {
+    return {
+        ChangeServiceState: (e) => {
+            dispatch({type: CHANGE_SERVICE_STATE, payload: e})
+        },
+        EnableServiceModal: () => {
+            dispatch({type: ACTIVE_SERVICE_MODAL_STATE, payload: true});
+            dispatch({type: ACTIVE_OVERLAY_STATE, payload: true})
+        }
+    };
+};
+
+export default connect(
+    null,
+    mapDispatchToProps
+)(ServicePost);
