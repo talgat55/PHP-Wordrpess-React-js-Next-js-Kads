@@ -23,7 +23,11 @@ const NewsBlock = dynamic(() => import('../components/layouts/NewsBlock/NewsBloc
 
 const Home = () => (
     <div id="main-wrap" className="main-wrap">
-        <Header title="Главная"/>
+        <Header
+            title="Земельный кадастр | Главная страница"
+            description="Бесплатные консультации по вопросам оформления документов на земельные участки и объекты капитального строительства. Подготовка межевых и технических планов"
+
+        />
         <HomeSlider/>
         <ServiceBlock/>
         <PromoBlock/>

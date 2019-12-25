@@ -24,8 +24,7 @@ Allow: */uploads            # открываем папку с файлами up
 
 # Укажите один или несколько файлов Sitemap (дублировать для каждого User-agent
 # не нужно). Google XML Sitemap создает 2 карты сайта, как в примере ниже.
-Sitemap: http://site.ru/sitemap.xml
-Sitemap: http://site.ru/sitemap.xml.gz
+Sitemap: http://zemkad55.ru/static/sitemap.xml
 
 # Укажите главное зеркало сайта, как в примере ниже (с WWW / без WWW, если HTTPS
 # то пишем протокол, если нужно указать порт, указываем). Команда стала необязательной. Ранее Host понимал

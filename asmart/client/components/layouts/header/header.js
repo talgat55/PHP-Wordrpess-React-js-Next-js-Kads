@@ -7,35 +7,46 @@ import CallBlock from '../../elements/call-block';
 import MobileMenu from '../../elements/MobileMenu';
 import {Col, Container, Row} from 'reactstrap';
 import "./style.sass";
-import {YMInitializer} from 'react-yandex-metrika';
-import TagManager from 'react-gtm-module';
+import ReactGA from 'react-ga';
+const trackingId = "UA-154970482-1"; // Replace with your Google Analytics tracking ID
+
+import { YMInitializer } from 'react-yandex-metrika';
+
+
 
 class Header extends React.Component {
 
-    componentDidMount() {
-        const tagManagerArgs = {
-            gtmId: 'UA-154889314-1'
-        };
-
-        TagManager.initialize(tagManagerArgs);
+    componentWillMount() {
+        ReactGA.initialize(trackingId);
     }
+    componentDidMount() {
+        ReactGA.pageview(window.location.pathname);
+    }
+
     render() {
         const {
-            title
+            title,
+            description
         } = this.props;
+
 
         return (
 
             <>
                 <Head>
-                    <title>{title} </title>
+
+                    <title>{title}</title>
+                    {
+                        description  && (<meta name="description" content={description}/>)
+                    }
+
                     <link rel='icon' href='/static/favicon.png'/>
                     <link
                         href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&display=swap&subset=cyrillic"
                         rel="stylesheet"/>
 
-                    <YMInitializer accounts={[56793624]}/>
                     <meta name="yandex-verification" content="18c521e1181aca35" />
+                    <YMInitializer accounts={[56805400]} options={{webvisor: true}}/>
                 </Head>
                 <MobileMenu/>
                 <header>

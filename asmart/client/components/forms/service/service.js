@@ -4,7 +4,8 @@ import InputMask from 'react-input-mask';
 import {sendFeedbackRequestLinkToUs} from '../../api/form/form';
 import {connect} from "react-redux";
 import {ACTIVE_SUCCESS_MODAL_STATE, DEACTIVE_SUCCESS_MODAL_STATE,DEACTIVE_SERVICE_MODAL_STATE} from "../../../types";
-
+import ym from 'react-yandex-metrika';
+import ReactGA from 'react-ga';
 class FormComponent extends Component {
     state = {
         username: '',
@@ -53,6 +54,13 @@ class FormComponent extends Component {
             console.log(response);
             response.then((resolve) => {
                 if (resolve.status === "mail_sent") {
+
+                    ym('reachGoal', 'order');
+
+                    ReactGA.event({
+                        category: 'form',
+                        action: 'order'
+                    });
                     this.setState({
                         errors: [],
                         username: '',
