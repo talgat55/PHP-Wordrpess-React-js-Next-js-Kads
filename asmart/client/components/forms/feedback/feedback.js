@@ -6,6 +6,7 @@ import {connect} from "react-redux";
 import {ACTIVE_SUCCESS_MODAL_STATE,DEACTIVE_SUCCESS_MODAL_STATE} from '../../../types';
 import ym from 'react-yandex-metrika';
 import ReactGA from 'react-ga';
+import {Spinner} from "reactstrap";
 class FormComponent extends Component {
     state = {
         username: '',
@@ -53,11 +54,11 @@ class FormComponent extends Component {
             response.then((resolve) => {
                 if (resolve.status === "mail_sent") {
 
-                    ym('reachGoal', 'callback');
-                    ReactGA.event({
-                        category: 'form',
-                        action: 'callback'
-                    });
+                    // ym('reachGoal', 'callback');
+                    // ReactGA.event({
+                    //     category: 'form',
+                    //     action: 'callback'
+                    // });
 
                     console.log('true');
                     this.setState({
@@ -147,7 +148,10 @@ class FormComponent extends Component {
 
                     </div>
                     <div>
-                        <Button>Заказать звонок</Button>
+                        <div className="button-wrap">
+                            { loading  && (  <div className="spinner-wrap"> <Spinner animation="grow"  className="spinner-button" /></div> )  }
+                            <Button>Заказать звонок</Button>
+                        </div>
                     </div>
                 </FormGroup>
                 <FormGroup>

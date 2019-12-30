@@ -10,7 +10,7 @@ const PromoItem = ({key,img, slogan, title, percent_value, description}) => {
             <div className="item-wrap  d-flex align-items-center justify-content-center" style={styles}>
             <div className="content text-center position-relative">
                 <div className="percent">
-                    {percent_value}
+                    {percent_value}%
                 </div>
                 <h3 className="title">
                     {title}

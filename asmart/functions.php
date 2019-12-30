@@ -284,3 +284,16 @@ add_action( 'rest_api_init', function () {
 function countPost() {
     return wp_count_posts();
 }
+
+
+
+add_action( 'admin_enqueue_scripts', 'load_admin_styles' );
+function load_admin_styles() {
+    echo '
+        <style>
+            #preview-action{
+                display: none!important;
+            }
+        </style> 
+    ';
+}

@@ -6,7 +6,8 @@ import withRedux from "next-redux-wrapper";
 import thunk from 'redux-thunk';
 import {composeWithDevTools} from 'redux-devtools-extension';
 import rootReducer from '../reducers/rootReducer';
-
+import { YMInitializer } from 'react-yandex-metrika';
+import Head from "next/dist/next-server/lib/head";
 
 /**
  * @param {object} initialState
@@ -41,11 +42,11 @@ class MyApp extends App {
         const {Component, pageProps, store} = this.props;
         return (
             <Provider store={store}>
+                <YMInitializer accounts={[56805400]} options={{webvisor: true}}/>
                 <Component {...pageProps} />
             </Provider>
         );
     }
 
 }
-
 export default withRedux(makeStore)(MyApp);

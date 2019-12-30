@@ -10,9 +10,6 @@ import "./style.sass";
 import ReactGA from 'react-ga';
 const trackingId = "UA-154970482-1"; // Replace with your Google Analytics tracking ID
 
-import { YMInitializer } from 'react-yandex-metrika';
-
-
 
 class Header extends React.Component {
 
@@ -46,7 +43,7 @@ class Header extends React.Component {
                         rel="stylesheet"/>
 
                     <meta name="yandex-verification" content="18c521e1181aca35" />
-                    <YMInitializer accounts={[56805400]} options={{webvisor: true}}/>
+
                 </Head>
                 <MobileMenu/>
                 <header>

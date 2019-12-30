@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Button, Form, FormGroup, Input} from 'reactstrap';
+import {Button, Form, FormGroup, Input, Spinner} from 'reactstrap';
 import InputMask from 'react-input-mask';
 import {sendFeedbackRequestLinkToUs} from "../../api/form/form";
 import {ACTIVE_SUCCESS_MODAL_STATE, DEACTIVE_SUCCESS_MODAL_STATE, DEACTIVE_MODAL_STATE} from "../../../types";
@@ -52,11 +52,13 @@ class FormComponent extends Component {
             });
             response.then((resolve) =>{
                 if(resolve.status === "mail_sent"){
-                    ym('reachGoal', 'callback');
-                    ReactGA.event({
-                        category: 'form',
-                        action: 'callback'
-                    });
+
+                    // ym('reachGoal', 'callback');
+                    // ReactGA.event({
+                    //     category: 'form',
+                    //     action: 'callback'
+                    // });
+
                     this.setState({
                         errors: [],
                         username: '',
@@ -123,7 +125,10 @@ class FormComponent extends Component {
                         />
                     </div>
                     <div>
-                        <Button>Заказать звонок</Button>
+                        <div className="button-wrap">
+                            { loading  && (  <div className="spinner-wrap"> <Spinner animation="grow"  className="spinner-button" /></div> )  }
+                            <Button>Заказать звонок</Button>
+                        </div>
                     </div>
                 </FormGroup>
                 <FormGroup>
