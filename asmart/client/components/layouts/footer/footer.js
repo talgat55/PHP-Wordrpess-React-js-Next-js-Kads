@@ -44,7 +44,7 @@ const Footer = () => {
                                 <CallBlock/>
                             </div>
                             <a target="_blank" className="bottom-copyright" title="Перейти на сайт разработчика"
-                               href="http://asmart-group.ru/">Сайт разработан IT-company <span>ASMART</span>
+                               href="https://asmart-group.ru/">Сайт разработан IT-company <span>ASMART</span>
                             </a>
                         </div>
                     </Row>
