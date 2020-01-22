@@ -8,7 +8,7 @@ import MobileMenu from '../../elements/MobileMenu';
 import {Col, Container, Row} from 'reactstrap';
 import "./style.sass";
 import ReactGA from 'react-ga';
-const trackingId = "UA-154970482-1"; // Replace with your Google Analytics tracking ID
+const trackingId = "UA-154970482-1";
 
 
 class Header extends React.Component {

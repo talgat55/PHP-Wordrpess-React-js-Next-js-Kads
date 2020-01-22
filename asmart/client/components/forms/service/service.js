@@ -61,12 +61,12 @@ class FormComponent extends Component {
             response.then((resolve) => {
                 if (resolve.status === "mail_sent") {
 
-                    // ym('reachGoal', 'order');
-                    //
-                    // ReactGA.event({
-                    //     category: 'form',
-                    //     action: 'order'
-                    // });
+                    ym('reachGoal', 'order');
+
+                    ReactGA.event({
+                        category: 'form',
+                        action: 'order'
+                    });
 
                     this.setState({
                         errors: [],

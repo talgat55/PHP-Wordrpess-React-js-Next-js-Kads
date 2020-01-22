@@ -53,11 +53,11 @@ class FormComponent extends Component {
             response.then((resolve) =>{
                 if(resolve.status === "mail_sent"){
 
-                    // ym('reachGoal', 'callback');
-                    // ReactGA.event({
-                    //     category: 'form',
-                    //     action: 'callback'
-                    // });
+                    ym('reachGoal', 'callback');
+                    ReactGA.event({
+                        category: 'form',
+                        action: 'callback'
+                    });
 
                     this.setState({
                         errors: [],

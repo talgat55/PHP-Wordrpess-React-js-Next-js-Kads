@@ -7,8 +7,6 @@ import thunk from 'redux-thunk';
 import {composeWithDevTools} from 'redux-devtools-extension';
 import rootReducer from '../reducers/rootReducer';
 import { YMInitializer } from 'react-yandex-metrika';
-import Head from "next/dist/next-server/lib/head";
-
 /**
  * @param {object} initialState
  * @param {boolean} options.isServer indicates whether it is a server side or client side
