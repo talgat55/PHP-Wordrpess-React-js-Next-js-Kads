@@ -54,7 +54,8 @@ class FormComponent extends Component {
             const response = sendFeedbackRequestLinkToUs('167', {
                 username: this.state.username,
                 userphone: this.state.userphone,
-                serviceName: this.props.activeSlide
+                serviceName: this.props.activeSlide,
+                serviceTabName: this.props.activeServiceTab
             });
 
             console.log(response);
@@ -156,6 +157,7 @@ const mapStateToProps = state => {
     return {
         modal: state.modal,
         activeSlide: state.activeService,
+        activeServiceTab: state.activeServiceTab,
     };
 };
 

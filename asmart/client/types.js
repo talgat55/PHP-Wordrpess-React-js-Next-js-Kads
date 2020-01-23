@@ -31,6 +31,15 @@ export const ACTIVE_SERVICE_MODAL_STATE = 'ACTIVE_SERVICE_MODAL_STATE';
 export const CHANGE_SERVICE_STATE = 'CHANGE_SERVICE_STATE';
 
 
+/*
+* Service  active tab state
+*/
+export const CHANGE_SERVICE_TAB_STATE = 'CHANGE_SERVICE_TAB_STATE';
+
+
+
+
+
 
 
 

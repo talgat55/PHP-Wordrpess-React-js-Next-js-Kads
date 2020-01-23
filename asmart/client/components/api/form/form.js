@@ -6,6 +6,7 @@ export async function  sendFeedbackRequestLinkToUs(idForm,data) {
     formData.append('username', data.username);
     formData.append('userphone', data.userphone);
     data.serviceName  &&  formData.append('servicename', data.serviceName);
+    data.serviceTabName  &&  formData.append('servicetabname', data.serviceTabName);
     const response = await fetch(url, {
         method: 'POST', // или 'PUT'
         body: formData

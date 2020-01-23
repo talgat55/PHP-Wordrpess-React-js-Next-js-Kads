@@ -19,6 +19,7 @@ import {
     ACTIVE_OVERLAY_STATE,
     ACTIVE_SERVICE_MODAL_STATE,
     CHANGE_SERVICE_STATE,
+    CHANGE_SERVICE_TAB_STATE,
 } from "../../types";
 
 class ServicePost extends React.Component {
@@ -48,13 +49,16 @@ class ServicePost extends React.Component {
     //
     HandleClick(e) {
         this.setState({
-            itemContent: this.state.item.acf.parts[e],
-            currentIndex: e,
+            itemContent: this.state.item.acf.parts[e.counter],
+            currentIndex: e.counter,
             openClass: false,
-            itemDocs: this.state.item.acf.parts[e].docs,
-            itemSteps: this.state.item.acf.parts[e].steps,
-            itemLastBlock: this.state.item.acf.parts[e].steps_last_blocks,
+            itemDocs: this.state.item.acf.parts[e.counter].docs,
+            itemSteps: this.state.item.acf.parts[e.counter].steps,
+            itemLastBlock: this.state.item.acf.parts[e.counter].steps_last_blocks,
         });
+
+        this.props.ChangeServiceTabState(e.title)
+
     }
 
     componentDidMount () {
@@ -213,6 +217,11 @@ const mapDispatchToProps = dispatch => {
         ChangeServiceState: (e) => {
             dispatch({type: CHANGE_SERVICE_STATE, payload: e})
         },
+        ChangeServiceTabState: (e) => {
+            dispatch({type: CHANGE_SERVICE_TAB_STATE, payload: e})
+        },
+
+
         EnableServiceModal: () => {
             dispatch({type: ACTIVE_SERVICE_MODAL_STATE, payload: true});
             dispatch({type: ACTIVE_OVERLAY_STATE, payload: true})
