@@ -2,7 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://api.zemkad55.ru",
+  "proxy": "http://api.kadastr.lightxdesign.ru",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

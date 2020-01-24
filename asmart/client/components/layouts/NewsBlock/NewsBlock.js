@@ -73,12 +73,11 @@ class NewsBlock extends React.Component {
                                 {items.map(item => {
                                         return this.props.exclude ?
                                             (this.props.exclude != item.slug ?
-
                                                     (<NewsItem
                                                         key={item.id}
                                                         title={item.title.rendered}
                                                         link={item.slug}
-                                                        image={item.acf.image}
+                                                        image={item.acf.image.sizes.news_block_img}
                                                         anons={item.acf.anons}
                                                         date={item.date}
                                                     />)

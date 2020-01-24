@@ -8,17 +8,12 @@ load_theme_textdomain('light', get_template_directory() . '/languages');
 * Register nav menu
 */
 if (function_exists('register_nav_menus')) {
-
     $menu_arr = array(
         'top_menu' => 'Топ Меню',
         'footer_one_menu' => 'Футер  Меню 1',
         'footer_two_menu' => 'Футер Меню 2'
     );
-
-
     register_nav_menus($menu_arr);
-
-
 }
 
 
@@ -33,6 +28,8 @@ add_image_size( 'news-img-recent', 278, 80, true);
 add_image_size( 'partners-img', 216, 97, false);
 add_image_size( 'history-img', 266, 165, true);
 add_image_size( 'administration-img', 330, 310, true);
+add_image_size( 'news_block_img', 249, 260, true);
+add_image_size( 'cert_img', 250, 347, true);
 
 
 

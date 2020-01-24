@@ -87,7 +87,7 @@ class ServicePost extends React.Component {
             backgroundImage: `url(${item.acf.imageBgPart ? item.acf.imageBgPart : ''})`
         };
         let styleLast = {
-            backgroundImage: `url(${item.acf.imageBgLast ? item.acf.imageBgLast : ''})`
+            backgroundImage: `url(/static/service-img-last.jpg)`
         };
 
         return (
@@ -95,7 +95,7 @@ class ServicePost extends React.Component {
                 <Header title={item.title.rendered}/>
                 <Hero
                     breadscrumb={<Breadcrumb items={listBread}/>}
-                    img={item.acf.imageDetail ? item.acf.imageDetail : '/static/hero-news.jpg'}
+                    img={'/static/service-img-detail.jpg'}
                 >
                     <Title title={item.title.rendered} main="true" className="sub-title single-post"/>
                 </Hero>

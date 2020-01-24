@@ -69,9 +69,6 @@ class CertsBlock extends React.Component {
                         dots: true,
                     }
                 }
-                // You can unslick at a given breakpoint now by adding:
-                // settings: "unslick"
-                // instead of a settings object
             ]
         };
         return (
@@ -87,8 +84,8 @@ class CertsBlock extends React.Component {
                             <Slider {...settings}>
                                 {items.map(item => (
                                     <div key={item.id } className="item">
-                                        <a href="#" onClick={ e => this.handleClickImage(e, item.acf.image)}  className="link">
-                                            <img src={item.acf.image} alt="Сертификат" />
+                                        <a href="#" onClick={ e => this.handleClickImage(e, item.acf.image.url)}  className="link">
+                                            <img src={item.acf.image.sizes.cert_img} alt="Сертификат" />
                                         </a>
                                     </div>
                                 ))
