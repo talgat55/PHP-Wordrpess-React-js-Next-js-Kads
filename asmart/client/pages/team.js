@@ -71,7 +71,7 @@ const Team = ({posts}) => {
                                 <TeamItem
                                     key={item.id}
                                     title={item.title.rendered}
-                                    photo={item.acf.photo}
+                                    photo={item.acf.photo.sizes.team_img}
                                     position={item.acf.position}
                                     icon_position={item.acf.icon_position}
                                 />

@@ -30,6 +30,7 @@ add_image_size( 'history-img', 266, 165, true);
 add_image_size( 'administration-img', 330, 310, true);
 add_image_size( 'news_block_img', 249, 260, true);
 add_image_size( 'cert_img', 250, 347, true);
+add_image_size( 'team_img', 269, 308, true);
 
 
 
@@ -294,3 +295,49 @@ function load_admin_styles() {
         </style> 
     ';
 }
+
+//
+//function wp_admin_bar_site_menu( $wp_admin_bar ) {
+//    // Don't show for logged out users.
+//    if ( ! is_user_logged_in() ) {
+//        return;
+//    }
+//
+//    // Show only when the user is a member of this site, or they're a super admin.
+//    if ( ! is_user_member_of_blog() && ! current_user_can( 'manage_network' ) ) {
+//        return;
+//    }
+//
+//    $blogname = get_bloginfo( 'name' );
+//
+//    if ( ! $blogname ) {
+//        $blogname = preg_replace( '#^(https?://)?(www.)?#', '', get_home_url() );
+//    }
+//
+//    if ( is_network_admin() ) {
+//        /* translators: %s: Site title. */
+//        $blogname = sprintf( __( 'Network Admin: %s' ), esc_html( get_network()->site_name ) );
+//    } elseif ( is_user_admin() ) {
+//        /* translators: %s: Site title. */
+//        $blogname = sprintf( __( 'User Dashboard: %s' ), esc_html( get_network()->site_name ) );
+//    }
+//
+//    $title = wp_html_excerpt( $blogname, 40, '&hellip;' );
+//
+//
+//    // Create submenu items.
+//
+//    if ( is_admin() ) {
+//        // Add an option to visit the site.
+//        $wp_admin_bar->add_node(
+//            array(
+//                'parent' => 'site-name',
+//                'id'     => 'view-site',
+//                'title'  => __( 'Visit Site' ),
+//                'href'   => 'http://zemkad55.ru/',
+//            )
+//        );
+//
+//
+//    }
+//}
