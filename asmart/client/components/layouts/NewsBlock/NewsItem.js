@@ -7,15 +7,23 @@ import 'dayjs/locale/ru';
 const NewsItem = ({key, title, link, image, anons, date, elementClass}) => {
 
     return (
+
         <div key={key} className={`item d-flex align-items-center ${elementClass}`}>
             <div className="img-block">
+
                 <LinkComponent href="/blog/[blogSlug]" slug={`/blog/${link}`}>
-                    <a className="link"> <img src={image} alt="Изображение"/></a>
+                    <a className="link">
+                        { image  ? (<img src={image} alt="Изображение"/>)
+
+                       :
+                            (<div style={{ width: 249, height: 260 }} />)
+                        }
+                    </a>
                 </LinkComponent>
             </div>
             <div className="text">
                 <div className="date">
-                    { dayjs(date).locale('ru').format('d MMMM YYYY') }
+                    { dayjs(date.slice(0,10)).locale('ru').format('DD.MM.YYYY') }
                 </div>
                 <LinkComponent href="/blog/[blogSlug]" slug={`/blog/${link}`}>
                     <a className="link">

@@ -1,7 +1,7 @@
 import React from 'react';
 import './call-block.sass';
 import {connect} from "react-redux";
-import {ACTIVE_MODAL_STATE } from '../../types';
+import {ChangeStateModal} from "../../actions/app";
 
 class CallBlock  extends React.Component {
 
@@ -22,20 +22,14 @@ class CallBlock  extends React.Component {
     };
 }
 const mapStateToProps = state =>{
-
     return {
         modal: state.modal
     };
 };
-const mapDispatchToProps = dispatch => {
-    return {
-        ChangeStateModal: () => {
-            dispatch({type: ACTIVE_MODAL_STATE, payload:true })
-        }
 
-    };
+const mapDispatchToProps = {
+    ChangeStateModal
 };
-
 export default connect(
     mapStateToProps,
     mapDispatchToProps

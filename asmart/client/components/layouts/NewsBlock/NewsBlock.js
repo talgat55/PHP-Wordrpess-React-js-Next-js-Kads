@@ -29,7 +29,7 @@ class NewsBlock extends React.Component {
         const countItems = items.length;
         var settings = {
             dots: true,
-            infinite:  countItems > 1  ?  true : false,
+            infinite: false,
             speed: 500,
             arrows: true,
             autoplay: true,
@@ -78,7 +78,7 @@ class NewsBlock extends React.Component {
                                                         key={item.id}
                                                         title={item.title.rendered}
                                                         link={item.slug}
-                                                        image={item.acf.image.sizes.news_block_img}
+                                                        image={ item.acf.image ? item.acf.image.sizes.news_block_img: ''}
                                                         anons={item.acf.anons}
                                                         date={item.date}
                                                     />)
@@ -90,7 +90,7 @@ class NewsBlock extends React.Component {
                                                 key={item.id}
                                                 title={item.title.rendered}
                                                 link={item.slug}
-                                                image={item.acf.image.sizes.news_block_img}
+                                                image={ item.acf.image ? item.acf.image.sizes.news_block_img: ''}
                                                 anons={item.acf.anons}
                                                 date={item.date}
                                             />)

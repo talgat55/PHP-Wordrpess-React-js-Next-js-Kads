@@ -13,7 +13,7 @@ const NewsList = ({posts}) => {
                                 key={item.id}
                                 title={item.title.rendered}
                                 link={item.slug}
-                                image={item.acf.image.sizes.news_block_img}
+                                image={ item.acf.image ? item.acf.image.sizes.news_block_img: ''}
                                 anons={item.acf.anons}
                                 date={item.date}
                                 elementClass="col-xl-6 col-lg-12  col-md-12 col-xs-12 col-12"

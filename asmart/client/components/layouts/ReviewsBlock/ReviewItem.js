@@ -9,7 +9,7 @@ const ReviewItem = ({key, title,text,date}) => {
                 {ReactHtmlParser(title)}
             </h3>
             <div className="date">
-                { dayjs(date).locale('ru').format('d MMMM YYYY') }
+                { dayjs(date.slice(0,10)).locale('ru').format('DD.MM.YYYY') }
             </div>
             <div className="content">
                 <div>

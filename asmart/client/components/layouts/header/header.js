@@ -12,6 +12,12 @@ const trackingId = "UA-154970482-1";
 
 
 class Header extends React.Component {
+    state = {
+        phoneNumber: '35-35-75'
+    };
+
+
+
 
     componentWillMount() {
         ReactGA.initialize(trackingId);
@@ -21,6 +27,7 @@ class Header extends React.Component {
     }
 
     render() {
+
         const {
             title,
             description
@@ -54,7 +61,7 @@ class Header extends React.Component {
                             </Col>
                             <Col>
                                 <div className="top d-flex justify-content-end  align-items-center">
-                                    <PhoneBlock/>
+                                    <PhoneBlock  />
                                     <CallBlock/>
 
                                 </div>

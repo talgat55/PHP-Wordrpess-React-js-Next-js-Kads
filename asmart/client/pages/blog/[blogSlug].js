@@ -32,7 +32,7 @@ const Post = ({post}) => {
                     <Row>
                         <div className="date-block d-flex align-items-center w-100">
                             <img src="/static/date.png" alt="иконка" />
-                            { dayjs(item.modified).locale('ru').format('d MMMM YYYY') }
+                            { dayjs(item.modified.slice(0,10)).locale('ru').format('DD.MM.YYYY') }
                         </div>
                         <div className="content">
                             {ReactHtmlParser(item.content.rendered)}
