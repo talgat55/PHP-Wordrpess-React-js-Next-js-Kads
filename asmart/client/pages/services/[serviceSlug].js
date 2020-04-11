@@ -15,12 +15,7 @@ import MapBlock from "../../components/layouts/MapBlock/MapBlock";
 import PartBlock from "../../components/layouts/ServiceBlock/Part/PartBlock";
 import DocBlock from "../../components/layouts/ServiceBlock/Part/DocBlock";
 import {connect} from "react-redux";
-import {
-    ACTIVE_OVERLAY_STATE,
-    ACTIVE_SERVICE_MODAL_STATE,
-    CHANGE_SERVICE_STATE,
-    CHANGE_SERVICE_TAB_STATE,
-} from "../../types";
+import {ChangeServiceState, ChangeServiceTabState, EnableServiceModal} from "../../actions/app";
 
 class ServicePost extends React.Component {
     constructor(props) {
@@ -42,6 +37,7 @@ class ServicePost extends React.Component {
     }
     ClickEvent = (e) => {
         e.preventDefault();
+
         this.props.EnableServiceModal();
     };
     //
@@ -212,21 +208,11 @@ ServicePost.getInitialProps = async (params) => {
     const post = await getServiceBySlug(params.query.serviceSlug);
     return {post: post};
 };
-const mapDispatchToProps = dispatch => {
-    return {
-        ChangeServiceState: (e) => {
-            dispatch({type: CHANGE_SERVICE_STATE, payload: e})
-        },
-        ChangeServiceTabState: (e) => {
-            dispatch({type: CHANGE_SERVICE_TAB_STATE, payload: e})
-        },
 
-
-        EnableServiceModal: () => {
-            dispatch({type: ACTIVE_SERVICE_MODAL_STATE, payload: true});
-            dispatch({type: ACTIVE_OVERLAY_STATE, payload: true})
-        }
-    };
+const mapDispatchToProps = {
+    ChangeServiceState,
+    ChangeServiceTabState,
+    EnableServiceModal
 };
 
 export default connect(

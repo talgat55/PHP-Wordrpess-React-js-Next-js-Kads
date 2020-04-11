@@ -2,14 +2,14 @@ import React from 'react';
 import Form   from '../../forms/service/service';
 import './style.sass';
 import {connect} from "react-redux";
-import {DEACTIVE_SERVICE_MODAL_STATE,DEACTIVE_OVERLAY_STATE } from '../../../types';
+import {DisableModal} from "../../../actions/app";
 class Modal extends React.Component {
     constructor(props) {
         super(props);
     }
     ChangeState  = e => {
         e.preventDefault();
-        this.props.ChangeStateModal();
+        this.props.DisableModal();
     };
     render() {
 
@@ -38,13 +38,8 @@ const mapStateToProps = state =>{
         modalService: state.modalService
     };
 };
-const mapDispatchToProps = dispatch => {
-    return {
-        ChangeStateModal: () => {
-            dispatch({type: DEACTIVE_SERVICE_MODAL_STATE, payload:false });
-            dispatch({type: DEACTIVE_OVERLAY_STATE, payload:false })
-        }
-    };
+const mapDispatchToProps =  {
+    DisableModal
 };
 
 export default connect(

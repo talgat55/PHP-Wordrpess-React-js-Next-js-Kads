@@ -2,10 +2,10 @@ import React, {Component} from 'react';
 import {Button, Form, FormGroup, Input, Spinner} from 'reactstrap';
 import InputMask from 'react-input-mask';
 import {sendFeedbackRequestLinkToUs} from "../../api/form/form";
-import {ACTIVE_SUCCESS_MODAL_STATE, DEACTIVE_SUCCESS_MODAL_STATE, DEACTIVE_MODAL_STATE} from "../../../types";
 import {connect} from "react-redux";
 import ym from 'react-yandex-metrika';
 import ReactGA from 'react-ga';
+import {ChangeStateSuccessModal, DisableStateModal, DisableStateSuccessModal} from "../../../actions/app";
 class FormComponent extends Component {
     state = {
         username: '',
@@ -146,20 +146,12 @@ class FormComponent extends Component {
 const mapStateToProps = state => {
     return { };
 };
-const mapDispatchToProps = dispatch => {
-    return {
-        ChangeStateSuccessModal: () => {
-            dispatch({type: ACTIVE_SUCCESS_MODAL_STATE, payload: true})
-        },
-        DisableStateSuccessModal: () => {
-            dispatch({type: DEACTIVE_SUCCESS_MODAL_STATE, payload: false})
-        },
-        DisableStateModal: () => {
-            dispatch({type: DEACTIVE_MODAL_STATE, payload: false})
-        }
-    };
-};
 
+const mapDispatchToProps = {
+    ChangeStateSuccessModal,
+    DisableStateSuccessModal,
+    DisableStateModal
+};
 export default connect(
     mapStateToProps,
     mapDispatchToProps

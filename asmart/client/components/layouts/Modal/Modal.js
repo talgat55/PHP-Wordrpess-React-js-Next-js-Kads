@@ -2,7 +2,7 @@ import React from 'react';
 import Form   from '../../forms/feedback/feedback-modal';
 import './style.sass';
 import {connect} from "react-redux";
-import {DEACTIVE_MODAL_STATE } from '../../../types';
+import {DisableStateModal} from "../../../actions/app";
 class Modal extends React.Component {
     constructor(props) {
         super(props);
@@ -10,7 +10,7 @@ class Modal extends React.Component {
     }
     ChangeState  = e => {
         e.preventDefault();
-        this.props.ChangeStateModal();
+        this.props.DisableStateModal();
     };
     render() {
 
@@ -39,14 +39,10 @@ const mapStateToProps = state =>{
         modal: state.modal
     };
 };
-const mapDispatchToProps = dispatch => {
-    return {
-        ChangeStateModal: () => {
-            dispatch({type: DEACTIVE_MODAL_STATE, payload:false })
-        }
-    };
-};
 
+const mapDispatchToProps = {
+    DisableStateModal
+};
 export default connect(
     mapStateToProps,
     mapDispatchToProps

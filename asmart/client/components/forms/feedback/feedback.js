@@ -3,10 +3,10 @@ import {Button, Form, FormGroup, Input} from 'reactstrap';
 import InputMask from 'react-input-mask';
 import {sendFeedbackRequestLinkToUs} from '../../api/form/form';
 import {connect} from "react-redux";
-import {ACTIVE_SUCCESS_MODAL_STATE,DEACTIVE_SUCCESS_MODAL_STATE} from '../../../types';
 import ym from 'react-yandex-metrika';
 import ReactGA from 'react-ga';
 import {Spinner} from "reactstrap";
+import {ChangeStateSuccessModal, DisableStateSuccessModal} from "../../../actions/app";
 class FormComponent extends Component {
     state = {
         username: '',
@@ -171,19 +171,11 @@ const mapStateToProps = state => {
         modal: state.modal
     };
 };
-const mapDispatchToProps = dispatch => {
-    return {
-        ChangeStateSuccessModal: () => {
-            dispatch({type: ACTIVE_SUCCESS_MODAL_STATE, payload: true})
-        },
-        DisableStateSuccessModal: () => {
-            dispatch({type: DEACTIVE_SUCCESS_MODAL_STATE, payload: false})
-        }
 
-
-    };
+const mapDispatchToProps =   {
+    ChangeStateSuccessModal,
+    DisableStateSuccessModal
 };
-
 export default connect(
     mapStateToProps,
     mapDispatchToProps

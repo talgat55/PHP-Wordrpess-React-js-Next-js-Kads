@@ -1,19 +1,14 @@
 import React from 'react';
 import './style.sass';
 import {connect} from "react-redux";
-import {DEACTIVE_SUCCESS_MODAL_STATE } from '../../../types';
+import {DisableStateSuccessModal} from "../../../actions/app";
 class ModalSuccess extends React.Component {
     constructor(props) {
         super(props);
-
-
-
     }
-
-
     ChangeState  = e => {
         e.preventDefault();
-        this.props.ChangeStateModal();
+        this.props.DisableStateSuccessModal();
     };
     render() {
 
@@ -42,12 +37,8 @@ const mapStateToProps = state =>{
         modalSuccess: state.modalSuccess
     };
 };
-const mapDispatchToProps = dispatch => {
-    return {
-        ChangeStateModal: () => {
-            dispatch({type: DEACTIVE_SUCCESS_MODAL_STATE, payload:false })
-        }
-    };
+const mapDispatchToProps =  {
+    DisableStateSuccessModal
 };
 
 export default connect(
