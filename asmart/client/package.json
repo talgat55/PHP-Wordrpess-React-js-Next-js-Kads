@@ -20,7 +20,7 @@
     "isomorphic-unfetch": "^3.0.0",
     "next": "9.0.8",
     "next-redux-wrapper": "^4.0.1",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "react": "^16.10.2",
     "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-burger-menu": "^2.6.13",
